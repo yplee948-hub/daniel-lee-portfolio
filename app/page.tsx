@@ -1,65 +1,178 @@
-import Image from "next/image";
+interface WorkItem {
+  title: string;
+  tags: string[];
+  description: string;
+  cardBg: string;
+  imageSrc?: string;
+  href?: string;
+}
 
-export default function Home() {
+interface SkillGroup {
+  category: string;
+  skills: string[];
+}
+
+const work: WorkItem[] = [
+  {
+    title: "Coffee Chat Operations Dashboard",
+    tags: ["PRODUCT MANAGEMENT", "FULL PROCESS", "2025"],
+    description: "Turned a manual Excel tracker into a real-time operations system for MSTI's coffee chat program — tracking 106+ requests, assignment ownership, intro email SLAs, and feedback follow-ups at a glance.",
+    cardBg: "#d6e8f7",
+    imageSrc: "/images/coffee-chat-dashboard.png",
+    href: "https://coffeechat-dashboard.vercel.app/",
+  },
+  {
+    title: "Stakeholder Dashboard",
+    tags: ["AI TOOLS", "DESIGN SYSTEMS", "2025"],
+    description: "Built a centralized tracking dashboard using Claude Code, reducing manual tracking time by 40% with 91% internal user satisfaction.",
+    cardBg: "#f7d6e8",
+  },
+  {
+    title: "Sundae Sillock Growth",
+    tags: ["PROJECT MANAGER", "FRANCHISE OPS", "2024"],
+    description: "Drove growth across 50+ franchise locations via quality control and localized campaigns, contributing to a 33.8% increase in brand revenue.",
+    cardBg: "#fce8d4",
+  },
+  {
+    title: "Accessibility Chessboard",
+    tags: ["ACCESSIBILITY", "TINYML", "2026"],
+    description: "Leading development of an interactive accessibility chessboard with T-Mobile, prototyping voice-command and gesture-recognition features.",
+    cardBg: "#e8d4fc",
+  },
+  {
+    title: "Government Employment Portal",
+    tags: ["PROGRAM MANAGER", "GOVERNMENT", "2023"],
+    description: "Managed citizen onboarding for a new employment portal, driving a 35% increase in application completion rate across 4,000+ applicants.",
+    cardBg: "#d4e8d4",
+  },
+  {
+    title: "Zero VFX",
+    tags: ["MARKETING", "VFX", "2020"],
+    description: "Supported acquisition of 3 high-profile VFX contracts by translating complex production workflows into client-facing pitch materials.",
+    cardBg: "#f7f0d4",
+  },
+];
+
+const skills: SkillGroup[] = [
+  { category: "PRODUCT & ANALYTICS", skills: ["SQL", "Python", "Excel", "Power BI", "Google Analytics", "SharePoint"] },
+  { category: "AI & DEVELOPMENT", skills: ["Claude Code", "Cursor AI", "GitHub Copilot", "OpenAI API", "Streamlit"] },
+  { category: "DESIGN & COLLABORATION", skills: ["Figma", "Notion", "Microsoft Office Suite"] },
+  { category: "EMBEDDED & AI SYSTEMS", skills: ["EdgeImpulse", "ESP32", "TinyML", "Gesture Recognition"] },
+];
+
+function Tag({ label }: { label: string }) {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <span className="inline-block border border-neutral-400 px-2 py-0.5 text-[9px] tracking-widest uppercase text-neutral-600 rounded-sm whitespace-nowrap">
+      {label}
+    </span>
+  );
+}
+
+function WorkCard({ item }: { item: WorkItem }) {
+  const cardContent = (
+    <div className="flex flex-col group">
+      <div
+        className="w-full rounded-2xl mb-4 overflow-hidden"
+        style={{ backgroundColor: item.cardBg, height: "320px" }}
+      >
+        {item.imageSrc && (
+          <img
+            src={item.imageSrc}
+            alt={item.title}
+            className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+          />
+        )}
+      </div>
+      <div className="flex justify-between items-start gap-3 mb-2">
+        <h3 className="text-[13px] font-sans font-medium leading-snug">{item.title}</h3>
+        <div className="flex flex-wrap justify-end gap-1 shrink-0 max-w-[55%]">
+          {item.tags.map((tag, i) => (
+            <Tag key={i} label={tag} />
+          ))}
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </div>
+      <p className="text-[11px] text-neutral-500 leading-relaxed">{item.description}</p>
     </div>
+  );
+
+  if (item.href) {
+    return (
+      <a href={item.href} target="_blank" rel="noopener noreferrer" className="block">
+        {cardContent}
+      </a>
+    );
+  }
+  return cardContent;
+}
+
+export default function HomePage() {
+  return (
+    <>
+      {/* Nav */}
+      <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center items-center gap-10 py-4 text-[10px] tracking-widest uppercase text-neutral-400 bg-white/80 backdrop-blur-sm">
+        <a href="/#work" className="hover:text-black transition-colors duration-150 text-black">WORK</a>
+        <a href="/about" className="hover:text-black transition-colors duration-150">ABOUT</a>
+        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors duration-150">RESUME</a>
+      </nav>
+
+      {/* Hero */}
+      <section
+        className="flex flex-col items-center justify-center text-center px-6 pt-32 pb-28 min-h-[65vh]"
+        style={{ background: "linear-gradient(to bottom, #dde5ef 0%, #ffffff 60%)" }}
+      >
+        <h1
+          className="font-sans font-bold tracking-tighter leading-[0.88] text-black w-full"
+          style={{ fontSize: "clamp(3rem, 15.5vw, 16rem)" }}
+        >
+          DANIEL LEE
+        </h1>
+        <p className="mt-6 text-[11px] tracking-widest uppercase text-neutral-500">
+          PRODUCT MANAGER PREVIOUSLY @ UW MSTI, HEESTORY, MINISTRY OF LABOR.
+        </p>
+      </section>
+
+      {/* Work */}
+      <section id="work" className="px-6 md:px-10 pb-24">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16">
+            {work.map((item, i) => (
+              <WorkCard key={i} item={item} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="px-6 md:px-10 pt-16 pb-14">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-xl md:text-2xl font-sans font-semibold mb-1">
+            Glad we could cross paths.
+          </p>
+          <p className="text-[11px] text-neutral-500 mb-12">
+            I hope it left you with a bit of curiosity and inspiration.
+          </p>
+          <div className="flex justify-between items-end">
+            <p className="text-[10px] text-neutral-400">© Daniel Lee, 2026</p>
+            <div className="flex gap-14">
+              <div>
+                <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">CONTACT</p>
+                <div className="flex flex-col gap-2 text-[11px]">
+                  <a href="mailto:yplee948@uw.edu" className="hover:opacity-50 transition-opacity">EMAIL</a>
+                  <a href="https://www.linkedin.com/in/youngpyunglee" target="_blank" rel="noopener noreferrer" className="hover:opacity-50 transition-opacity">LINKEDIN</a>
+                </div>
+              </div>
+              <div>
+                <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">NAVIGATION</p>
+                <div className="flex flex-col gap-2 text-[11px]">
+                  <a href="#work" className="hover:opacity-50 transition-opacity">WORK</a>
+                  <a href="/about" className="hover:opacity-50 transition-opacity">ABOUT</a>
+                  <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="hover:opacity-50 transition-opacity">RESUME</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </>
   );
 }
