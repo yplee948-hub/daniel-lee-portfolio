@@ -14,42 +14,47 @@ interface SkillGroup {
 
 const work: WorkItem[] = [
   {
+    title: "Accessibility Chessboard",
+    tags: ["ACCESSIBILITY", "TINYML", "2026"],
+    description: "Leading development of an interactive accessibility chessboard with T-Mobile, prototyping voice-command and gesture-recognition features.",
+    cardBg: "#e8d4fc",
+    href: "/accessibility-chessboard",
+  },
+  {
     title: "Coffee Chat Operations Dashboard",
     tags: ["PRODUCT MANAGEMENT", "FULL PROCESS", "2025"],
     description: "Turned a manual Excel tracker into a real-time operations system for MSTI's coffee chat program — tracking 106+ requests, assignment ownership, intro email SLAs, and feedback follow-ups at a glance.",
     cardBg: "#d6e8f7",
     imageSrc: "/images/coffee-chat-dashboard.png",
-    href: "https://coffeechat-dashboard.vercel.app/",
+    href: "/coffee-chat",
   },
   {
     title: "Stakeholder Dashboard",
     tags: ["AI TOOLS", "DESIGN SYSTEMS", "2025"],
     description: "Built a centralized tracking dashboard using Claude Code, reducing manual tracking time by 40% with 91% internal user satisfaction.",
     cardBg: "#f7d6e8",
+    href: "/stakeholder-dashboard",
   },
   {
     title: "Sundae Sillock Growth",
     tags: ["PROJECT MANAGER", "FRANCHISE OPS", "2024"],
     description: "Drove growth across 50+ franchise locations via quality control and localized campaigns, contributing to a 33.8% increase in brand revenue.",
     cardBg: "#fce8d4",
-  },
-  {
-    title: "Accessibility Chessboard",
-    tags: ["ACCESSIBILITY", "TINYML", "2026"],
-    description: "Leading development of an interactive accessibility chessboard with T-Mobile, prototyping voice-command and gesture-recognition features.",
-    cardBg: "#e8d4fc",
+    href: "/sundae-sillock",
   },
   {
     title: "Government Employment Portal",
     tags: ["PROGRAM MANAGER", "GOVERNMENT", "2023"],
     description: "Managed citizen onboarding for a new employment portal, driving a 35% increase in application completion rate across 4,000+ applicants.",
     cardBg: "#d4e8d4",
+    href: "/government-portal",
   },
   {
     title: "Zero VFX",
     tags: ["MARKETING", "VFX", "2020"],
     description: "Supported acquisition of 3 high-profile VFX contracts by translating complex production workflows into client-facing pitch materials.",
     cardBg: "#f7f0d4",
+    href: "/zero-vfx",
   },
 ];
 
@@ -96,8 +101,13 @@ function WorkCard({ item }: { item: WorkItem }) {
   );
 
   if (item.href) {
+    const isExternal = item.href.startsWith("http");
     return (
-      <a href={item.href} target="_blank" rel="noopener noreferrer" className="block">
+      <a
+        href={item.href}
+        {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+        className="block"
+      >
         {cardContent}
       </a>
     );
