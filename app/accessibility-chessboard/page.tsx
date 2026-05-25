@@ -43,7 +43,7 @@ function VideoWrap({
   return (
     <div
       className="relative rounded-sm overflow-hidden bg-neutral-200 mb-3"
-      style={portrait ? { aspectRatio: "9/14", maxHeight: "320px" } : { maxHeight: "420px" }}
+      style={portrait ? { aspectRatio: "9/14", maxHeight: "380px" } : { maxHeight: "420px" }}
     >
       <video
         controls
