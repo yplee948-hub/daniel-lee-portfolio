@@ -33,8 +33,8 @@ function PhotoWrap({
 
 function VideoWrap({ src, label }: { src: string; label: string }) {
   return (
-    <div className="relative rounded-sm overflow-hidden bg-neutral-200 mb-3">
-      <video controls className="w-full block">
+    <div className="relative rounded-sm overflow-hidden bg-neutral-200 mb-3" style={{ maxHeight: "420px" }}>
+      <video controls className="w-full block" style={{ maxHeight: "420px", objectFit: "cover" }}>
         <source src={src} />
       </video>
       <span className="absolute top-3 left-3 font-mono text-[9px] bg-black/70 text-white px-2 py-1 tracking-widest uppercase rounded-sm">
