@@ -321,7 +321,7 @@ export default function AccessibilityChessboardPage() {
         <SectionLabel>Build Journey</SectionLabel>
 
         {/* Phase 01 */}
-        <div className="grid md:grid-cols-[200px_1fr] gap-12 py-16 border-b border-neutral-200">
+        <div className="grid md:grid-cols-[2fr_3fr] gap-12 py-16 border-b border-neutral-200">
           <div className="md:sticky top-24 self-start">
             <p className="font-mono text-[9px] text-neutral-400 tracking-widest mb-2">
               PHASE 01
@@ -401,7 +401,7 @@ export default function AccessibilityChessboardPage() {
         </div>
 
         {/* Phase 02 */}
-        <div className="grid md:grid-cols-[200px_1fr] gap-12 py-16 border-b border-neutral-200">
+        <div className="grid md:grid-cols-[2fr_3fr] gap-12 py-16 border-b border-neutral-200">
           <div className="md:sticky top-24 self-start">
             <p className="font-mono text-[9px] text-neutral-400 tracking-widest mb-2">
               PHASE 02
@@ -432,7 +432,7 @@ export default function AccessibilityChessboardPage() {
         </div>
 
         {/* Phase 03 */}
-        <div className="grid md:grid-cols-[200px_1fr] gap-12 py-16 border-b border-neutral-200">
+        <div className="grid md:grid-cols-[2fr_3fr] gap-12 py-16 border-b border-neutral-200">
           <div className="md:sticky top-24 self-start">
             <p className="font-mono text-[9px] text-neutral-400 tracking-widest mb-2">
               PHASE 03
@@ -457,7 +457,7 @@ export default function AccessibilityChessboardPage() {
         </div>
 
         {/* Phase 04 */}
-        <div className="grid md:grid-cols-[200px_1fr] gap-12 py-16 border-b border-neutral-200">
+        <div className="grid md:grid-cols-[2fr_3fr] gap-12 py-16 border-b border-neutral-200">
           <div className="md:sticky top-24 self-start">
             <p className="font-mono text-[9px] text-neutral-400 tracking-widest mb-2">
               PHASE 04
@@ -518,7 +518,7 @@ export default function AccessibilityChessboardPage() {
         </div>
 
         {/* Phase 05 */}
-        <div className="grid md:grid-cols-[200px_1fr] gap-12 py-16 border-b border-neutral-200">
+        <div className="grid md:grid-cols-[2fr_3fr] gap-12 py-16 border-b border-neutral-200">
           <div className="md:sticky top-24 self-start">
             <p className="font-mono text-[9px] text-neutral-400 tracking-widest mb-2">
               PHASE 05
@@ -563,7 +563,7 @@ export default function AccessibilityChessboardPage() {
         </div>
 
         {/* Phase 06 */}
-        <div className="grid md:grid-cols-[200px_1fr] gap-12 py-16 border-b border-neutral-200">
+        <div className="grid md:grid-cols-[2fr_3fr] gap-12 py-16 border-b border-neutral-200">
           <div className="md:sticky top-24 self-start">
             <p className="font-mono text-[9px] text-neutral-400 tracking-widest mb-2">
               PHASE 06
@@ -600,7 +600,7 @@ export default function AccessibilityChessboardPage() {
         </div>
 
         {/* Phase 07 */}
-        <div className="grid md:grid-cols-[200px_1fr] gap-12 py-16">
+        <div className="grid md:grid-cols-[2fr_3fr] gap-12 py-16">
           <div className="md:sticky top-24 self-start">
             <p className="font-mono text-[9px] text-neutral-400 tracking-widest mb-2">
               PHASE 07
