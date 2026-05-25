@@ -35,7 +35,7 @@ function VideoWrap({ src, label }: { src: string; label: string }) {
   return (
     <div className="relative rounded-sm overflow-hidden bg-neutral-200 mb-3">
       <video controls className="w-full block">
-        <source src={src} type="video/mp4" />
+        <source src={src} />
       </video>
       <span className="absolute top-3 left-3 font-mono text-[9px] bg-black/70 text-white px-2 py-1 tracking-widest uppercase rounded-sm">
         {label}
@@ -396,7 +396,7 @@ export default function AccessibilityChessboardPage() {
             />
             <Caption>Testing magnetic penetration through different plywood thicknesses</Caption>
             <VideoWrap
-              src="/images/chessboard/Electromagnet_Polarity_Test.MOV"
+              src="/images/chessboard/Electromagnet_Polarity_Test.mp4"
               label="Polarity Switching Test"
             />
           </div>
