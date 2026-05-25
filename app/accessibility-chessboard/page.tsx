@@ -362,33 +362,39 @@ export default function AccessibilityChessboardPage() {
             <Caption>
               Early assembly → components laid out → first full gantry with breadboard wiring
             </Caption>
-            <div className="grid grid-cols-2 gap-3 mb-2">
-              <PhotoWrap
-                src="/images/chessboard/1779614899975_image.png"
-                alt="Fusion 360 carriage CAD"
-              />
-              <PhotoWrap
-                src="/images/chessboard/1779614921073_image.png"
-                alt="Fusion 360 corner bracket CAD"
-              />
-            </div>
-            <Caption>
-              Custom bracket designs in Fusion 360 — carriage piece (left) and corner mount (right)
-            </Caption>
-            <div className="flex gap-3" style={{ maxWidth: "500px" }}>
-              <div className="flex-1">
-                <VideoWrap
-                  src="/images/chessboard/first_vid_test_.mp4"
-                  label="First Movement Test"
-                  portrait
-                />
+            <div className="grid grid-cols-2 gap-6 items-start">
+              {/* Left: Fusion 360 images */}
+              <div>
+                <div className="flex flex-col gap-3 mb-2">
+                  <PhotoWrap
+                    src="/images/chessboard/1779614899975_image.png"
+                    alt="Fusion 360 carriage CAD"
+                  />
+                  <PhotoWrap
+                    src="/images/chessboard/1779614921073_image.png"
+                    alt="Fusion 360 corner bracket CAD"
+                  />
+                </div>
+                <Caption>
+                  Custom bracket designs in Fusion 360 — carriage piece (top) and corner mount (bottom)
+                </Caption>
               </div>
-              <div className="flex-1">
-                <VideoWrap
-                  src="/images/chessboard/movingthechessinthebackrow.mp4"
-                  label="Piece Routing with Blocker Displacement"
-                  portrait
-                />
+              {/* Right: portrait videos */}
+              <div className="flex gap-3">
+                <div className="flex-1">
+                  <VideoWrap
+                    src="/images/chessboard/first_vid_test_.mp4"
+                    label="First Movement Test"
+                    portrait
+                  />
+                </div>
+                <div className="flex-1">
+                  <VideoWrap
+                    src="/images/chessboard/movingthechessinthebackrow.mp4"
+                    label="Piece Routing with Blocker Displacement"
+                    portrait
+                  />
+                </div>
               </div>
             </div>
           </div>
