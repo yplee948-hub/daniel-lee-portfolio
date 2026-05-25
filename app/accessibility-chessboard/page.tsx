@@ -340,7 +340,7 @@ export default function AccessibilityChessboardPage() {
               Bresenham&apos;s line algorithm for smooth coordinated motion across 41cm × 41cm
               of travel.
             </p>
-            <div className="grid grid-cols-2 gap-3 mb-2">
+            <div className="grid grid-cols-2 gap-3 mb-2" style={{ maxWidth: "480px" }}>
               <PhotoWrap
                 src="/images/chessboard/Xy_beginning.jpeg"
                 alt="Early gantry assembly"
