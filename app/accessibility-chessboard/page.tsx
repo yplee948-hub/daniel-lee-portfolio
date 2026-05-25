@@ -31,10 +31,25 @@ function PhotoWrap({
   );
 }
 
-function VideoWrap({ src, label }: { src: string; label: string }) {
+function VideoWrap({
+  src,
+  label,
+  portrait = false,
+}: {
+  src: string;
+  label: string;
+  portrait?: boolean;
+}) {
   return (
-    <div className="relative rounded-sm overflow-hidden bg-neutral-200 mb-3" style={{ maxHeight: "420px" }}>
-      <video controls className="w-full block" style={{ maxHeight: "420px", objectFit: "cover" }}>
+    <div
+      className="relative rounded-sm overflow-hidden bg-neutral-200 mb-3"
+      style={portrait ? { aspectRatio: "9/16" } : { maxHeight: "420px" }}
+    >
+      <video
+        controls
+        className="w-full h-full block"
+        style={{ objectFit: portrait ? "contain" : "cover", maxHeight: portrait ? undefined : "420px" }}
+      >
         <source src={src} />
       </video>
       <span className="absolute top-3 left-3 font-mono text-[9px] bg-black/70 text-white px-2 py-1 tracking-widest uppercase rounded-sm">
@@ -360,14 +375,18 @@ export default function AccessibilityChessboardPage() {
             <Caption>
               Custom bracket designs in Fusion 360 — carriage piece (left) and corner mount (right)
             </Caption>
-            <VideoWrap
-              src="/images/chessboard/first_vid_test_.mp4"
-              label="First Movement Test"
-            />
-            <VideoWrap
-              src="/images/chessboard/movingthechessinthebackrow.mp4"
-              label="Piece Routing with Blocker Displacement"
-            />
+            <div className="grid grid-cols-2 gap-3">
+              <VideoWrap
+                src="/images/chessboard/first_vid_test_.mp4"
+                label="First Movement Test"
+                portrait
+              />
+              <VideoWrap
+                src="/images/chessboard/movingthechessinthebackrow.mp4"
+                label="Piece Routing with Blocker Displacement"
+                portrait
+              />
+            </div>
           </div>
         </div>
 
