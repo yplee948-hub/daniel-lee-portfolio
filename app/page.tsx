@@ -115,7 +115,7 @@ export default function HomePage() {
       >
         <h1
           className="font-sans font-bold tracking-tighter leading-[0.88] text-black w-full"
-          style={{ fontSize: "clamp(3rem, 15.5vw, 16rem)" }}
+          style={{ fontSize: "180px" }}
         >
           DANIEL LEE
         </h1>
