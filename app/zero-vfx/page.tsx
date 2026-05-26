@@ -1,5 +1,4 @@
 import Nav from "../components/Nav";
-import Footer from "../components/Footer";
 
 const meta = {
   tags: ["MARKETING", "VFX", "2020"],
@@ -130,7 +129,6 @@ export default function ZeroVFXPage() {
 
       </main>
 
-      <Footer />
     </>
   );
 }

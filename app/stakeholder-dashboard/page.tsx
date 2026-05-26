@@ -1,5 +1,4 @@
 import Nav from "../components/Nav";
-import Footer from "../components/Footer";
 
 const meta = {
   tags: ["AI TOOLS", "DESIGN SYSTEMS", "2025"],
@@ -130,7 +129,6 @@ export default function StakeholderDashboardPage() {
 
       </main>
 
-      <Footer />
     </>
   );
 }

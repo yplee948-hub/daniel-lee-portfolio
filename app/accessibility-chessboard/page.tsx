@@ -1,5 +1,4 @@
 import Nav from "../components/Nav";
-import Footer from "../components/Footer";
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
@@ -994,7 +993,6 @@ export default function AccessibilityChessboardPage() {
         </a>
       </div>
 
-      <Footer />
     </>
   );
 }

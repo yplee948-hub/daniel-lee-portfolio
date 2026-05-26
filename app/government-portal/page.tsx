@@ -1,5 +1,4 @@
 import Nav from "../components/Nav";
-import Footer from "../components/Footer";
 
 const meta = {
   tags: ["PROGRAM MANAGER", "GOVERNMENT", "2023"],
@@ -130,7 +129,6 @@ export default function GovernmentPortalPage() {
 
       </main>
 
-      <Footer />
     </>
   );
 }

@@ -1,5 +1,4 @@
 import Nav from "../components/Nav";
-import Footer from "../components/Footer";
 
 const leadership = [
   {
@@ -105,7 +104,6 @@ export default function AboutPage() {
         </div>
       </main>
 
-      <Footer subtitle="Out of anywhere you could be, you're here." />
     </>
   );
 }
