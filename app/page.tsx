@@ -30,6 +30,13 @@ const work: WorkItem[] = [
     href: "/coffee-chat",
   },
   {
+    title: "Drama Relationship Map",
+    tags: ["PRODUCT MANAGEMENT", "AI TOOLS", "2025"],
+    description: "PM'd a spoiler-safe, AI-assisted character relationship board for cast-heavy dramas — from blank spec to live product at charactermap.vercel.app.",
+    cardBg: "#d0f0ec",
+    href: "/character-map-tracker",
+  },
+  {
     title: "Stakeholder Dashboard",
     tags: ["AI TOOLS", "DESIGN SYSTEMS", "2025"],
     description: "Built a centralized tracking dashboard using Claude Code, reducing manual tracking time by 40% with 91% internal user satisfaction.",
