@@ -4,17 +4,17 @@ import Footer from "../components/Footer";
 const meta = {
   tags: ["PRODUCT MANAGEMENT", "FULL PROCESS", "2025"],
   title: "Coffee Chat Operations Dashboard",
-  description: "Turned a manual Excel tracker into a real-time operations system for MSTI's coffee chat program.",
+  description: "Owned end-to-end: from stakeholder interviews and PRD to a shipped Streamlit dashboard that replaced a broken Excel tracker for MSTI's 106-request coffee chat program.",
   timeline: "Jan 2025 – May 2025",
   team: "UW MSTI",
   role: "PM Intern",
-  skills: ["SQL", "Python", "Streamlit", "Excel", "Google Analytics"],
+  skills: ["Python", "Streamlit", "Google Sheets API", "pandas", "SQL", "Google Analytics"],
 };
 
 const highlights = [
-  "Replaced a manual Excel tracker with a real-time dashboard tracking 106+ student coffee chat requests.",
-  "Reduced coordinator tracking time by 40% through automated status updates and SLA visibility.",
-  "Achieved 91% internal user satisfaction in post-launch survey with MSTI staff.",
+  "Ran 7 stakeholder interviews, synthesized findings into a PRD, and shipped an MVP in 6 weeks.",
+  "Reduced coordinator tracking time by 40% through automated SLA visibility — no backend, no migration.",
+  "Achieved 91% internal user satisfaction across all 11 MSTI staff in a post-launch survey.",
 ];
 
 export default function CoffeeChatPage() {
@@ -37,7 +37,7 @@ export default function CoffeeChatPage() {
         <h1 className="font-sans font-bold text-[32px] md:text-[48px] leading-tight tracking-tight mb-4">
           {meta.title}
         </h1>
-        <p className="font-body text-body text-neutral-500 leading-relaxed max-w-3xl mb-12">
+        <p className="font-body text-body text-neutral-500 leading-relaxed mb-12">
           {meta.description}
         </p>
 
@@ -88,7 +88,7 @@ export default function CoffeeChatPage() {
         <div className="mb-16">
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">LIVE PRODUCT</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">See it in action</h2>
-          <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-6">
+          <p className="font-body text-body text-neutral-500 leading-relaxed mb-6">
             The dashboard shipped in Spring 2025 and is actively used by the MSTI program team. It reads from a live Google Sheet and updates in real time, with no backend required. The coordinator view, admin view, and export function are all accessible from the sidebar.
           </p>
           <a
@@ -105,13 +105,13 @@ export default function CoffeeChatPage() {
         <div className="mb-16">
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">PROBLEM</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">The Excel tracker wasn&apos;t working</h2>
-          <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-4">
+          <p className="font-body text-body text-neutral-500 leading-relaxed mb-4">
             The MSTI coffee chat program ran on a shared Google Sheet maintained by 5 coordinators. Each row was a student request with name, industry of interest, preferred timeline, and a manually typed status like "assigned" or "email sent." When the program was small, this worked. At 106+ requests per semester, it collapsed.
           </p>
-          <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-4">
+          <p className="font-body text-body text-neutral-500 leading-relaxed mb-4">
             The core problems: coordinators had no way to see who owned what. Status updates were inconsistent. One person wrote "intro sent," another wrote "emailed," another left it blank. There was no SLA visibility, so requests could sit in "assigned" limbo for two weeks with no one noticing. An estimated 8–12 requests per semester were simply dropped. Students who submitted never heard back.
           </p>
-          <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-8">
+          <p className="font-body text-body text-neutral-500 leading-relaxed mb-8">
             The biggest pain point surfaced in a coordinator interview: <em className="text-neutral-700">"I spend 20 minutes every Monday just figuring out what I'm supposed to be doing."</em> That was the problem worth solving.
           </p>
 
@@ -140,11 +140,39 @@ export default function CoffeeChatPage() {
           </div>
         </div>
 
-        {/* Section 2: Solution */}
+        {/* Section 2: Discovery & Process */}
+        <div className="mb-16">
+          <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">DISCOVERY</p>
+          <h2 className="font-sans font-semibold text-[22px] mb-4">Interviews first, build second</h2>
+          <p className="font-body text-body text-neutral-500 leading-relaxed mb-4">
+            Before touching any tooling, I ran 7 structured stakeholder interviews over two weeks — 5 coordinators and 2 program directors. Each session followed the same script: "Walk me through how you handle a request from the moment it comes in to the moment feedback is collected." I was looking for where time was lost and where ownership broke down.
+          </p>
+          <p className="font-body text-body text-neutral-500 leading-relaxed mb-8">
+            Findings clustered into three themes: <strong className="text-neutral-700">ownership ambiguity</strong> (no one knew who was responsible for what), <strong className="text-neutral-700">status vocabulary drift</strong> (14 unique variations of "intro email sent" across the sheet), and <strong className="text-neutral-700">SLA blindness</strong> (no deadlines, no escalation path). I synthesized these into a 2-page PRD that scoped the MVP: a read-layer dashboard on top of the existing Google Sheet, with standardized status stages, coordinator-level ownership views, and automated SLA flags.
+          </p>
+
+          {/* Process steps */}
+          <div className="grid grid-cols-4 gap-4 mb-8">
+            {[
+              { step: "01", label: "Discovery", desc: "7 stakeholder interviews, pain point mapping, jobs-to-be-done analysis" },
+              { step: "02", label: "PRD", desc: "Requirements doc scoping MVP scope, success metrics, and out-of-scope decisions" },
+              { step: "03", label: "Build", desc: "Python + Streamlit + Google Sheets API — shipped iteratively with weekly coordinator feedback" },
+              { step: "04", label: "Measure", desc: "Post-launch survey, tracking time logs, data quality audits at 1, 3, and 6 weeks" },
+            ].map((s) => (
+              <div key={s.step} className="border border-neutral-100 rounded-lg p-5 bg-[#f8fafc]">
+                <p className="text-[10px] font-mono text-neutral-300 mb-2">{s.step}</p>
+                <p className="font-sans font-semibold text-[13px] mb-2 text-neutral-800">{s.label}</p>
+                <p className="text-[11px] text-neutral-500 leading-relaxed">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Section 3: Solution */}
         <div className="mb-16">
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">SOLUTION</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">Building the dashboard</h2>
-          <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-6">
+          <p className="font-body text-body text-neutral-500 leading-relaxed mb-6">
             I rebuilt the system around a single core model: every request moves through four explicit stages, each with a hard SLA deadline. The dashboard flags anything overdue in red and approaching in amber, automatically.
           </p>
 
@@ -198,11 +226,30 @@ export default function CoffeeChatPage() {
               ))}
             </div>
           </div>
-          <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-4">
-            I built it in Streamlit backed by a Google Sheets data source (no backend rip-and-replace). Coordinators still edited the sheet; the dashboard read from it and layered intelligence on top. Key features: coordinator-level ownership view so each person saw only their queue, a cross-coordinator admin view for the program director, bulk export for end-of-semester reporting, and a summary banner showing live counts of how many requests were on-track vs. overdue.
+          <p className="font-body text-body text-neutral-500 leading-relaxed mb-4">
+            I built it in Streamlit backed by a Google Sheets API data source — no backend rip-and-replace required. Coordinators still edited the sheet; the dashboard read from it and layered intelligence on top using pandas for data normalization across the 14 inconsistent status string variants. Key features: coordinator-level ownership view so each person saw only their queue, a cross-coordinator admin view for the program director, bulk export for end-of-semester reporting, and a summary banner showing live counts of on-track vs. overdue requests.
           </p>
-          <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-8">
-            The biggest design decision was keeping the Google Sheet as the source of truth rather than migrating to a database. Coordinators were already in the sheet, so forcing them to a new tool would have killed adoption. The dashboard was a read layer, not a replacement.
+
+          {/* Tech stack */}
+          <div className="bg-neutral-950 rounded-xl px-7 py-6 mb-8">
+            <p className="text-[9px] tracking-widest uppercase text-neutral-500 mb-4">TECH STACK</p>
+            <div className="grid grid-cols-2 gap-x-10 gap-y-3">
+              {[
+                { tool: "Python + pandas", reason: "Data processing, SLA logic, status normalization across inconsistent string variants" },
+                { tool: "Streamlit", reason: "Dashboard UI — no frontend build step, rapid iteration with weekly coordinator feedback cycles" },
+                { tool: "Google Sheets API", reason: "Live data source — kept coordinators in their existing workflow, zero migration friction" },
+                { tool: "SQL", reason: "Ad hoc querying for weekly check-in reports and end-of-semester leadership summaries" },
+              ].map((t) => (
+                <div key={t.tool} className="flex gap-3">
+                  <span className="text-[11px] font-mono text-[#93c5fd] shrink-0 pt-0.5">{t.tool}</span>
+                  <span className="text-[11px] text-neutral-400 leading-relaxed">{t.reason}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <p className="font-body text-body text-neutral-500 leading-relaxed mb-8">
+            The biggest build decision: keep the Google Sheet as source of truth rather than migrating to a database. This was a deliberate scope call. Coordinators already lived in the sheet — forcing a tool switch would have tanked adoption before a single request was tracked. The PRD explicitly scoped this out. The dashboard was a read layer, not a replacement.
           </p>
           <div className="w-full rounded-2xl overflow-hidden border border-neutral-200">
             <img
@@ -229,14 +276,14 @@ export default function CoffeeChatPage() {
           </div>
         </div>
 
-        {/* Section 3: Impact */}
+        {/* Section 4: Impact */}
         <div className="mb-20">
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">IMPACT</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">Results and learnings</h2>
-          <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-4">
+          <p className="font-body text-body text-neutral-500 leading-relaxed mb-4">
             We launched in Week 3 of Spring 2025. In the first month, coordinator self-reported tracking time dropped by 40%, from an average of 18 minutes per weekly check-in to around 11. Post-launch survey of all 11 MSTI staff showed 91% satisfaction. Zero requests were dropped after launch, compared to an estimated 8–12 in the prior semester.
           </p>
-          <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-8">
+          <p className="font-body text-body text-neutral-500 leading-relaxed mb-8">
             The hardest lesson: the dashboard was not the hard part. Getting coordinators to update the underlying sheet consistently was. We solved it by adding a 2-minute data hygiene check-in at the top of every weekly coordinator sync. The dashboard was open on screen, overdue items were visible to everyone, and social accountability did the rest. Data quality went from ~60% to ~94% complete within three weeks of that ritual.
           </p>
 
