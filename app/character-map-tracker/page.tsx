@@ -614,7 +614,10 @@ export default function CharacterMapTrackerPage() {
                   className="w-full h-auto object-cover"
                 />
               </div>
-              <p className="font-mono text-[9px] text-neutral-400 mt-3 tracking-wide">
+              <p
+                className="mt-3 tracking-wide text-neutral-400"
+                style={{ fontFamily: "var(--font-space-mono), monospace", fontSize: "8px" }}
+              >
                 The RedNote launch post · one week after shipping
               </p>
             </div>
