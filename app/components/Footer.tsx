@@ -11,11 +11,9 @@ export default function Footer({ workHref = "/", className = "" }: FooterProps) 
       <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-12 md:gap-16">
         <div className="flex flex-col justify-between md:min-h-[120px] flex-1 max-w-lg">
           <div>
-            <p className="text-xl md:text-2xl font-sans font-semibold leading-snug text-black mb-2">
-              Glad we could cross paths.
-            </p>
-            <p className="text-base text-neutral-500 leading-relaxed">
-              I hope it left you with a bit of curiosity and inspiration.
+            <p className="text-xl md:text-2xl font-sans font-semibold leading-snug text-black">
+              Open to PM roles for summer/fall 2026 Internships let&apos;s talk if you&apos;re job
+              seeking.
             </p>
           </div>
           <p className="text-sm text-neutral-400 mt-10 md:mt-0">© Daniel Lee, 2026</p>
