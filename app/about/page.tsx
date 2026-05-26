@@ -31,7 +31,7 @@ export default function AboutPage() {
       <Nav active="about" />
 
       <main className="pt-28 pb-8 bg-white">
-        <div className="px-8 md:px-16 max-w-4xl">
+        <div className="w-full max-w-4xl mx-auto px-8 md:px-16">
 
           {/* Intro heading */}
           <p
@@ -102,10 +102,9 @@ export default function AboutPage() {
             </div>
           </div>
 
+          <Footer inset />
         </div>
       </main>
-
-      <Footer className="max-w-4xl px-8 md:px-16" />
     </>
   );
 }

@@ -1,16 +1,21 @@
 type FooterProps = {
   workHref?: string;
   className?: string;
+  /** Use inside a page container that already sets max-width and padding */
+  inset?: boolean;
 };
 
 export default function Footer({
   workHref = "/",
-  className = "max-w-6xl px-6 md:px-10",
+  className = "",
+  inset = false,
 }: FooterProps) {
+  const outerClass = inset
+    ? `w-full mt-20 pt-16 pb-14 border-t border-neutral-200 ${className}`
+    : `w-full max-w-6xl mx-auto px-6 md:px-10 pt-16 pb-14 border-t border-neutral-200 ${className}`;
+
   return (
-    <footer
-      className={`mx-auto pt-16 pb-14 border-t border-neutral-200 ${className}`}
-    >
+    <footer className={outerClass}>
       <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-12 md:gap-16">
         <div className="flex flex-col justify-between md:min-h-[120px] flex-1 max-w-2xl">
           <div>
