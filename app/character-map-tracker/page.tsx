@@ -614,7 +614,7 @@ export default function CharacterMapTrackerPage() {
                   className="w-full h-auto object-cover"
                 />
               </div>
-              <p className="font-body text-body text-neutral-400 mt-3 tracking-wide text-[11px]">
+              <p className="font-mono text-[9px] text-neutral-400 mt-3 tracking-wide">
                 The RedNote launch post · one week after shipping
               </p>
             </div>
