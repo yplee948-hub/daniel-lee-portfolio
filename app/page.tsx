@@ -73,9 +73,11 @@ function WorkCard({ item }: { item: WorkItem }) {
           />
         )}
       </div>
-      <div className="flex justify-between items-start gap-3 mb-2">
-        <h3 className="text-base font-sans font-medium leading-snug">{item.title}</h3>
-        <div className="flex flex-wrap justify-end gap-1 shrink-0 max-w-[55%]">
+      <div className="mb-2">
+        <h3 className="text-base font-sans font-medium leading-snug whitespace-nowrap">
+          {item.title}
+        </h3>
+        <div className="flex flex-wrap gap-1 mt-2">
           {item.tags.map((tag, i) => (
             <Tag key={i} label={tag} />
           ))}
