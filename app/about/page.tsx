@@ -105,7 +105,7 @@ export default function AboutPage() {
         </div>
       </main>
 
-      <Footer />
+      <Footer className="max-w-4xl px-8 md:px-16" />
     </>
   );
 }

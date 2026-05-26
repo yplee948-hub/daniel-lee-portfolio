@@ -976,7 +976,7 @@ export default function AccessibilityChessboardPage() {
         </div>
       </section>
 
-      <Footer className="max-w-none md:px-16" />
+      <Footer className="max-w-none px-6 md:px-16" />
     </>
   );
 }
