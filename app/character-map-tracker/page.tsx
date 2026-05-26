@@ -605,8 +605,8 @@ export default function CharacterMapTrackerPage() {
         <div className="mb-16">
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">GO-TO-MARKET</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">Why RedNote worked</h2>
-          <div className="grid grid-cols-2 gap-8 items-start mb-4">
-            <div className="shrink-0" style={{ maxWidth: "320px" }}>
+          <div className="flex gap-6 items-start mb-8">
+            <div className="w-[260px] shrink-0">
               <div className="rounded-2xl overflow-hidden border border-neutral-200">
                 <img
                   src="/images/charactertracker.png"
@@ -618,24 +618,26 @@ export default function CharacterMapTrackerPage() {
                 The RedNote launch post · one week after shipping
               </p>
             </div>
-            <p className="font-body text-body text-neutral-500 leading-relaxed">
-              Choosing RedNote (小红书) as the launch channel wasn&apos;t arbitrary. It came from the same
-              research process that shaped the product: go to where the audience already is and observe
-              what they&apos;re doing. What I found was that Chinese drama audiences don&apos;t just watch
-              shows. They document them. Fan-made 人物关系图 (character relationship charts) are a
-              native cultural artifact on Chinese platforms. Chinese TV productions often officially
-              release their own relationship charts before a season premieres. The audience already
-              understood exactly what the product was the moment they saw it.
-            </p>
+            <div className="flex-1 min-w-0 space-y-4">
+              <p className="font-body text-body text-neutral-500 leading-relaxed">
+                Choosing RedNote (小红书) as the launch channel wasn&apos;t arbitrary. It came from the same
+                research process that shaped the product: go to where the audience already is and observe
+                what they&apos;re doing. What I found was that Chinese drama audiences don&apos;t just watch
+                shows. They document them. Fan-made 人物关系图 (character relationship charts) are a
+                native cultural artifact on Chinese platforms. Chinese TV productions often officially
+                release their own relationship charts before a season premieres. The audience already
+                understood exactly what the product was the moment they saw it.
+              </p>
+              <p className="font-body text-body text-neutral-500 leading-relaxed">
+                RedNote&apos;s format did the rest. With 300M+ monthly active users skewing female aged
+                18–35, the exact demographic that drives K-drama and C-drama fandom, and a visual-first
+                feed where saves carry more algorithmic weight than likes, a single high-quality post
+                showing the board in action had real distribution potential. Singles Inferno (단신지옥 /
+                单身地狱) was already trending on the platform when we launched, which meant the demo
+                content matched what the audience was actively searching for.
+              </p>
+            </div>
           </div>
-          <p className="font-body text-body text-neutral-500 leading-relaxed mb-8">
-            RedNote&apos;s format did the rest. With 300M+ monthly active users skewing female aged
-            18–35, the exact demographic that drives K-drama and C-drama fandom, and a visual-first
-            feed where saves carry more algorithmic weight than likes, a single high-quality post
-            showing the board in action had real distribution potential. Singles Inferno (단신지옥 /
-            单身地狱) was already trending on the platform when we launched, which meant the demo
-            content matched what the audience was actively searching for.
-          </p>
 
           {/* Why Chinese audiences block */}
           <div className="rounded-xl border border-neutral-100 bg-[#f8fafc] px-8 py-7 mb-8">
