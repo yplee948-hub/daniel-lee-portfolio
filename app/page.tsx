@@ -4,6 +4,7 @@ interface WorkItem {
   description: string;
   cardBg: string;
   imageSrc?: string;
+  imagePosition?: "top" | "center";
   href?: string;
 }
 
@@ -34,6 +35,8 @@ const work: WorkItem[] = [
     tags: ["PRODUCT MANAGEMENT", "AI TOOLS", "2025"],
     description: "PM'd a spoiler-safe, AI-assisted character relationship board for cast-heavy dramas, from blank spec to live product at charactermap.vercel.app.",
     cardBg: "#d0f0ec",
+    imageSrc: "/images/dramamap-hero.jpg",
+    imagePosition: "center",
     href: "/character-map-tracker",
   },
   {
@@ -92,7 +95,7 @@ function WorkCard({ item }: { item: WorkItem }) {
           <img
             src={item.imageSrc}
             alt={item.title}
-            className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+            className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02] ${item.imagePosition === "center" ? "object-center" : "object-top"}`}
           />
         )}
       </div>
