@@ -52,7 +52,7 @@ const skills: SkillGroup[] = [
 
 function Tag({ label }: { label: string }) {
   return (
-    <span className="inline-block border border-neutral-400 px-2 py-0.5 text-[9px] tracking-widest uppercase text-neutral-600 rounded-sm whitespace-nowrap">
+    <span className="inline-block border border-neutral-300 px-1.5 py-px text-[7px] tracking-wider uppercase text-neutral-500 rounded-sm whitespace-nowrap">
       {label}
     </span>
   );
@@ -77,7 +77,7 @@ function WorkCard({ item }: { item: WorkItem }) {
         <h3 className="text-base font-sans font-medium leading-snug whitespace-nowrap">
           {item.title}
         </h3>
-        <div className="flex flex-wrap gap-1 mt-2">
+        <div className="flex flex-wrap gap-0.5 mt-1.5">
           {item.tags.map((tag, i) => (
             <Tag key={i} label={tag} />
           ))}
