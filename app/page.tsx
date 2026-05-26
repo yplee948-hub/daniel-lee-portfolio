@@ -121,8 +121,8 @@ export default function HomePage() {
         >
           DANIEL LEE
         </h1>
-        <p className="mt-6 text-base tracking-widest uppercase text-neutral-500">
-          PRODUCT MANAGER PREVIOUSLY @ UW MSTI, HEESTORY, MINISTRY OF LABOR.
+        <p className="mt-6 text-base text-neutral-500 leading-relaxed">
+          Breaking into Product. Background in program management, marketing &amp; HCI.
         </p>
       </section>
 
