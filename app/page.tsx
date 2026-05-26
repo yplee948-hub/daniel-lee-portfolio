@@ -18,6 +18,7 @@ const work: WorkItem[] = [
     tags: ["ACCESSIBILITY", "TINYML", "2026"],
     description: "Leading development of an interactive accessibility chessboard with T-Mobile, prototyping voice-command and gesture-recognition features.",
     cardBg: "#e8d4fc",
+    imageSrc: "/images/chessboard/Image__20_.jpeg",
     href: "/accessibility-chessboard",
   },
   {
