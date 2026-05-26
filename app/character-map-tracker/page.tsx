@@ -605,15 +605,29 @@ export default function CharacterMapTrackerPage() {
         <div className="mb-16">
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">GO-TO-MARKET</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">Why RedNote worked</h2>
-          <p className="font-body text-body text-neutral-500 leading-relaxed mb-4">
-            Choosing RedNote (小红书) as the launch channel wasn&apos;t arbitrary. It came from the same
-            research process that shaped the product: go to where the audience already is and observe
-            what they&apos;re doing. What I found was that Chinese drama audiences don&apos;t just watch
-            shows. They document them. Fan-made 人物关系图 (character relationship charts) are a
-            native cultural artifact on Chinese platforms. Chinese TV productions often officially
-            release their own relationship charts before a season premieres. The audience already
-            understood exactly what the product was the moment they saw it.
-          </p>
+          <div className="grid grid-cols-2 gap-8 items-start mb-4">
+            <div className="shrink-0" style={{ maxWidth: "320px" }}>
+              <div className="rounded-2xl overflow-hidden border border-neutral-200">
+                <img
+                  src="/images/charactertracker.png"
+                  alt="RedNote post for Drama Relationship Map showing 4,448 likes, 3,351 saves, 464 comments"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <p className="font-body text-body text-neutral-400 mt-3 tracking-wide text-[11px]">
+                The RedNote launch post · one week after shipping
+              </p>
+            </div>
+            <p className="font-body text-body text-neutral-500 leading-relaxed">
+              Choosing RedNote (小红书) as the launch channel wasn&apos;t arbitrary. It came from the same
+              research process that shaped the product: go to where the audience already is and observe
+              what they&apos;re doing. What I found was that Chinese drama audiences don&apos;t just watch
+              shows. They document them. Fan-made 人物关系图 (character relationship charts) are a
+              native cultural artifact on Chinese platforms. Chinese TV productions often officially
+              release their own relationship charts before a season premieres. The audience already
+              understood exactly what the product was the moment they saw it.
+            </p>
+          </div>
           <p className="font-body text-body text-neutral-500 leading-relaxed mb-8">
             RedNote&apos;s format did the rest. With 300M+ monthly active users skewing female aged
             18–35, the exact demographic that drives K-drama and C-drama fandom, and a visual-first
@@ -653,21 +667,9 @@ export default function CharacterMapTrackerPage() {
             </div>
           </div>
 
-          {/* RedNote post screenshot + metrics */}
-          <div className="grid grid-cols-2 gap-8 items-start mb-8">
-            <div>
-              <div className="rounded-2xl overflow-hidden border border-neutral-200" style={{ maxWidth: "320px" }}>
-                <img
-                  src="/images/charactertracker.png"
-                  alt="RedNote post for Drama Relationship Map showing 4,448 likes, 3,351 saves, 464 comments"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              <p className="font-body text-body text-neutral-400 mt-3 tracking-wide text-[11px]">
-                The RedNote launch post · one week after shipping
-              </p>
-            </div>
-            <div className="bg-neutral-950 rounded-xl px-7 py-7 self-start">
+          {/* Post performance metrics */}
+          <div className="mb-8">
+            <div className="bg-neutral-950 rounded-xl px-7 py-7 max-w-xl">
               <p className="text-[9px] tracking-widest uppercase text-neutral-500 mb-5">POST PERFORMANCE · WEEK 1</p>
               <div className="space-y-5">
                 {[
