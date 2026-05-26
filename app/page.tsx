@@ -1,3 +1,5 @@
+import Footer from "./components/Footer";
+
 interface WorkItem {
   title: string;
   tags: string[];
@@ -135,6 +137,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      <Footer workHref="#work" />
     </>
   );
 }

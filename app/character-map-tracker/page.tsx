@@ -1,4 +1,5 @@
 import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 
 const meta = {
   tags: ["PRODUCT MANAGEMENT", "AI TOOLS", "2025"],
@@ -734,6 +735,7 @@ export default function CharacterMapTrackerPage() {
         </div>
       </main>
 
+      <Footer />
     </>
   );
 }

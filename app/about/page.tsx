@@ -1,4 +1,5 @@
 import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 
 const leadership = [
   {
@@ -104,6 +105,7 @@ export default function AboutPage() {
         </div>
       </main>
 
+      <Footer />
     </>
   );
 }

@@ -1,4 +1,5 @@
 import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 
 const meta = {
   tags: ["PROJECT MANAGER", "FRANCHISE OPS", "2024"],
@@ -114,6 +115,7 @@ export default function SundaeSillockPage() {
         </div>
       </main>
 
+      <Footer />
     </>
   );
 }

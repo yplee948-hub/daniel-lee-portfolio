@@ -1,4 +1,5 @@
 import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 
 const meta = {
   tags: ["PRODUCT MANAGEMENT", "FULL PROCESS", "2025"],
@@ -311,6 +312,7 @@ export default function CoffeeChatPage() {
         </div>
       </main>
 
+      <Footer />
     </>
   );
 }
