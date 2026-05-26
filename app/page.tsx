@@ -39,34 +39,6 @@ const work: WorkItem[] = [
     imagePosition: "center",
     href: "/character-map-tracker",
   },
-  {
-    title: "Stakeholder Dashboard",
-    tags: ["AI TOOLS", "DESIGN SYSTEMS", "2025"],
-    description: "Built a centralized tracking dashboard using Claude Code, reducing manual tracking time by 40% with 91% internal user satisfaction.",
-    cardBg: "#f7d6e8",
-    href: "/stakeholder-dashboard",
-  },
-  {
-    title: "Sundae Sillock Growth",
-    tags: ["PROJECT MANAGER", "FRANCHISE OPS", "2024"],
-    description: "Drove growth across 50+ franchise locations via quality control and localized campaigns, contributing to a 33.8% increase in brand revenue.",
-    cardBg: "#fce8d4",
-    href: "/sundae-sillock",
-  },
-  {
-    title: "Government Employment Portal",
-    tags: ["PROGRAM MANAGER", "GOVERNMENT", "2023"],
-    description: "Managed citizen onboarding for a new employment portal, driving a 35% increase in application completion rate across 4,000+ applicants.",
-    cardBg: "#d4e8d4",
-    href: "/government-portal",
-  },
-  {
-    title: "Zero VFX",
-    tags: ["MARKETING", "VFX", "2020"],
-    description: "Supported acquisition of 3 high-profile VFX contracts by translating complex production workflows into client-facing pitch materials.",
-    cardBg: "#f7f0d4",
-    href: "/zero-vfx",
-  },
 ];
 
 const skills: SkillGroup[] = [
