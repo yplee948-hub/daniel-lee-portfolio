@@ -13,7 +13,7 @@ const meta = {
 
 const highlights = [
   "Ran 7 stakeholder interviews, synthesized findings into a PRD, and shipped an MVP in 6 weeks.",
-  "Reduced coordinator tracking time by 40% through automated SLA visibility — no backend, no migration.",
+  "Reduced coordinator tracking time by 40% through automated SLA visibility, no backend, no migration.",
   "Achieved 91% internal user satisfaction across all 11 MSTI staff in a post-launch survey.",
 ];
 
@@ -145,7 +145,7 @@ export default function CoffeeChatPage() {
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">DISCOVERY</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">Interviews first, build second</h2>
           <p className="font-body text-body text-neutral-500 leading-relaxed mb-4">
-            Before touching any tooling, I ran 7 structured stakeholder interviews over two weeks — 5 coordinators and 2 program directors. Each session followed the same script: "Walk me through how you handle a request from the moment it comes in to the moment feedback is collected." I was looking for where time was lost and where ownership broke down.
+            Before touching any tooling, I ran 7 structured stakeholder interviews over two weeks: 5 coordinators and 2 program directors. Each session followed the same script: "Walk me through how you handle a request from the moment it comes in to the moment feedback is collected." I was looking for where time was lost and where ownership broke down.
           </p>
           <p className="font-body text-body text-neutral-500 leading-relaxed mb-8">
             Findings clustered into three themes: <strong className="text-neutral-700">ownership ambiguity</strong> (no one knew who was responsible for what), <strong className="text-neutral-700">status vocabulary drift</strong> (14 unique variations of "intro email sent" across the sheet), and <strong className="text-neutral-700">SLA blindness</strong> (no deadlines, no escalation path). I synthesized these into a 2-page PRD that scoped the MVP: a read-layer dashboard on top of the existing Google Sheet, with standardized status stages, coordinator-level ownership views, and automated SLA flags.
@@ -156,7 +156,7 @@ export default function CoffeeChatPage() {
             {[
               { step: "01", label: "Discovery", desc: "7 stakeholder interviews, pain point mapping, jobs-to-be-done analysis" },
               { step: "02", label: "PRD", desc: "Requirements doc scoping MVP scope, success metrics, and out-of-scope decisions" },
-              { step: "03", label: "Build", desc: "Python + Streamlit + Google Sheets API — shipped iteratively with weekly coordinator feedback" },
+              { step: "03", label: "Build", desc: "Python + Streamlit + Google Sheets API, shipped iteratively with weekly coordinator feedback" },
               { step: "04", label: "Measure", desc: "Post-launch survey, tracking time logs, data quality audits at 1, 3, and 6 weeks" },
             ].map((s) => (
               <div key={s.step} className="border border-neutral-100 rounded-lg p-5 bg-[#f8fafc]">
@@ -227,7 +227,7 @@ export default function CoffeeChatPage() {
             </div>
           </div>
           <p className="font-body text-body text-neutral-500 leading-relaxed mb-4">
-            I built it in Streamlit backed by a Google Sheets API data source — no backend rip-and-replace required. Coordinators still edited the sheet; the dashboard read from it and layered intelligence on top using pandas for data normalization across the 14 inconsistent status string variants. Key features: coordinator-level ownership view so each person saw only their queue, a cross-coordinator admin view for the program director, bulk export for end-of-semester reporting, and a summary banner showing live counts of on-track vs. overdue requests.
+            I built it in Streamlit backed by a Google Sheets API data source, no backend rip-and-replace required. Coordinators still edited the sheet; the dashboard read from it and layered intelligence on top using pandas for data normalization across the 14 inconsistent status string variants. Key features: coordinator-level ownership view so each person saw only their queue, a cross-coordinator admin view for the program director, bulk export for end-of-semester reporting, and a summary banner showing live counts of on-track vs. overdue requests.
           </p>
 
           {/* Tech stack */}
@@ -236,8 +236,8 @@ export default function CoffeeChatPage() {
             <div className="grid grid-cols-2 gap-x-10 gap-y-3">
               {[
                 { tool: "Python + pandas", reason: "Data processing, SLA logic, status normalization across inconsistent string variants" },
-                { tool: "Streamlit", reason: "Dashboard UI — no frontend build step, rapid iteration with weekly coordinator feedback cycles" },
-                { tool: "Google Sheets API", reason: "Live data source — kept coordinators in their existing workflow, zero migration friction" },
+                { tool: "Streamlit", reason: "Dashboard UI: no frontend build step, rapid iteration with weekly coordinator feedback cycles" },
+                { tool: "Google Sheets API", reason: "Live data source: kept coordinators in their existing workflow, zero migration friction" },
                 { tool: "SQL", reason: "Ad hoc querying for weekly check-in reports and end-of-semester leadership summaries" },
               ].map((t) => (
                 <div key={t.tool} className="flex gap-3">
@@ -249,7 +249,7 @@ export default function CoffeeChatPage() {
           </div>
 
           <p className="font-body text-body text-neutral-500 leading-relaxed mb-8">
-            The biggest build decision: keep the Google Sheet as source of truth rather than migrating to a database. This was a deliberate scope call. Coordinators already lived in the sheet — forcing a tool switch would have tanked adoption before a single request was tracked. The PRD explicitly scoped this out. The dashboard was a read layer, not a replacement.
+            The biggest build decision: keep the Google Sheet as source of truth rather than migrating to a database. This was a deliberate scope call. Coordinators already lived in the sheet. Forcing a tool switch would have tanked adoption before a single request was tracked. The PRD explicitly scoped this out. The dashboard was a read layer, not a replacement.
           </p>
           <div className="w-full rounded-2xl overflow-hidden border border-neutral-200">
             <img

@@ -5,7 +5,7 @@ const meta = {
   tags: ["PRODUCT MANAGEMENT", "AI TOOLS", "2025"],
   title: "Drama Relationship Map",
   description:
-    "Acted as PM in a course-based developer marketplace to ship a spoiler-safe, AI-assisted character relationship board for cast-heavy dramas — from blank spec to live product.",
+    "Acted as PM in a course-based developer marketplace to ship a spoiler-safe, AI-assisted character relationship board for cast-heavy dramas, from blank spec to live product.",
   timeline: "Jan 2025 – Apr 2025",
   team: "UW MSTI",
   role: "Product Manager (Client)",
@@ -13,9 +13,9 @@ const meta = {
 };
 
 const highlights = [
-  "Wrote the full product spec and graph architecture before a line of code was shipped — locking the visual language (node size, edge color, spoiler filter) that made it into the final demo unchanged.",
+  "Wrote the full product spec and graph architecture before a line of code was shipped, locking the visual language (node size, edge color, spoiler filter) that made it into the final demo unchanged.",
   "Managed 3 milestone check-ins with developer Finnick Chen, reviewing PRs within 48 hours and making the key scope call that kept the demo tight and shippable.",
-  "One RedNote post one week after launch drove 21,000 users to the app — 4,448 likes, 3,351 saves, 464 comments — validating that the right channel was as important as the right product.",
+  "One RedNote post one week after launch drove 21,000 users to the app: 4,448 likes, 3,351 saves, 464 comments, validating that the right channel was as important as the right product.",
 ];
 
 export default function CharacterMapTrackerPage() {
@@ -113,8 +113,8 @@ export default function CharacterMapTrackerPage() {
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">PROBLEM</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">The spoiler trap</h2>
           <p className="font-body text-body text-neutral-500 leading-relaxed mb-4">
-            Viewers of cast-heavy dramas — prestige TV, multi-generational epics, reality competition
-            shows — run into the same problem constantly: they lose track of a character mid-episode,
+            Viewers of cast-heavy dramas (prestige TV, multi-generational epics, reality competition
+            shows) run into the same problem constantly: they lose track of a character mid-episode,
             pause to search for context, and accidentally see a spoiler in the first result. The search
             engine doesn&apos;t know where you are in the story. Every wiki, fan site, and recap assumes
             you&apos;ve seen everything.
@@ -122,7 +122,7 @@ export default function CharacterMapTrackerPage() {
           <p className="font-body text-body text-neutral-500 leading-relaxed">
             The gap was clear: there was no spoiler-safe, visual, interactive tool that showed you only
             the relationships you were supposed to know at your current point in the story. The product
-            opportunity was to build exactly that — and make it work for any show, not just one.
+            opportunity was to build exactly that and make it work for any show, not just one.
           </p>
         </div>
 
@@ -132,7 +132,7 @@ export default function CharacterMapTrackerPage() {
           <h2 className="font-sans font-semibold text-[22px] mb-4">The complex-drama viewer</h2>
           <p className="font-body text-body text-neutral-500 leading-relaxed mb-8">
             Not every drama watcher has this problem equally. I defined three distinct personas based on
-            the specific nature of their confusion — each with a different trigger and a different version
+            the specific nature of their confusion, each with a different trigger and a different version
             of the spoiler risk.
           </p>
 
@@ -141,7 +141,7 @@ export default function CharacterMapTrackerPage() {
               {
                 persona: "The Prestige TV Super-Fan",
                 shows: "Succession · The White Lotus · Industry · Shōgun",
-                pain: "These shows have massive ensembles where characters are related by blood, marriage, and corporate politics simultaneously. A single throwaway line can imply a major loyalty shift — and this user feels they're missing the subtext.",
+                pain: "These shows have massive ensembles where characters are related by blood, marriage, and corporate politics simultaneously. A single throwaway line can imply a major loyalty shift, and this user feels they're missing the subtext.",
                 trigger: "Mid-episode confusion",
               },
               {
@@ -171,7 +171,7 @@ export default function CharacterMapTrackerPage() {
           <p className="font-body text-body text-neutral-500 leading-relaxed">
             All three personas share a single underlying need: a way to check in on relationships without
             leaving the story further behind than they already are. The spoiler filter is what makes the
-            product usable for all three — without it, the app is just another wiki.
+            product usable for all three. Without it, the app is just another wiki.
           </p>
         </div>
 
@@ -182,20 +182,20 @@ export default function CharacterMapTrackerPage() {
           <p className="font-body text-body text-neutral-500 leading-relaxed mb-8">
             A PM should never build features based on a guess. I used a four-step research framework
             combining digital ethnography, qualitative interviews, prototype testing, and demand
-            validation — in that order. Each step either confirmed or sharpened the previous one.
+            validation, in that order. Each step either confirmed or sharpened the previous one.
           </p>
 
           {/* Step 1: Digital Ethnography */}
           <div className="mb-10">
             <div className="flex items-center gap-3 mb-4">
               <span className="text-[10px] font-mono text-neutral-300">01</span>
-              <p className="font-sans font-semibold text-[15px] text-neutral-800">Digital Ethnography — where fans already complain</p>
+              <p className="font-sans font-semibold text-[15px] text-neutral-800">Digital Ethnography: where fans already complain</p>
             </div>
             <p className="font-body text-body text-neutral-500 leading-relaxed mb-5">
               Before talking to anyone, I went to where drama viewers already express confusion publicly.
               On subreddits for Succession, House of the Dragon, and Dark, I found over 30 threads
               titled variations of &ldquo;can someone explain the family tree?&rdquo; or &ldquo;who is
-              working for who at this point?&rdquo; — each with hundreds of upvotes and dozens of replies.
+              working for who at this point?&rdquo;, each with hundreds of upvotes and dozens of replies.
               The top-voted responses were almost always fan-made graphics: color-coded flowcharts, family
               trees drawn in Google Slides, org-chart screenshots. Users were manually building the tool
               they needed every season.
@@ -204,12 +204,12 @@ export default function CharacterMapTrackerPage() {
               I also scanned App Store reviews for TV tracking apps (TV Time, Letterboxd). A recurring
               complaint: &ldquo;gives me cast info but always includes spoilers&rdquo; and &ldquo;no way
               to filter by how far I am in the show.&rdquo; Existing tools weren&apos;t solving for
-              spoiler-safe access — they were built for completionists, not people mid-rewatch.
+              spoiler-safe access. They were built for completionists, not people mid-rewatch.
             </p>
             <div className="grid grid-cols-3 gap-4">
               {[
                 { stat: "30+", label: "Reddit threads asking cast / relationship questions across drama subreddits" },
-                { stat: "Top answer", label: "Was always a fan-made visual — color-coded flowcharts, not text summaries" },
+                { stat: "Top answer", label: "Was always a fan-made visual: color-coded flowcharts, not text summaries" },
                 { stat: "3 apps", label: "Reviewed on App Store; all flagged for spoilers by users in lower-rated reviews" },
               ].map((s, i) => (
                 <div key={i} className="border-t border-neutral-200 pt-5">
@@ -224,15 +224,15 @@ export default function CharacterMapTrackerPage() {
           <div className="mb-10">
             <div className="flex items-center gap-3 mb-4">
               <span className="text-[10px] font-mono text-neutral-300">02</span>
-              <p className="font-sans font-semibold text-[15px] text-neutral-800">User Interviews — qualitative behavior, not opinions</p>
+              <p className="font-sans font-semibold text-[15px] text-neutral-800">User Interviews: qualitative behavior, not opinions</p>
             </div>
             <p className="font-body text-body text-neutral-500 leading-relaxed mb-5">
               I recruited 5 heavy drama watchers for 30-minute video interviews. The key rule: never ask
-              someone if they&apos;d like your idea — people lie to be polite. Instead, I asked only about
+              someone if they&apos;d like your idea. People lie to be polite. Instead, I asked only about
               past behavior. &ldquo;Tell me about a time you got confused while watching a show. What did
               you do in that exact moment?&rdquo; and &ldquo;Have you ever been spoiled while trying to
               look up a character? Walk me through how that happened.&rdquo; I also asked them to
-              screenshare and show me how they currently look something up mid-episode — watching them
+              screenshare and show me how they currently look something up mid-episode, watching them
               navigate in real time surfaced friction points no interview question would have.
             </p>
             <div className="grid grid-cols-3 gap-4 mb-5">
@@ -242,7 +242,7 @@ export default function CharacterMapTrackerPage() {
                   context: "Interview 2 · K-drama viewer",
                 },
                 {
-                  quote: "I paused House of the Dragon and Googled a character — the autocomplete showed me they get killed two episodes later.",
+                  quote: "I paused House of the Dragon and Googled a character. The autocomplete showed me they get killed two episodes later.",
                   context: "Interview 4 · Prestige TV viewer",
                 },
                 {
@@ -261,7 +261,7 @@ export default function CharacterMapTrackerPage() {
             <p className="font-body text-body text-neutral-500 leading-relaxed">
               Key finding: all 5 interviewees had paused a show to search in the past month. 4 out of 5
               had been spoiled at least once in the past year doing it. None were satisfied with any
-              existing tool — but all 5 had developed workarounds: screenshot bookmarks, notes apps,
+              existing tool, but all 5 had developed workarounds: screenshot bookmarks, notes apps,
               fan-made PDFs. Workarounds at scale are one of the clearest signals a real product gap exists.
             </p>
           </div>
@@ -270,16 +270,16 @@ export default function CharacterMapTrackerPage() {
           <div className="mb-10">
             <div className="flex items-center gap-3 mb-4">
               <span className="text-[10px] font-mono text-neutral-300">03</span>
-              <p className="font-sans font-semibold text-[15px] text-neutral-800">Low-Fi Prototype Testing — validate behavior, not preference</p>
+              <p className="font-sans font-semibold text-[15px] text-neutral-800">Low-Fi Prototype Testing: validate behavior, not preference</p>
             </div>
             <p className="font-body text-body text-neutral-500 leading-relaxed mb-5">
-              Before writing the SPEC, I built a clickable Miro board of the Succession Season 3 cast —
+              Before writing the SPEC, I built a clickable Miro board of the Succession Season 3 cast,
               character cards connected by labeled relationship lines, no interactivity, just a static
               visual map. I handed it to 5 testers with a specific task: &ldquo;Imagine you&apos;re about
               to start Episode 4. Use this to remind yourself who currently controls the board seats.&rdquo;
             </p>
             <p className="font-body text-body text-neutral-500 leading-relaxed mb-5">
-              What I watched for wasn&apos;t whether they liked it — it was what they tried to do. All 5
+              What I watched for wasn&apos;t whether they liked it. It was what they tried to do. All 5
               immediately tried to click the nodes. 3 out of 5 looked for a search bar. 2 found the
               unlabeled lines confusing and asked what the different line styles meant. These observations
               directly shaped three decisions in the SPEC: click-to-focus was a must-have (not a
@@ -288,7 +288,7 @@ export default function CharacterMapTrackerPage() {
             </p>
             <div className="grid grid-cols-3 gap-4">
               {[
-                { finding: "5/5 tried to click character nodes", implication: "Interactive nodes are not a nice-to-have — they're the expected default behavior" },
+                { finding: "5/5 tried to click character nodes", implication: "Interactive nodes are not a nice-to-have. They're the expected default behavior" },
                 { finding: "3/5 looked for a search or filter bar", implication: "Added search to must-have features; became the episode-progress filter in the final product" },
                 { finding: "2/5 confused by unlabeled lines", implication: "Locked the 6-type edge color vocabulary into the architecture before any code was written" },
               ].map((f, i) => (
@@ -304,11 +304,11 @@ export default function CharacterMapTrackerPage() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <span className="text-[10px] font-mono text-neutral-300">04</span>
-              <p className="font-sans font-semibold text-[15px] text-neutral-800">Smoke Test — validate demand before building</p>
+              <p className="font-sans font-semibold text-[15px] text-neutral-800">Smoke Test: validate demand before building</p>
             </div>
             <p className="font-body text-body text-neutral-500 leading-relaxed mb-5">
               The final check before committing to a build: I put up a one-page Carrd landing page
-              describing the product — &ldquo;The spoiler-free character map for complex dramas. Never
+              describing the product: &ldquo;The spoiler-free character map for complex dramas. Never
               get confused by family trees or corporate betrayals again.&rdquo; I added screenshots of
               the Figma mockups and a single CTA: &ldquo;Join the Beta Launch.&rdquo; I shared it in
               two drama-adjacent Discord communities and one Reddit thread.
@@ -316,7 +316,7 @@ export default function CharacterMapTrackerPage() {
             <p className="font-body text-body text-neutral-500 leading-relaxed mb-5">
               The benchmark for strong demand signal: a 15–20% email sign-up conversion rate from
               unique visitors. Over two weeks, the page received 212 unique visitors and collected 38
-              email sign-ups — an 18% conversion rate. That number, alongside the interview data and the
+              email sign-ups: an 18% conversion rate. That number, alongside the interview data and the
               Reddit pattern, gave me enough confidence to write a full SPEC rather than a scoped
               experiment.
             </p>
@@ -325,7 +325,7 @@ export default function CharacterMapTrackerPage() {
                 {[
                   { num: "212", label: "Unique visitors over 2 weeks" },
                   { num: "38", label: "Email sign-ups from the beta CTA" },
-                  { num: "18%", label: "Conversion rate — above the 15–20% strong-demand threshold" },
+                  { num: "18%", label: "Conversion rate: above the 15–20% strong-demand threshold" },
                 ].map((m, i) => (
                   <div key={i}>
                     <p className="font-sans font-light text-[2rem] leading-none text-black mb-1">{m.num}</p>
@@ -342,7 +342,7 @@ export default function CharacterMapTrackerPage() {
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">PROCESS</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">Spec before sprint</h2>
           <p className="font-body text-body text-neutral-500 leading-relaxed mb-4">
-            This project ran inside a course-based developer marketplace — I was the PM and client,
+            This project ran inside a course-based developer marketplace. I was the PM and client,
             Finnick Chen was the developer. Unlike a typical class project where you figure it out
             together, I had to come in with a real brief. Finnick&apos;s time was the resource. Wasted
             check-ins meant a worse product.
@@ -352,10 +352,10 @@ export default function CharacterMapTrackerPage() {
             product SPEC and an ARCHITECTURE doc. The SPEC covered the problem statement, five
             prioritized user stories derived directly from the interview findings, a must-have vs.
             nice-to-have feature split, and acceptance criteria specific enough to evaluate at a live
-            demo. The ARCHITECTURE doc went a level deeper — specifying the exact visual language for the
+            demo. The ARCHITECTURE doc went a level deeper: specifying the exact visual language for the
             graph (the same color vocabulary validated in prototype testing), the data schema with
             column-level notes, and three milestone check-ins with clear deliverables. Writing that
-            architecture document was one of the most PM-specific things I did on this project — it
+            architecture document was one of the most PM-specific things I did on this project, it
             translated user needs into engineering constraints so there was no ambiguity about what
             &ldquo;done&rdquo; looked like.
           </p>
@@ -366,7 +366,7 @@ export default function CharacterMapTrackerPage() {
               {
                 step: "01",
                 label: "Discovery",
-                desc: "Digital ethnography, 5 user interviews, low-fi prototype testing, smoke test landing page — all before writing a single requirement",
+                desc: "Digital ethnography, 5 user interviews, low-fi prototype testing, smoke test landing page, all before writing a single requirement",
               },
               {
                 step: "02",
@@ -381,7 +381,7 @@ export default function CharacterMapTrackerPage() {
               {
                 step: "04",
                 label: "Demo",
-                desc: "Live demo to class of 18 — Singles Inferno S5 curated board plus live AI generation for any show",
+                desc: "Live demo to class of 18: Singles Inferno S5 curated board plus live AI generation for any show",
               },
             ].map((s) => (
               <div key={s.step} className="border border-neutral-100 rounded-lg p-5 bg-[#f8fafc]">
@@ -400,7 +400,7 @@ export default function CharacterMapTrackerPage() {
                 {
                   decision: "Cut manual text paste from v1.",
                   reasoning:
-                    "Original spec included a flow where users paste raw story text and AI extracts characters. I scoped this to v2 — the LLM already knows popular dramas from training data, so typing a title was enough for a demo. This saved significant backend work and kept the milestone on track.",
+                    "Original spec included a flow where users paste raw story text and AI extracts characters. I scoped this to v2. The LLM already knows popular dramas from training data, so typing a title was enough for a demo. This saved significant backend work and kept the milestone on track.",
                 },
                 {
                   decision: "No user accounts or saved boards in v1.",
@@ -430,8 +430,8 @@ export default function CharacterMapTrackerPage() {
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">SOLUTION</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">A string board for any show</h2>
           <p className="font-body text-body text-neutral-500 leading-relaxed mb-6">
-            The product ships in two modes. First, a curated board — Singles Inferno Season 5, 12
-            characters, 23 relationship edges, episode-aware spoiler filtering. Second, an AI mode — type
+            The product ships in two modes. First, a curated board: Singles Inferno Season 5, 12 Season 5, 12
+            characters, 23 relationship edges, episode-aware spoiler filtering. Second, an AI mode: type
             any drama title, wait ~4 seconds, and a fresh cast graph renders using the same visual
             language. Both modes share the same interaction layer: draggable nodes, click-to-focus, a
             relationship detail panel, and PNG export.
@@ -445,9 +445,9 @@ export default function CharacterMapTrackerPage() {
                 <p className="font-sans font-semibold text-[13px] text-neutral-800 mb-3">Nodes (Characters)</p>
                 <div className="space-y-2">
                   {[
-                    { property: "Size", meaning: "Character importance — protagonist nodes are visibly larger than supporting or minor characters" },
-                    { property: "Color", meaning: "Faction or group — characters on the same side share a hue, making alliances immediately legible" },
-                    { property: "Avatar", meaning: "Cast headshot from TMDB — makes real-world characters recognizable on sight" },
+                    { property: "Size", meaning: "Character importance: protagonist nodes are visibly larger than supporting or minor characters" },
+                    { property: "Color", meaning: "Faction or group: characters on the same side share a hue, making alliances immediately legible" },
+                    { property: "Avatar", meaning: "Cast headshot from TMDB: makes real-world characters recognizable on sight" },
                   ].map((r) => (
                     <div key={r.property} className="flex gap-3">
                       <span className="text-[10px] font-mono text-teal-600 shrink-0 w-14 pt-0.5">{r.property}</span>
@@ -493,11 +493,11 @@ export default function CharacterMapTrackerPage() {
                 },
                 {
                   tool: "OpenAI-compatible API",
-                  reason: "Server-side AI generation — user types any show, gets back a structured cast + relationship graph in ~4 seconds",
+                  reason: "Server-side AI generation: user types any show, gets back a structured cast + relationship graph in ~4 seconds",
                 },
                 {
                   tool: "TMDB API",
-                  reason: "Cast headshots for known shows — makes character cards recognizable without any manual asset work",
+                  reason: "Cast headshots for known shows: makes character cards recognizable without any manual asset work",
                 },
                 {
                   tool: "Supabase",
@@ -505,7 +505,7 @@ export default function CharacterMapTrackerPage() {
                 },
                 {
                   tool: "Zod",
-                  reason: "Validates every AI response before a DB write — protects against malformed JSON from the LLM",
+                  reason: "Validates every AI response before a DB write: protects against malformed JSON from the LLM",
                 },
               ].map((t) => (
                 <div key={t.tool} className="flex gap-3">
@@ -521,11 +521,11 @@ export default function CharacterMapTrackerPage() {
             <div className="grid grid-cols-2 gap-6 items-center">
               <div>
                 <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">CURATED DEMO</p>
-                <h3 className="font-sans font-semibold text-[18px] mb-3">Singles Inferno S5 — pre-loaded and episode-aware</h3>
+                <h3 className="font-sans font-semibold text-[18px] mb-3">Singles Inferno S5: pre-loaded and episode-aware</h3>
                 <p className="font-body text-body text-neutral-500 leading-relaxed">
                   12 cast members, 23 relationship edges, and full episode-progress filtering built in.
                   The demo was chosen specifically because Singles Inferno was trending on RedNote at
-                  launch — the audience already knew the cast, which made the board immediately legible
+                  launch, the audience already knew the cast, which made the board immediately legible
                   and shareable without any explanation.
                 </p>
               </div>
@@ -544,11 +544,11 @@ export default function CharacterMapTrackerPage() {
             {[
               {
                 label: "AI Cast Generation",
-                desc: "Type any show title — the app sends a structured prompt to the LLM, validates the response with Zod, and renders the full cast graph. Average time: ~4 seconds.",
+                desc: "Type any show title. The app sends a structured prompt to the LLM, validates the response with Zod, and renders the full cast graph. Average time: ~4 seconds.",
               },
               {
                 label: "Spoiler-Safe Filter",
-                desc: "Slide to your current episode. Characters introduced later disappear from the board entirely — absent nodes don't hint that someone exists.",
+                desc: "Slide to your current episode. Characters introduced later disappear from the board entirely. Absent nodes don't hint that someone exists.",
               },
               {
                 label: "Click-to-Focus",
@@ -572,7 +572,7 @@ export default function CharacterMapTrackerPage() {
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">IMPACT</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">From course project to 21K users</h2>
           <p className="font-body text-body text-neutral-500 leading-relaxed mb-4">
-            The course demo went well — highest functionality score (5/5), two classmates called out the
+            The course demo went well: highest functionality score (5/5), two classmates called out the
             visual interaction design by name. But the real story happened after the class ended. One
             RedNote post a week after launch drove 21,000 users to the app and made it clear we had
             built something with genuine market demand, not just a good class project.
@@ -583,7 +583,7 @@ export default function CharacterMapTrackerPage() {
             {[
               { num: "21K", label: "Users within the first week of launch" },
               { num: "4,448", label: "Likes on the RedNote launch post" },
-              { num: "3,351", label: "Saves — the highest-signal engagement metric on RedNote" },
+              { num: "3,351", label: "Saves: the highest-signal engagement metric on RedNote" },
               { num: "464", label: "Comments, mostly tagging friends to try it" },
             ].map((m, i) => (
               <div key={i} className="border-t border-neutral-200 pt-6">
@@ -597,19 +597,19 @@ export default function CharacterMapTrackerPage() {
         {/* Section 5: Go-to-Market */}
         <div className="mb-16">
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">GO-TO-MARKET</p>
-          <h2 className="font-sans font-semibold text-[22px] mb-4">Why RedNote — and why it worked</h2>
+          <h2 className="font-sans font-semibold text-[22px] mb-4">Why RedNote worked</h2>
           <p className="font-body text-body text-neutral-500 leading-relaxed mb-4">
             Choosing RedNote (小红书) as the launch channel wasn&apos;t arbitrary. It came from the same
             research process that shaped the product: go to where the audience already is and observe
             what they&apos;re doing. What I found was that Chinese drama audiences don&apos;t just watch
-            shows — they document them. Fan-made 人物关系图 (character relationship charts) are a
+            shows. They document them. Fan-made 人物关系图 (character relationship charts) are a
             native cultural artifact on Chinese platforms. Chinese TV productions often officially
             release their own relationship charts before a season premieres. The audience already
             understood exactly what the product was the moment they saw it.
           </p>
           <p className="font-body text-body text-neutral-500 leading-relaxed mb-8">
             RedNote&apos;s format did the rest. With 300M+ monthly active users skewing female aged
-            18–35 — the exact demographic that drives K-drama and C-drama fandom — and a visual-first
+            18–35, the exact demographic that drives K-drama and C-drama fandom, and a visual-first
             feed where saves carry more algorithmic weight than likes, a single high-quality post
             showing the board in action had real distribution potential. Singles Inferno (단신지옥 /
             单身地狱) was already trending on the platform when we launched, which meant the demo
@@ -623,11 +623,11 @@ export default function CharacterMapTrackerPage() {
               {[
                 {
                   title: "人物关系图 is already cultural",
-                  body: "Character relationship charts are a native concept in Chinese drama culture. Official production companies release them. Fans redraw them every episode. The product didn't need to explain itself — it just needed to be better than a PNG in a group chat.",
+                  body: "Character relationship charts are a native concept in Chinese drama culture. Official production companies release them. Fans redraw them every episode. The product didn't need to explain itself. It just needed to be better than a PNG in a group chat.",
                 },
                 {
                   title: "RedNote's save mechanic rewards visual tools",
-                  body: "On RedNote, saves (收藏) signal intent to return — more valuable than a like. A tool users want to reference again and again is exactly the type of content that gets saved, and saved content gets distributed. 3,351 saves in one week validated the repeat-use model.",
+                  body: "On RedNote, saves (收藏) signal intent to return, more valuable than a like. A tool users want to reference again and again is exactly the type of content that gets saved, and saved content gets distributed. 3,351 saves in one week validated the repeat-use model.",
                 },
                 {
                   title: "K-drama fandoms are massive and organized",
@@ -635,7 +635,7 @@ export default function CharacterMapTrackerPage() {
                 },
                 {
                   title: "RedNote drives referral behavior naturally",
-                  body: "The comment section on the post was almost entirely users tagging friends: '你看这个' ('look at this'). The visual nature of the board — character photos, colored relationship lines — made it highly shareable in screenshots without even clicking through.",
+                  body: "The comment section on the post was almost entirely users tagging friends: '你看这个' ('look at this'). The visual nature of the board (character photos, colored relationship lines) made it highly shareable in screenshots without even clicking through.",
                 },
               ].map((item, i) => (
                 <div key={i}>
@@ -689,7 +689,7 @@ export default function CharacterMapTrackerPage() {
           <p className="font-body text-body text-neutral-500 leading-relaxed mb-8">
             The main thing I&apos;d do differently on the product side: I scoped out user text paste too
             early. During the demo and in the RedNote comments, the most common request was support for
-            shows the AI didn&apos;t know — niche dramas, current-season reality TV, novels. The LLM
+            shows the AI didn&apos;t know: niche dramas, current-season reality TV, novels. The LLM
             generation works brilliantly for popular titles but fails for anything outside its training
             data. Text paste would have closed that gap and made the product meaningfully more useful for
             the long tail of the audience that showed up.
@@ -700,15 +700,15 @@ export default function CharacterMapTrackerPage() {
               {[
                 {
                   title: "Architecture docs are a PM deliverable.",
-                  body: "Writing the ARCHITECTURE doc forced me to translate user needs into engineering constraints before a line of code was written. It made every check-in faster — there was always a shared reference to compare against.",
+                  body: "Writing the ARCHITECTURE doc forced me to translate user needs into engineering constraints before a line of code was written. It made every check-in faster because there was always a shared reference to compare against.",
                 },
                 {
                   title: "Scope calls age. Revisit them.",
-                  body: "Cutting text paste felt right at week 2. By launch week it was clearly the most-requested feature. Good scope management means defending the right cuts — but also recognizing when real user signal contradicts an early assumption.",
+                  body: "Cutting text paste felt right at week 2. By launch week it was clearly the most-requested feature. Good scope management means defending the right cuts, but also recognizing when real user signal contradicts an early assumption.",
                 },
                 {
                   title: "Channel is a product decision.",
-                  body: "Choosing RedNote wasn&apos;t a marketing afterthought — it came from the same user research that shaped the product. The audience, the format, and the content all aligned. Distribution deserves the same rigor as the feature set.",
+                  body: "Choosing RedNote wasn&apos;t a marketing afterthought. It came from the same user research that shaped the product. The audience, the format, and the content all aligned. Distribution deserves the same rigor as the feature set.",
                 },
               ].map((l, i) => (
                 <div key={i}>

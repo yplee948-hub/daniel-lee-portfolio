@@ -32,7 +32,7 @@ const work: WorkItem[] = [
   {
     title: "Drama Relationship Map",
     tags: ["PRODUCT MANAGEMENT", "AI TOOLS", "2025"],
-    description: "PM'd a spoiler-safe, AI-assisted character relationship board for cast-heavy dramas — from blank spec to live product at charactermap.vercel.app.",
+    description: "PM'd a spoiler-safe, AI-assisted character relationship board for cast-heavy dramas, from blank spec to live product at charactermap.vercel.app.",
     cardBg: "#d0f0ec",
     href: "/character-map-tracker",
   },
