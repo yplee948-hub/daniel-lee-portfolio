@@ -516,6 +516,29 @@ export default function CharacterMapTrackerPage() {
             </div>
           </div>
 
+          {/* Singles Inferno demo showcase */}
+          <div className="mb-8">
+            <div className="grid grid-cols-2 gap-6 items-center">
+              <div>
+                <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">CURATED DEMO</p>
+                <h3 className="font-sans font-semibold text-[18px] mb-3">Singles Inferno S5 — pre-loaded and episode-aware</h3>
+                <p className="font-body text-body text-neutral-500 leading-relaxed">
+                  12 cast members, 23 relationship edges, and full episode-progress filtering built in.
+                  The demo was chosen specifically because Singles Inferno was trending on RedNote at
+                  launch — the audience already knew the cast, which made the board immediately legible
+                  and shareable without any explanation.
+                </p>
+              </div>
+              <div className="rounded-2xl overflow-hidden border border-neutral-200">
+                <img
+                  src="/images/singles-inferno-poster.png"
+                  alt="Singles Inferno Season 5 Netflix poster"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+          </div>
+
           {/* Feature grid */}
           <div className="grid grid-cols-2 gap-4">
             {[
@@ -623,21 +646,38 @@ export default function CharacterMapTrackerPage() {
             </div>
           </div>
 
-          {/* RedNote post metrics callout */}
-          <div className="bg-neutral-950 rounded-xl px-8 py-7 mb-8">
-            <p className="text-[9px] tracking-widest uppercase text-neutral-500 mb-5">REDNOTE POST PERFORMANCE · WEEK 1</p>
-            <div className="grid grid-cols-3 gap-8">
-              {[
-                { num: "4,448", label: "❤️  Likes", sub: "Top signal of reach" },
-                { num: "3,351", label: "⭐  Saves", sub: "Highest-intent action on the platform" },
-                { num: "464", label: "💬  Comments", sub: "Mostly friend tags and show requests" },
-              ].map((m, i) => (
-                <div key={i}>
-                  <p className="font-sans font-light text-[2rem] leading-none text-white mb-1">{m.num}</p>
-                  <p className="text-[11px] text-neutral-300 mb-0.5">{m.label}</p>
-                  <p className="text-[10px] text-neutral-500">{m.sub}</p>
-                </div>
-              ))}
+          {/* RedNote post screenshot + metrics */}
+          <div className="grid grid-cols-2 gap-8 items-start mb-8">
+            <div>
+              <div className="rounded-2xl overflow-hidden border border-neutral-200" style={{ maxWidth: "320px" }}>
+                <img
+                  src="/images/charactertracker.png"
+                  alt="RedNote post for Drama Relationship Map showing 4,448 likes, 3,351 saves, 464 comments"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <p className="font-body text-body text-neutral-400 mt-3 tracking-wide text-[11px]">
+                The RedNote launch post · one week after shipping
+              </p>
+            </div>
+            <div className="bg-neutral-950 rounded-xl px-7 py-7 self-start">
+              <p className="text-[9px] tracking-widest uppercase text-neutral-500 mb-5">POST PERFORMANCE · WEEK 1</p>
+              <div className="space-y-5">
+                {[
+                  { num: "4,448", label: "❤️  Likes", sub: "Top signal of reach" },
+                  { num: "3,351", label: "⭐  Saves", sub: "Highest-intent action on the platform" },
+                  { num: "464", label: "💬  Comments", sub: "Mostly friend tags and show requests" },
+                  { num: "21K", label: "👤  Users", sub: "Total app users driven within one week" },
+                ].map((m, i) => (
+                  <div key={i} className="flex items-baseline gap-4">
+                    <p className="font-sans font-light text-[1.6rem] leading-none text-white shrink-0 w-20">{m.num}</p>
+                    <div>
+                      <p className="text-[11px] text-neutral-300">{m.label}</p>
+                      <p className="text-[10px] text-neutral-500">{m.sub}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
