@@ -235,7 +235,7 @@ export default function CharacterMapTrackerPage() {
               screenshare and show me how they currently look something up mid-episode, watching them
               navigate in real time surfaced friction points no interview question would have.
             </p>
-            <div className="grid grid-cols-3 gap-4 mb-5">
+            <div className="grid grid-cols-3 gap-4 mb-5 items-stretch">
               {[
                 {
                   quote: "I just want to know if they're related. Not if they die.",
@@ -250,11 +250,18 @@ export default function CharacterMapTrackerPage() {
                   context: "Interview 5 · Hiatus binger",
                 },
               ].map((q, i) => (
-                <div key={i} className="border border-neutral-100 rounded-lg p-5 bg-[#f8fafc]">
-                  <p className="font-body text-body text-neutral-700 leading-relaxed mb-3 italic">
-                    &ldquo;{q.quote}&rdquo;
+                <div
+                  key={i}
+                  className="border border-neutral-100 rounded-lg p-5 bg-[#f8fafc] flex flex-col min-h-[200px]"
+                >
+                  <div className="flex flex-1 items-center justify-center">
+                    <p className="font-body text-body text-neutral-700 leading-relaxed italic text-center">
+                      &ldquo;{q.quote}&rdquo;
+                    </p>
+                  </div>
+                  <p className="text-[9px] tracking-widest uppercase text-neutral-400 pt-4 shrink-0 w-full">
+                    {q.context}
                   </p>
-                  <p className="text-[9px] tracking-widest uppercase text-neutral-400">{q.context}</p>
                 </div>
               ))}
             </div>
