@@ -15,7 +15,7 @@ const meta = {
 const highlights = [
   "Wrote the full product spec and graph architecture before a line of code was shipped — locking the visual language (node size, edge color, spoiler filter) that made it into the final demo unchanged.",
   "Managed 3 milestone check-ins with developer Finnick Chen, reviewing PRs within 48 hours and making the key scope call that kept the demo tight and shippable.",
-  "Shipped live at charactermap.vercel.app — AI generates a full cast graph for any show in under 4 seconds, with Singles Inferno S5 pre-loaded as a curated 12-character demo.",
+  "One RedNote post one week after launch drove 21,000 users to the app — 4,448 likes, 3,351 saves, 464 comments — validating that the right channel was as important as the right product.",
 ];
 
 export default function CharacterMapTrackerPage() {
@@ -545,31 +545,23 @@ export default function CharacterMapTrackerPage() {
         </div>
 
         {/* Section 4: Impact */}
-        <div className="mb-20">
+        <div className="mb-16">
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">IMPACT</p>
-          <h2 className="font-sans font-semibold text-[22px] mb-4">From assignment to live product</h2>
+          <h2 className="font-sans font-semibold text-[22px] mb-4">From course project to 21K users</h2>
           <p className="font-body text-body text-neutral-500 leading-relaxed mb-4">
-            We demoed to a class of 18 students and the course instructor. The live AI generation — type a
-            show name and watch a graph appear — landed well; several classmates tried it with shows
-            they were watching. The course review gave us the highest functionality score (5/5). Two
-            classmates called out the visual interaction design by name in their feedback.
-          </p>
-          <p className="font-body text-body text-neutral-500 leading-relaxed mb-8">
-            The main thing I&apos;d do differently: I scoped out user text paste too early. During the demo,
-            multiple people asked if they could paste a book passage to generate a map of a novel with a
-            smaller cast. That use case was closer to the original problem statement than I&apos;d realized —
-            the LLM generation works for popular shows, but fails for niche dramas or current-season
-            reality TV the model doesn&apos;t know yet. Keeping text-paste as a v2 was the right call for
-            the timeline, but it would have made the product meaningfully more useful.
+            The course demo went well — highest functionality score (5/5), two classmates called out the
+            visual interaction design by name. But the real story happened after the class ended. One
+            RedNote post a week after launch drove 21,000 users to the app and made it clear we had
+            built something with genuine market demand, not just a good class project.
           </p>
 
-          {/* Metrics */}
-          <div className="grid grid-cols-4 gap-6 mb-10">
+          {/* Top-level metrics */}
+          <div className="grid grid-cols-4 gap-6 mb-16">
             {[
-              { num: "5/5", label: "Functionality score in course peer review" },
-              { num: "12", label: "Characters in the Singles Inferno S5 curated demo" },
-              { num: "~4s", label: "Average time to generate a full cast graph via AI" },
-              { num: "3/3", label: "Check-in milestones delivered on schedule" },
+              { num: "21K", label: "Users within the first week of launch" },
+              { num: "4,448", label: "Likes on the RedNote launch post" },
+              { num: "3,351", label: "Saves — the highest-signal engagement metric on RedNote" },
+              { num: "464", label: "Comments, mostly tagging friends to try it" },
             ].map((m, i) => (
               <div key={i} className="border-t border-neutral-200 pt-6">
                 <p className="font-sans font-light text-[2.5rem] leading-none text-black mb-2">{m.num}</p>
@@ -577,19 +569,106 @@ export default function CharacterMapTrackerPage() {
               </div>
             ))}
           </div>
+        </div>
 
-          {/* Learnings */}
-          <div className="rounded-xl border border-neutral-100 bg-[#f8fafc] px-8 py-7">
-            <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-5">WHAT I&apos;D CARRY FORWARD</p>
+        {/* Section 5: Go-to-Market */}
+        <div className="mb-16">
+          <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">GO-TO-MARKET</p>
+          <h2 className="font-sans font-semibold text-[22px] mb-4">Why RedNote — and why it worked</h2>
+          <p className="font-body text-body text-neutral-500 leading-relaxed mb-4">
+            Choosing RedNote (小红书) as the launch channel wasn&apos;t arbitrary. It came from the same
+            research process that shaped the product: go to where the audience already is and observe
+            what they&apos;re doing. What I found was that Chinese drama audiences don&apos;t just watch
+            shows — they document them. Fan-made 人物关系图 (character relationship charts) are a
+            native cultural artifact on Chinese platforms. Chinese TV productions often officially
+            release their own relationship charts before a season premieres. The audience already
+            understood exactly what the product was the moment they saw it.
+          </p>
+          <p className="font-body text-body text-neutral-500 leading-relaxed mb-8">
+            RedNote&apos;s format did the rest. With 300M+ monthly active users skewing female aged
+            18–35 — the exact demographic that drives K-drama and C-drama fandom — and a visual-first
+            feed where saves carry more algorithmic weight than likes, a single high-quality post
+            showing the board in action had real distribution potential. Singles Inferno (단신지옥 /
+            单身地狱) was already trending on the platform when we launched, which meant the demo
+            content matched what the audience was actively searching for.
+          </p>
+
+          {/* Why Chinese audiences block */}
+          <div className="rounded-xl border border-neutral-100 bg-[#f8fafc] px-8 py-7 mb-8">
+            <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-5">WHY CHINESE AUDIENCES WERE THE RIGHT FIRST MARKET</p>
             <div className="grid grid-cols-2 gap-6">
               {[
                 {
-                  title: "Architecture docs are a PM deliverable, not just dev scaffolding.",
-                  body: "Writing the ARCHITECTURE doc forced me to translate user needs into specific, evaluable engineering constraints. It removed ambiguity before it became a problem and made check-ins faster because there was always a shared reference to compare against.",
+                  title: "人物关系图 is already cultural",
+                  body: "Character relationship charts are a native concept in Chinese drama culture. Official production companies release them. Fans redraw them every episode. The product didn't need to explain itself — it just needed to be better than a PNG in a group chat.",
                 },
                 {
-                  title: "Scope calls age. Revisit them at each milestone.",
-                  body: "Cutting text paste felt right at week 2. By the demo it was clearly the feature most people wanted. Good scope management means defending the right cuts — but also recognizing when real user signal contradicts a week-2 assumption.",
+                  title: "RedNote's save mechanic rewards visual tools",
+                  body: "On RedNote, saves (收藏) signal intent to return — more valuable than a like. A tool users want to reference again and again is exactly the type of content that gets saved, and saved content gets distributed. 3,351 saves in one week validated the repeat-use model.",
+                },
+                {
+                  title: "K-drama fandoms are massive and organized",
+                  body: "Chinese K-drama fans are among the most engaged in the world. Singles Inferno S5 had millions of views across Chinese platforms the week it dropped. Launching with a pre-built S5 demo meant the app was immediately useful to an audience that was actively watching.",
+                },
+                {
+                  title: "RedNote drives referral behavior naturally",
+                  body: "The comment section on the post was almost entirely users tagging friends: '你看这个' ('look at this'). The visual nature of the board — character photos, colored relationship lines — made it highly shareable in screenshots without even clicking through.",
+                },
+              ].map((item, i) => (
+                <div key={i}>
+                  <p className="font-sans font-semibold text-[13px] text-neutral-800 mb-2">{item.title}</p>
+                  <p className="text-[11px] text-neutral-500 leading-relaxed">{item.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* RedNote post metrics callout */}
+          <div className="bg-neutral-950 rounded-xl px-8 py-7 mb-8">
+            <p className="text-[9px] tracking-widest uppercase text-neutral-500 mb-5">REDNOTE POST PERFORMANCE · WEEK 1</p>
+            <div className="grid grid-cols-3 gap-8">
+              {[
+                { num: "4,448", label: "❤️  Likes", sub: "Top signal of reach" },
+                { num: "3,351", label: "⭐  Saves", sub: "Highest-intent action on the platform" },
+                { num: "464", label: "💬  Comments", sub: "Mostly friend tags and show requests" },
+              ].map((m, i) => (
+                <div key={i}>
+                  <p className="font-sans font-light text-[2rem] leading-none text-white mb-1">{m.num}</p>
+                  <p className="text-[11px] text-neutral-300 mb-0.5">{m.label}</p>
+                  <p className="text-[10px] text-neutral-500">{m.sub}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Section 6: Learnings */}
+        <div className="mb-20">
+          <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">LEARNINGS</p>
+          <h2 className="font-sans font-semibold text-[22px] mb-4">What this changed about how I think about PM</h2>
+          <p className="font-body text-body text-neutral-500 leading-relaxed mb-8">
+            The main thing I&apos;d do differently on the product side: I scoped out user text paste too
+            early. During the demo and in the RedNote comments, the most common request was support for
+            shows the AI didn&apos;t know — niche dramas, current-season reality TV, novels. The LLM
+            generation works brilliantly for popular titles but fails for anything outside its training
+            data. Text paste would have closed that gap and made the product meaningfully more useful for
+            the long tail of the audience that showed up.
+          </p>
+          <div className="rounded-xl border border-neutral-100 bg-[#f8fafc] px-8 py-7">
+            <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-5">WHAT I&apos;D CARRY FORWARD</p>
+            <div className="grid grid-cols-3 gap-6">
+              {[
+                {
+                  title: "Architecture docs are a PM deliverable.",
+                  body: "Writing the ARCHITECTURE doc forced me to translate user needs into engineering constraints before a line of code was written. It made every check-in faster — there was always a shared reference to compare against.",
+                },
+                {
+                  title: "Scope calls age. Revisit them.",
+                  body: "Cutting text paste felt right at week 2. By launch week it was clearly the most-requested feature. Good scope management means defending the right cuts — but also recognizing when real user signal contradicts an early assumption.",
+                },
+                {
+                  title: "Channel is a product decision.",
+                  body: "Choosing RedNote wasn&apos;t a marketing afterthought — it came from the same user research that shaped the product. The audience, the format, and the content all aligned. Distribution deserves the same rigor as the feature set.",
                 },
               ].map((l, i) => (
                 <div key={i}>
