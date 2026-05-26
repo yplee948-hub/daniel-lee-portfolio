@@ -112,21 +112,6 @@ export default function SundaeSillockPage() {
           </p>
           <div className="w-full rounded-2xl bg-[#e7bf97]" style={{ height: "360px" }} />
         </div>
-
-        {/* Next up */}
-        <div className="border-t border-neutral-200 pt-12">
-          <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-6">NEXT UP…</p>
-          <a href="/government-portal" className="group flex items-center justify-between">
-            <div>
-              <p className="font-body text-body text-neutral-400 mb-1">PROGRAM MANAGER · 2023</p>
-              <h3 className="font-sans font-semibold text-[22px] group-hover:opacity-60 transition-opacity">
-                Government Employment Portal →
-              </h3>
-            </div>
-            <div className="w-24 h-16 rounded-xl bg-[#d4e8d4] shrink-0 ml-8" />
-          </a>
-        </div>
-
       </main>
 
     </>

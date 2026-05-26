@@ -112,21 +112,6 @@ export default function StakeholderDashboardPage() {
           </p>
           <div className="w-full rounded-2xl bg-[#edadcc]" style={{ height: "360px" }} />
         </div>
-
-        {/* Next up */}
-        <div className="border-t border-neutral-200 pt-12">
-          <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-6">NEXT UP…</p>
-          <a href="/sundae-sillock" className="group flex items-center justify-between">
-            <div>
-              <p className="font-body text-body text-neutral-400 mb-1">PROJECT MANAGER · 2024</p>
-              <h3 className="font-sans font-semibold text-[22px] group-hover:opacity-60 transition-opacity">
-                Sundae Sillock Growth →
-              </h3>
-            </div>
-            <div className="w-24 h-16 rounded-xl bg-[#fce8d4] shrink-0 ml-8" />
-          </a>
-        </div>
-
       </main>
 
     </>
