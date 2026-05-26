@@ -89,7 +89,7 @@ export default function GovernmentPortalPage() {
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">CONTEXT</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">Launching a government-scale product</h2>
           <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-8">
-            [Placeholder — describe the portal, the government initiative behind it, and the stakes of getting onboarding right at scale.]
+            [Placeholder: describe the portal, the government initiative behind it, and the stakes of getting onboarding right at scale.]
           </p>
           <div className="w-full rounded-2xl bg-[#c2dcc2]" style={{ height: "360px" }} />
         </div>
@@ -99,7 +99,7 @@ export default function GovernmentPortalPage() {
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">PROCESS</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">Redesigning the onboarding flow</h2>
           <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-8">
-            [Placeholder — walk through how you identified drop-off points, what changes were made to the onboarding process, and how you coordinated with government stakeholders.]
+            [Placeholder: walk through how you identified drop-off points, what changes were made to the onboarding process, and how you coordinated with government stakeholders.]
           </p>
           <div className="w-full rounded-2xl bg-[#b0d0b0]" style={{ height: "360px" }} />
         </div>
@@ -109,7 +109,7 @@ export default function GovernmentPortalPage() {
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">IMPACT</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">35% more applications completed</h2>
           <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-8">
-            [Placeholder — share the before/after data, what the completion rate improvement meant for real citizens, and key takeaways from working in the public sector.]
+            [Placeholder: share the before/after data, what the completion rate improvement meant for real citizens, and key takeaways from working in the public sector.]
           </p>
           <div className="w-full rounded-2xl bg-[#9ec49e]" style={{ height: "360px" }} />
         </div>

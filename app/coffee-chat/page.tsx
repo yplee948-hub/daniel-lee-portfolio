@@ -89,7 +89,7 @@ export default function CoffeeChatPage() {
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">LIVE PRODUCT</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">See it in action</h2>
           <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-6">
-            The dashboard shipped in Spring 2025 and is actively used by the MSTI program team. It reads from a live Google Sheet and updates in real time — no backend required. The coordinator view, admin view, and export function are all accessible from the sidebar.
+            The dashboard shipped in Spring 2025 and is actively used by the MSTI program team. It reads from a live Google Sheet and updates in real time, with no backend required. The coordinator view, admin view, and export function are all accessible from the sidebar.
           </p>
           <a
             href="https://coffeechat-dashboard-git-main-yplee948-hubs-projects.vercel.app/"
@@ -101,15 +101,15 @@ export default function CoffeeChatPage() {
           </a>
         </div>
 
-        {/* Section 1 — Problem */}
+        {/* Section 1: Problem */}
         <div className="mb-16">
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">PROBLEM</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">The Excel tracker wasn&apos;t working</h2>
           <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-4">
-            The MSTI coffee chat program ran on a shared Google Sheet maintained by 5 coordinators. Each row was a student request — name, industry of interest, preferred timeline, and a manually typed status like "assigned" or "email sent." When the program was small, this worked. At 106+ requests per semester, it collapsed.
+            The MSTI coffee chat program ran on a shared Google Sheet maintained by 5 coordinators. Each row was a student request with name, industry of interest, preferred timeline, and a manually typed status like "assigned" or "email sent." When the program was small, this worked. At 106+ requests per semester, it collapsed.
           </p>
           <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-4">
-            The core problems: coordinators had no way to see who owned what. Status updates were inconsistent — one person wrote "intro sent," another wrote "emailed," another left it blank. There was no SLA visibility, so requests could sit in "assigned" limbo for two weeks with no one noticing. An estimated 8–12 requests per semester were simply dropped — students who submitted never heard back.
+            The core problems: coordinators had no way to see who owned what. Status updates were inconsistent. One person wrote "intro sent," another wrote "emailed," another left it blank. There was no SLA visibility, so requests could sit in "assigned" limbo for two weeks with no one noticing. An estimated 8–12 requests per semester were simply dropped. Students who submitted never heard back.
           </p>
           <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-8">
             The biggest pain point surfaced in a coordinator interview: <em className="text-neutral-700">"I spend 20 minutes every Monday just figuring out what I'm supposed to be doing."</em> That was the problem worth solving.
@@ -125,7 +125,7 @@ export default function CoffeeChatPage() {
                   className="w-full h-full object-cover object-top"
                 />
               </div>
-              <p className="font-body text-body text-neutral-400 mt-3 tracking-wide">Student intake form — each submission became a row in the shared tracker</p>
+              <p className="font-body text-body text-neutral-400 mt-3 tracking-wide">Student intake form. Each submission became a row in the shared tracker</p>
             </div>
             <div>
               <div className="w-full rounded-2xl overflow-hidden border border-neutral-200" style={{ height: "420px" }}>
@@ -135,17 +135,17 @@ export default function CoffeeChatPage() {
                   className="w-full h-full object-cover object-top"
                 />
               </div>
-              <p className="font-body text-body text-neutral-400 mt-3 tracking-wide">Original Google Sheet tracker — 5 coordinators, no ownership column, no SLA visibility</p>
+              <p className="font-body text-body text-neutral-400 mt-3 tracking-wide">Original Google Sheet tracker with 5 coordinators, no ownership column, and no SLA visibility</p>
             </div>
           </div>
         </div>
 
-        {/* Section 2 — Solution */}
+        {/* Section 2: Solution */}
         <div className="mb-16">
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">SOLUTION</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">Building the dashboard</h2>
           <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-6">
-            I rebuilt the system around a single core model: every request moves through four explicit stages, each with a hard SLA deadline. The dashboard flags anything overdue in red, approaching in amber — automatically.
+            I rebuilt the system around a single core model: every request moves through four explicit stages, each with a hard SLA deadline. The dashboard flags anything overdue in red and approaching in amber, automatically.
           </p>
 
           {/* Lifecycle pipeline visual */}
@@ -159,23 +159,23 @@ export default function CoffeeChatPage() {
               {/* Pending line (steps 2→3, gray) */}
               <div className="absolute top-1/2 h-[2px] bg-[#d4dfe9] -translate-y-1/2" style={{ left: "calc(66.67% + 1rem)", right: "1rem" }} />
 
-              {/* Step 1 — done */}
+              {/* Step 1: done */}
               <div className="relative z-10 w-8 h-8 rounded-full flex items-center justify-center bg-[#1d4ed8] border-2 border-[#1d4ed8]">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
                   <path d="M2 6l2.5 2.5 5.5-5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
-              {/* Step 2 — done */}
+              {/* Step 2: done */}
               <div className="relative z-10 w-8 h-8 rounded-full flex items-center justify-center bg-[#1d4ed8] border-2 border-[#1d4ed8]">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
                   <path d="M2 6l2.5 2.5 5.5-5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
-              {/* Step 3 — overdue */}
+              {/* Step 3: overdue */}
               <div className="relative z-10 w-8 h-8 rounded-full flex items-center justify-center bg-white border-2 border-[#ef4444]">
                 <div className="w-2.5 h-2.5 rounded-full bg-[#ef4444]" />
               </div>
-              {/* Step 4 — pending */}
+              {/* Step 4: pending */}
               <div className="relative z-10 w-8 h-8 rounded-full flex items-center justify-center bg-[#eaeff5] border-2 border-[#d4dfe9]" />
             </div>
 
@@ -199,10 +199,10 @@ export default function CoffeeChatPage() {
             </div>
           </div>
           <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-4">
-            I built it in Streamlit backed by a Google Sheets data source (no backend rip-and-replace — coordinators still edited the sheet, the dashboard just read from it and layered intelligence on top). Key features: coordinator-level ownership view so each person saw only their queue, a cross-coordinator admin view for the program director, bulk export for end-of-semester reporting, and a summary banner showing live counts of how many requests were on-track vs. overdue.
+            I built it in Streamlit backed by a Google Sheets data source (no backend rip-and-replace). Coordinators still edited the sheet; the dashboard read from it and layered intelligence on top. Key features: coordinator-level ownership view so each person saw only their queue, a cross-coordinator admin view for the program director, bulk export for end-of-semester reporting, and a summary banner showing live counts of how many requests were on-track vs. overdue.
           </p>
           <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-8">
-            The biggest design decision was keeping the Google Sheet as the source of truth rather than migrating to a database. Coordinators were already in the sheet — forcing them to a new tool would have killed adoption. The dashboard was a read layer, not a replacement.
+            The biggest design decision was keeping the Google Sheet as the source of truth rather than migrating to a database. Coordinators were already in the sheet, so forcing them to a new tool would have killed adoption. The dashboard was a read layer, not a replacement.
           </p>
           <div className="w-full rounded-2xl overflow-hidden border border-neutral-200">
             <img
@@ -211,15 +211,15 @@ export default function CoffeeChatPage() {
               className="w-full h-auto object-cover object-top"
             />
           </div>
-          <p className="font-body text-body text-neutral-400 mt-3 tracking-wide">Dashboard overview — status pipeline, SLA indicators, coordinator assignment view</p>
+          <p className="font-body text-body text-neutral-400 mt-3 tracking-wide">Dashboard overview: status pipeline, SLA indicators, and coordinator assignment view</p>
 
           {/* Feature grid */}
           <div className="grid grid-cols-2 gap-4 mt-10">
             {[
-              { label: "SLA Tracking", desc: "3-tier deadline system per request — assignment, intro email, and feedback. Overdue items surface automatically in red." },
+              { label: "SLA Tracking", desc: "3-tier deadline system per request: assignment, intro email, and feedback. Overdue items surface automatically in red." },
               { label: "Ownership View", desc: "Each coordinator sees only their active queue. No more 'I thought you were handling that.'" },
               { label: "Admin Overview", desc: "Program director gets a cross-coordinator view with total requests, completion rate, and average time-to-intro." },
-              { label: "Bulk Export", desc: "One-click export of the full semester's data for reporting to MSTI leadership — formatted, not raw." },
+              { label: "Bulk Export", desc: "One-click export of the full semester's data for reporting to MSTI leadership, formatted rather than raw." },
             ].map((f, i) => (
               <div key={i} className="border border-neutral-200 rounded-sm p-5">
                 <p className="font-sans font-semibold text-base mb-2">{f.label}</p>
@@ -229,15 +229,15 @@ export default function CoffeeChatPage() {
           </div>
         </div>
 
-        {/* Section 3 — Impact */}
+        {/* Section 3: Impact */}
         <div className="mb-20">
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">IMPACT</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">Results and learnings</h2>
           <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-4">
-            We launched in Week 3 of Spring 2025. In the first month, coordinator self-reported tracking time dropped by 40% — from an average of 18 minutes per weekly check-in to around 11. Post-launch survey of all 11 MSTI staff showed 91% satisfaction. Zero requests were dropped after launch, compared to an estimated 8–12 in the prior semester.
+            We launched in Week 3 of Spring 2025. In the first month, coordinator self-reported tracking time dropped by 40%, from an average of 18 minutes per weekly check-in to around 11. Post-launch survey of all 11 MSTI staff showed 91% satisfaction. Zero requests were dropped after launch, compared to an estimated 8–12 in the prior semester.
           </p>
           <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-8">
-            The hardest lesson: the dashboard was not the hard part. Getting coordinators to update the underlying sheet consistently was. We solved it by adding a 2-minute data hygiene check-in at the top of every weekly coordinator sync — the dashboard was open on screen, overdue items were visible to everyone, and social accountability did the rest. Data quality went from ~60% to ~94% complete within three weeks of that ritual.
+            The hardest lesson: the dashboard was not the hard part. Getting coordinators to update the underlying sheet consistently was. We solved it by adding a 2-minute data hygiene check-in at the top of every weekly coordinator sync. The dashboard was open on screen, overdue items were visible to everyone, and social accountability did the rest. Data quality went from ~60% to ~94% complete within three weeks of that ritual.
           </p>
 
           {/* Metrics row */}
@@ -257,11 +257,11 @@ export default function CoffeeChatPage() {
           <div className="w-full rounded-2xl overflow-hidden border border-neutral-200">
             <img
               src="/images/programanalytics.png"
-              alt="Program analytics — requests over time and weekly activity"
+              alt="Program analytics showing requests over time and weekly activity"
               className="w-full h-auto object-cover object-top"
             />
           </div>
-          <p className="font-body text-body text-neutral-400 mt-3 tracking-wide">Week-over-week request completion rate — before and after dashboard launch</p>
+          <p className="font-body text-body text-neutral-400 mt-3 tracking-wide">Week-over-week request completion rate before and after dashboard launch</p>
         </div>
 
         {/* Next up */}

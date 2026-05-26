@@ -97,7 +97,7 @@ export default function AccessibilityChessboardPage() {
         <div className="flex items-end justify-between gap-6 flex-wrap border-t border-neutral-200 pt-8">
           <p className="font-body text-body text-neutral-500 leading-relaxed max-w-lg">
             A Harry Potter-inspired autonomous chessboard that physically moves pieces by
-            itself — designed for players with hand and motor disabilities.
+            itself, designed for players with hand and motor disabilities.
           </p>
           <div className="flex gap-3 flex-shrink-0">
             <a
@@ -159,7 +159,7 @@ export default function AccessibilityChessboardPage() {
               motion system hands-on.
             </p>
             <p className="font-body text-body text-neutral-500 leading-relaxed">
-              This is the rare combination employers talk about — someone who can write a
+              This is the rare combination employers talk about: someone who can write a
               product brief in the morning and solder a PCB at night.
             </p>
           </div>
@@ -173,12 +173,12 @@ export default function AccessibilityChessboardPage() {
               {
                 num: "02",
                 title: "Engineering",
-                body: "Built the full Next.js web interface and co-engineered the CoreXY motion system — firmware, kinematics, and physical assembly.",
+                body: "Built the full Next.js web interface and co-engineered the CoreXY motion system: firmware, kinematics, and physical assembly.",
               },
               {
                 num: "03",
                 title: "Sponsor Relations",
-                body: "Served as T-Mobile liaison — presenting progress, gathering feedback from their accessibility team, and translating industry requirements back into engineering decisions.",
+                body: "Served as T-Mobile liaison, presenting progress, gathering feedback from their accessibility team, and translating industry requirements back into engineering decisions.",
               },
               {
                 num: "04",
@@ -213,15 +213,15 @@ export default function AccessibilityChessboardPage() {
           </p>
           <p className="font-sans font-medium text-[clamp(1.3rem,2.5vw,2rem)] leading-snug">
             Make physical chess truly playable for people with hand and motor disabilities
-            — without sacrificing the tactile experience of the game?
+            without sacrificing the tactile experience of the game?
           </p>
         </div>
 
         <p className="font-body text-body text-neutral-500 leading-relaxed max-w-3xl mb-4">
           Chess is one of the most universal strategy games in the world. But for people
           living with hand disabilities or motor impairments, physically moving pieces across
-          a board is a frustrating barrier. Existing solutions — digital chess apps,
-          screen-based interfaces — strip away the tactile, physical experience of the game
+          a board is a frustrating barrier. Existing solutions like digital chess apps and
+          screen-based interfaces strip away the tactile, physical experience of the game
           entirely.
         </p>
         <p className="font-body text-body text-neutral-500 leading-relaxed max-w-3xl mb-12">
@@ -302,7 +302,7 @@ export default function AccessibilityChessboardPage() {
 
         <div className="border border-neutral-200 bg-neutral-50 rounded-sm px-6 py-4 flex items-center justify-between gap-4 flex-wrap mt-5">
           <p className="font-body text-body text-neutral-500">
-            <strong className="text-black">Live Demo Available</strong> — Connect to the web
+            <strong className="text-black">Live Demo Available.</strong> Connect to the web
             interface and control the physical board from any browser on the same network.
           </p>
           <a
@@ -332,7 +332,7 @@ export default function AccessibilityChessboardPage() {
           </div>
           <div>
             <p className="font-body text-body text-neutral-500 leading-relaxed mb-6">
-              We explored multiple approaches — including robotic arms — before settling on a
+              We explored multiple approaches including robotic arms before settling on a
               CoreXY belt-drive system inspired by 3D printer mechanics. We designed all
               custom brackets in Fusion 360, 3D printed them, sourced linear rods, belts,
               and NEMA 17 stepper motors within budget, and assembled the full gantry by hand.
@@ -376,7 +376,7 @@ export default function AccessibilityChessboardPage() {
                   />
                 </div>
                 <Caption>
-                  Custom bracket designs in Fusion 360 — carriage piece (top) and corner mount (bottom)
+                  Custom bracket designs in Fusion 360 carriage piece (top) and corner mount (bottom)
                 </Caption>
               </div>
               {/* Right: portrait videos */}
@@ -414,7 +414,7 @@ export default function AccessibilityChessboardPage() {
             <p className="font-body text-body text-neutral-500 leading-relaxed mb-6">
               We selected an H-bridge-driven electromagnet and engineered a key insight: by
               switching the direction of current through the H-bridge, we could attract white
-              pieces on one polarity and black pieces on the other — allowing the board to
+              pieces on one polarity and black pieces on the other, allowing the board to
               selectively pick up pieces by color. We physically tested magnetic penetration
               through different plywood thicknesses to find the right balance between
               structural stability and magnetic force.
@@ -446,7 +446,7 @@ export default function AccessibilityChessboardPage() {
               We integrated an ICS-43432 I2S MEMS microphone with the ESP32-S3 to capture
               voice commands, sending audio to OpenAI Whisper for transcription. The system
               parses the transcript for a chess move and sends it wirelessly to the Pico via
-              ESP-NOW. Voice and web UI inputs are completely interchangeable — the physical
+              ESP-NOW. Voice and web UI inputs are completely interchangeable. The physical
               board cannot tell the difference between a spoken command and a browser click.
             </p>
             <VideoWrap
@@ -469,7 +469,7 @@ export default function AccessibilityChessboardPage() {
           <div>
             <p className="font-body text-body text-neutral-500 leading-relaxed mb-6">
               We designed a custom 2-layer PCB in KiCad integrating 16× A1302xUA Hall effect
-              sensors and 16× WS2812B addressable RGB LEDs — one of each per chess square.
+              sensors and 16× WS2812B addressable RGB LEDs, one of each per chess square.
               The board was fabricated in Shenzhen, received, and hand-soldered using SMD
               reflow techniques. The Hall sensors detect and verify piece presence; the LEDs
               provide accessibility feedback highlighting valid moves and confirming correct
@@ -512,7 +512,7 @@ export default function AccessibilityChessboardPage() {
             </Caption>
             <VideoWrap
               src="/images/chessboard/halleffectsensortest.mp4"
-              label="Hall Sensor Test — Custom PCB"
+              label="Hall Sensor Test Custom PCB"
             />
           </div>
         </div>
@@ -532,7 +532,7 @@ export default function AccessibilityChessboardPage() {
               We 3D-printed a full Harry Potter-themed chess set using SLA resin printing on
               an ELEGOO printer, UV-cured them on a Mercury Plus curing station,
               post-processed and assembled by hand with super glue, then spray-painted one
-              full set white and one set black — matching the electromagnet&apos;s polarity
+              full set white and one set black, matching the electromagnet&apos;s polarity
               color coding so the board can distinguish pieces by color.
             </p>
             <div className="grid grid-cols-2 gap-3 mb-2">
@@ -579,12 +579,12 @@ export default function AccessibilityChessboardPage() {
               real-time WebSocket sync to the physical board, legal move highlighting (blue
               for moves, red for captures), captured pieces tracking, per-player timers, game
               status detection, and Stockfish 18 AI running entirely in the browser as a Web
-              Worker. Two browsers on the same LAN stay in sync in real time — a voice move
+              Worker. Two browsers on the same LAN stay in sync in real time. A voice move
               at the board reflects on every connected screen instantly.
             </p>
             <div className="border border-neutral-200 bg-white rounded-sm px-6 py-4 flex items-center justify-between gap-4 flex-wrap">
               <p className="font-body text-body text-neutral-500">
-                <strong className="text-black">Try it live</strong> — the web interface is
+                <strong className="text-black">Try it live.</strong> The web interface is
                 deployed and working.
               </p>
               <a
@@ -632,7 +632,7 @@ export default function AccessibilityChessboardPage() {
               />
             </div>
             <Caption>
-              T-Mobile sponsor demo — presenting to industry accessibility team
+              T-Mobile sponsor demo, presenting to industry accessibility team
             </Caption>
           </div>
         </div>
@@ -649,7 +649,7 @@ export default function AccessibilityChessboardPage() {
             </span>
             <div className="pt-2">
               <h3 className="font-sans font-medium text-[15px] leading-snug">
-                Piece Location Verification —
+                Piece Location Verification 
               </h3>
               <h3 className="font-sans font-light italic text-[15px] text-neutral-500">
                 &ldquo;How do we know the board is in the right state?&rdquo;
@@ -659,20 +659,20 @@ export default function AccessibilityChessboardPage() {
           <div className="pl-[4.5rem] space-y-4">
             <p className="font-body text-body text-neutral-500 leading-relaxed max-w-3xl">
               This was our biggest and most fundamental challenge. Chess pieces are physical
-              objects — they can drift, stick to each other due to residual magnetism, get
+              objects. They can drift, stick to each other due to residual magnetism, get
               dragged slightly off-center, or fail to land exactly on target. Once the board
               state drifts even slightly from what the software expects, every subsequent move
               compounds the error. Within a few moves the whole board could be in complete
               disarray.
             </p>
             <p className="font-body text-body text-neutral-500 leading-relaxed max-w-3xl">
-              We researched several approaches — computer vision (too complex,
+              We researched several approaches: computer vision (too complex,
               lighting-dependent), pressure sensors (not sensitive enough for light resin
               pieces), and capacitive sensing (too much interference from wood). We landed on
               Hall effect sensors: one A1302xUA sensor per square, embedded in a custom PCB
               beneath the board. Since every piece has a magnet in its base, each sensor
               detects whether a piece is sitting on its square and reports back to the
-              firmware — closing the loop between what the system thinks is on the board and
+              firmware, closing the loop between what the system thinks is on the board and
               what is actually there.
             </p>
           </div>
@@ -685,7 +685,7 @@ export default function AccessibilityChessboardPage() {
             </span>
             <div className="pt-2">
               <h3 className="font-sans font-medium text-[15px] leading-snug">
-                Wait Time &amp; Captured Piece UX —
+                Wait Time &amp; Captured Piece UX 
               </h3>
               <h3 className="font-sans font-light italic text-[15px] text-neutral-500">
                 &ldquo;Five seconds is a long time.&rdquo;
@@ -694,7 +694,7 @@ export default function AccessibilityChessboardPage() {
           </div>
           <div className="pl-[4.5rem] space-y-4">
             <p className="font-body text-body text-neutral-500 leading-relaxed max-w-3xl">
-              Moving a piece takes around 5 seconds on average — acceptable for a normal move.
+              Moving a piece takes around 5 seconds on average, acceptable for a normal move.
               But when a capture happens, the original plan was for the robot to drag the
               captured piece to a border slot before executing the main move, meaning a player
               could wait 10–15 seconds for a single capture. In testing this felt painfully
@@ -704,7 +704,7 @@ export default function AccessibilityChessboardPage() {
               We rethought the capture interaction using the electromagnet&apos;s polarity
               switching: on a capture, the board flips the magnet polarity to repel the
               captured piece rather than drag it, nudging it so the player can pick it up
-              themselves. This turns a frustrating wait into an intentional interaction — the
+              themselves. This turns a frustrating wait into an intentional interaction: the
               player gets to remove their opponent&apos;s piece by hand, which feels more
               satisfying. It cut capture time significantly and made the experience feel
               collaborative rather than passive.
@@ -719,7 +719,7 @@ export default function AccessibilityChessboardPage() {
             </span>
             <div className="pt-2">
               <h3 className="font-sans font-medium text-[15px] leading-snug">
-                Accessibility —
+                Accessibility 
               </h3>
               <h3 className="font-sans font-light italic text-[15px] text-neutral-500">
                 &ldquo;What does truly accessible chess actually look like?&rdquo;
@@ -730,7 +730,7 @@ export default function AccessibilityChessboardPage() {
             <p className="font-body text-body text-neutral-500 leading-relaxed max-w-3xl">
               This was the core of the entire project and the most layered challenge we faced.
               Our T-Mobile mentor pushed us early to think beyond &ldquo;the board moves
-              pieces&rdquo; — the question was what a truly accessible chess experience looks
+              pieces.&rdquo; The question was what a truly accessible chess experience looks
               like for someone with limited hand mobility, limited vision, or both. We
               identified three problems: players needed a way to input moves without touching
               the board, they needed feedback confirming the move happened correctly, and they
@@ -741,8 +741,8 @@ export default function AccessibilityChessboardPage() {
               for input (no physical contact required), WS2812B LEDs per square for in-board
               confirmation feedback, and the real-time web interface for complete board
               awareness from any device. Together these three layers mean a player with limited
-              hand mobility can play a full game of physical chess — speaking their moves,
-              watching the board respond, and following the game on screen — without assistance
+              hand mobility can play a full game of physical chess speaking their moves,
+              watching the board respond, and following the game on screen without assistance
               from another person.
             </p>
           </div>
@@ -759,7 +759,7 @@ export default function AccessibilityChessboardPage() {
               icon: "🧪",
               num: "52",
               title: "Unit Tests",
-              desc: "Written for embedded C++ firmware using the Unity framework — chess engine and move planner fully tested independently of hardware.",
+              desc: "Written for embedded C++ firmware using the Unity framework chess engine and move planner fully tested independently of hardware.",
             },
             {
               icon: "🗺️",
@@ -777,7 +777,7 @@ export default function AccessibilityChessboardPage() {
               icon: "🔒",
               num: null,
               title: "No Optimistic UI",
-              desc: "The web interface only updates when the physical move is confirmed complete — the digital board always reflects physical reality.",
+              desc: "The web interface only updates when the physical move is confirmed complete. The digital board always reflects physical reality.",
             },
             {
               icon: "🔌",
@@ -938,7 +938,7 @@ export default function AccessibilityChessboardPage() {
             {
               icon: "♿",
               title: "Accessibility is a design constraint, not a feature.",
-              body: "Working with T-Mobile's accessibility team reframed how I think about inclusive design. The best accessibility decisions weren't add-ons — they were fundamental architecture choices that made the whole system better for everyone.",
+              body: "Working with T-Mobile's accessibility team reframed how I think about inclusive design. The best accessibility decisions weren't add-ons. They were fundamental architecture choices that made the whole system better for everyone.",
             },
             {
               icon: "🤝",
@@ -960,7 +960,7 @@ export default function AccessibilityChessboardPage() {
         <SectionLabel>What&apos;s Next</SectionLabel>
         <div className="flex flex-col gap-3 max-w-xl">
           {[
-            "Final birch plywood enclosure — production-quality board housing currently in fabrication",
+            "Final birch plywood enclosure production-quality board housing currently in fabrication",
             "Full 8×8 Hall sensor + LED grid integration across the complete board",
             "Complete end-to-end play loop with real-time piece position verification",
             "Web interface remote play mode for players in different locations",

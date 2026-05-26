@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Daniel Lee",
   description: "Product Manager | UW MSTI (HCI)",
   openGraph: {
-    title: "Daniel Lee — Product Manager",
+    title: "Daniel Lee | Product Manager",
     description: "Product manager with a background in franchise operations, government programs, and accessibility technology.",
   },
 };

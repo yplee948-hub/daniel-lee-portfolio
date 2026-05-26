@@ -89,7 +89,7 @@ export default function SundaeSillockPage() {
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">CONTEXT</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">Scaling a franchise in South Korea</h2>
           <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-8">
-            [Placeholder — describe the brand, its growth stage, the market, and what challenges came with scaling quickly.]
+            [Placeholder: describe the brand, its growth stage, the market, and what challenges came with scaling quickly.]
           </p>
           <div className="w-full rounded-2xl bg-[#f5dfc6]" style={{ height: "360px" }} />
         </div>
@@ -99,7 +99,7 @@ export default function SundaeSillockPage() {
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">APPROACH</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">Campaigns and quality systems</h2>
           <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-8">
-            [Placeholder — walk through the localized campaign strategy, what made it work, and how quality control was implemented across locations.]
+            [Placeholder: walk through the localized campaign strategy, what made it work, and how quality control was implemented across locations.]
           </p>
           <div className="w-full rounded-2xl bg-[#eecfae]" style={{ height: "360px" }} />
         </div>
@@ -109,7 +109,7 @@ export default function SundaeSillockPage() {
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">RESULTS</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">33.8% revenue growth</h2>
           <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-8">
-            [Placeholder — add the revenue data, operational improvements, and what you learned about scaling physical-digital brand experiences.]
+            [Placeholder: add the revenue data, operational improvements, and what you learned about scaling physical-digital brand experiences.]
           </p>
           <div className="w-full rounded-2xl bg-[#e7bf97]" style={{ height: "360px" }} />
         </div>

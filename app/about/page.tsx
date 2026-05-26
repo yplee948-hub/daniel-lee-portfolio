@@ -4,12 +4,12 @@ import Footer from "../components/Footer";
 const leadership = [
   {
     role: "PM Intern",
-    org: "UW MSTI — Coffee Chat Program",
+    org: "UW MSTI, Coffee Chat Program",
     bg: "#e8edf5",
   },
   {
     role: "Apprenticeship Lead",
-    org: "T-Mobile — Accessibility Chessboard",
+    org: "T-Mobile, Accessibility Chessboard",
     bg: "#f0e8f5",
   },
   {
@@ -45,7 +45,7 @@ export default function AboutPage() {
           <div className="space-y-5 max-w-2xl font-body text-body text-[#242424] leading-[1.7]">
             <p>
               Growing up between Seoul and Bellevue shaped my instinct for understanding people. I&apos;ve always been
-              drawn to the spaces where systems fall short — the government portal that confuses users, the franchise
+              drawn to the spaces where systems fall short: the government portal that confuses users, the franchise
               that can&apos;t scale, the team that loses track of its own progress.
             </p>
             <p>

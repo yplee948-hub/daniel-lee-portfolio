@@ -89,7 +89,7 @@ export default function StakeholderDashboardPage() {
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">CONTEXT</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">The fragmented tracking problem</h2>
           <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-8">
-            [Placeholder — describe the situation before: scattered spreadsheets, unclear ownership, and the cost of that friction.]
+            [Placeholder: describe the situation before: scattered spreadsheets, unclear ownership, and the cost of that friction.]
           </p>
           <div className="w-full rounded-2xl bg-[#f5c8df]" style={{ height: "360px" }} />
         </div>
@@ -99,7 +99,7 @@ export default function StakeholderDashboardPage() {
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">BUILD</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">Using AI to move faster</h2>
           <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-8">
-            [Placeholder — explain how you used Claude Code and Cursor AI to accelerate development, what decisions you made, and what the dashboard actually shows.]
+            [Placeholder: explain how you used Claude Code and Cursor AI to accelerate development, what decisions you made, and what the dashboard actually shows.]
           </p>
           <div className="w-full rounded-2xl bg-[#f2bad6]" style={{ height: "360px" }} />
         </div>
@@ -109,7 +109,7 @@ export default function StakeholderDashboardPage() {
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">IMPACT</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">What changed</h2>
           <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-8">
-            [Placeholder — add adoption stats, time savings, user quotes, and what you'd build next.]
+            [Placeholder: add adoption stats, time savings, user quotes, and what you'd build next.]
           </p>
           <div className="w-full rounded-2xl bg-[#edadcc]" style={{ height: "360px" }} />
         </div>

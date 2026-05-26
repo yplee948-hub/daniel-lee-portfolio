@@ -89,7 +89,7 @@ export default function ZeroVFXPage() {
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">CONTEXT</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">The world of VFX pitching</h2>
           <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-8">
-            [Placeholder — describe Zero VFX as a studio, the types of projects they work on, and what the pitch process typically looks like for VFX contracts.]
+            [Placeholder: describe Zero VFX as a studio, the types of projects they work on, and what the pitch process typically looks like for VFX contracts.]
           </p>
           <div className="w-full rounded-2xl bg-[#f0e8c2]" style={{ height: "360px" }} />
         </div>
@@ -99,7 +99,7 @@ export default function ZeroVFXPage() {
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">WORK</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">Translating craft into narrative</h2>
           <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-8">
-            [Placeholder — walk through the pitch materials you created, how you simplified complex workflows, and what made the client communications effective.]
+            [Placeholder: walk through the pitch materials you created, how you simplified complex workflows, and what made the client communications effective.]
           </p>
           <div className="w-full rounded-2xl bg-[#e9e0b0]" style={{ height: "360px" }} />
         </div>
@@ -109,12 +109,12 @@ export default function ZeroVFXPage() {
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">OUTCOME</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">3 contracts secured</h2>
           <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-8">
-            [Placeholder — describe the 3 contracts won, what they meant for the studio, and what you took away from working at the intersection of creative production and business development.]
+            [Placeholder: describe the 3 contracts won, what they meant for the studio, and what you took away from working at the intersection of creative production and business development.]
           </p>
           <div className="w-full rounded-2xl bg-[#e2d89e]" style={{ height: "360px" }} />
         </div>
 
-        {/* Next up — loop back to first project */}
+        {/* Next up: loop back to first project */}
         <div className="border-t border-neutral-200 pt-12">
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-6">NEXT UP…</p>
           <a href="/accessibility-chessboard" className="group flex items-center justify-between">

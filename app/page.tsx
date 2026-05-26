@@ -23,7 +23,7 @@ const work: WorkItem[] = [
   {
     title: "Coffee Chat Operations Dashboard",
     tags: ["PRODUCT MANAGEMENT", "FULL PROCESS", "2025"],
-    description: "Turned a manual Excel tracker into a real-time operations system for MSTI's coffee chat program — tracking 106+ requests, assignment ownership, intro email SLAs, and feedback follow-ups at a glance.",
+    description: "Turned a manual Excel tracker into a real-time operations system for MSTI's coffee chat program, tracking 106+ requests, assignment ownership, intro email SLAs, and feedback follow-ups at a glance.",
     cardBg: "#d6e8f7",
     imageSrc: "/images/coffeechatdashboard.png",
     href: "/coffee-chat",
