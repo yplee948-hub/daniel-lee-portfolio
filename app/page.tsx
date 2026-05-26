@@ -138,11 +138,9 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="px-6 md:px-10 pt-16 pb-14">
         <div className="max-w-6xl mx-auto">
-          <p className="text-xl md:text-2xl font-sans font-semibold mb-1">
-            Glad we could cross paths.
-          </p>
-          <p className="font-body text-body text-neutral-500 mb-12">
-            I hope it left you with a bit of curiosity and inspiration.
+          <p className="text-xl md:text-2xl font-sans font-semibold leading-snug max-w-3xl mb-12">
+            Open to PM roles for summer/fall Internships 2026 let&apos;s talk! if you&apos;re
+            job-seeking.
           </p>
           <div className="flex justify-between items-end">
             <p className="font-body text-body text-neutral-400">© Daniel Lee, 2026</p>
