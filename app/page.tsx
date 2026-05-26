@@ -25,7 +25,7 @@ const work: WorkItem[] = [
     tags: ["PRODUCT MANAGEMENT", "FULL PROCESS", "2025"],
     description: "Turned a manual Excel tracker into a real-time operations system for MSTI's coffee chat program — tracking 106+ requests, assignment ownership, intro email SLAs, and feedback follow-ups at a glance.",
     cardBg: "#d6e8f7",
-    imageSrc: "/images/coffee-chat-dashboard.png",
+    imageSrc: "/images/coffeechatdashboard.png",
     href: "/coffee-chat",
   },
   {
@@ -89,14 +89,14 @@ function WorkCard({ item }: { item: WorkItem }) {
         )}
       </div>
       <div className="flex justify-between items-start gap-3 mb-2">
-        <h3 className="text-[13px] font-sans font-medium leading-snug">{item.title}</h3>
+        <h3 className="text-base font-sans font-medium leading-snug">{item.title}</h3>
         <div className="flex flex-wrap justify-end gap-1 shrink-0 max-w-[55%]">
           {item.tags.map((tag, i) => (
             <Tag key={i} label={tag} />
           ))}
         </div>
       </div>
-      <p className="text-[11px] text-neutral-500 leading-relaxed">{item.description}</p>
+      <p className="font-body text-body text-neutral-500 leading-relaxed">{item.description}</p>
     </div>
   );
 
@@ -136,7 +136,7 @@ export default function HomePage() {
         >
           DANIEL LEE
         </h1>
-        <p className="mt-6 text-[11px] tracking-widest uppercase text-neutral-500">
+        <p className="mt-6 text-base tracking-widest uppercase text-neutral-500">
           PRODUCT MANAGER PREVIOUSLY @ UW MSTI, HEESTORY, MINISTRY OF LABOR.
         </p>
       </section>
@@ -158,22 +158,22 @@ export default function HomePage() {
           <p className="text-xl md:text-2xl font-sans font-semibold mb-1">
             Glad we could cross paths.
           </p>
-          <p className="text-[11px] text-neutral-500 mb-12">
+          <p className="font-body text-body text-neutral-500 mb-12">
             I hope it left you with a bit of curiosity and inspiration.
           </p>
           <div className="flex justify-between items-end">
-            <p className="text-[10px] text-neutral-400">© Daniel Lee, 2026</p>
+            <p className="font-body text-body text-neutral-400">© Daniel Lee, 2026</p>
             <div className="flex gap-14">
               <div>
                 <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">CONTACT</p>
-                <div className="flex flex-col gap-2 text-[11px]">
+                <div className="flex flex-col gap-2 font-body text-body">
                   <a href="mailto:yplee948@uw.edu" className="hover:opacity-50 transition-opacity">EMAIL</a>
                   <a href="https://www.linkedin.com/in/youngpyunglee" target="_blank" rel="noopener noreferrer" className="hover:opacity-50 transition-opacity">LINKEDIN</a>
                 </div>
               </div>
               <div>
                 <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">NAVIGATION</p>
-                <div className="flex flex-col gap-2 text-[11px]">
+                <div className="flex flex-col gap-2 font-body text-body">
                   <a href="#work" className="hover:opacity-50 transition-opacity">WORK</a>
                   <a href="/about" className="hover:opacity-50 transition-opacity">ABOUT</a>
                   <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="hover:opacity-50 transition-opacity">RESUME</a>

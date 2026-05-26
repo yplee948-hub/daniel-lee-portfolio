@@ -42,7 +42,7 @@ export default function AboutPage() {
           </p>
 
           {/* Body paragraphs */}
-          <div className="space-y-5 max-w-2xl" style={{ fontSize: "16px", color: "#242424", lineHeight: "1.7" }}>
+          <div className="space-y-5 max-w-2xl font-body text-body text-[#242424] leading-[1.7]">
             <p>
               Growing up between Seoul and Bellevue shaped my instinct for understanding people. I&apos;ve always been
               drawn to the spaces where systems fall short — the government portal that confuses users, the franchise
@@ -66,7 +66,7 @@ export default function AboutPage() {
 
           {/* Leadership */}
           <div className="mt-20 pt-10 border-t border-neutral-200 max-w-4xl">
-            <p className="text-[11px] tracking-widest uppercase text-neutral-400 mb-4">LEADERSHIP</p>
+            <p className="text-base tracking-widest uppercase text-neutral-400 mb-4">LEADERSHIP</p>
             <p
               className="font-sans mb-10"
               style={{ fontSize: "24px", fontWeight: 400, color: "#545454" }}
@@ -80,8 +80,8 @@ export default function AboutPage() {
                     className="w-full mb-3"
                     style={{ backgroundColor: item.bg, height: "200px" }}
                   />
-                  <p className="font-sans text-[14px] text-black">{item.role}</p>
-                  <p className="font-sans text-[14px] text-neutral-500">{item.org}</p>
+                  <p className="font-body text-body text-black">{item.role}</p>
+                  <p className="font-body text-body text-neutral-500">{item.org}</p>
                 </div>
               ))}
             </div>
@@ -89,12 +89,12 @@ export default function AboutPage() {
 
           {/* Core Values */}
           <div className="mt-20 pt-10 border-t border-neutral-200 max-w-4xl">
-            <p className="text-[11px] tracking-widest uppercase text-neutral-400 mb-10">MY CORE VALUES</p>
+            <p className="text-base tracking-widest uppercase text-neutral-400 mb-10">MY CORE VALUES</p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
               {values.map((value, i) => (
                 <div key={i}>
                   <p className="text-lg mb-3 text-neutral-800">✱</p>
-                  <p className="font-sans text-[14px] leading-relaxed" style={{ color: "#242424" }}>
+                  <p className="font-body text-body leading-relaxed text-[#242424]">
                     {value}
                   </p>
                 </div>

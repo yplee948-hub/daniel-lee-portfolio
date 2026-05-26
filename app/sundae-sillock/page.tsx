@@ -22,7 +22,7 @@ export default function SundaeSillockPage() {
     <>
       <Nav />
 
-      <main className="pt-28 pb-16 px-6 md:px-10 max-w-4xl mx-auto">
+      <main className="pt-28 pb-16 px-6 md:px-10 max-w-6xl mx-auto">
 
         {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-6">
@@ -37,7 +37,7 @@ export default function SundaeSillockPage() {
         <h1 className="font-sans font-bold text-[32px] md:text-[48px] leading-tight tracking-tight mb-4">
           {meta.title}
         </h1>
-        <p className="text-[13px] text-neutral-500 leading-relaxed max-w-xl mb-12">
+        <p className="font-body text-body text-neutral-500 leading-relaxed max-w-xl mb-12">
           {meta.description}
         </p>
 
@@ -45,19 +45,19 @@ export default function SundaeSillockPage() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-b border-neutral-200 py-8 mb-16">
           <div>
             <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-2">TIMELINE</p>
-            <p className="text-[12px] leading-snug">{meta.timeline}</p>
+            <p className="font-body text-body leading-snug">{meta.timeline}</p>
           </div>
           <div>
             <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-2">TEAM</p>
-            <p className="text-[12px] leading-snug">{meta.team}</p>
+            <p className="font-body text-body leading-snug">{meta.team}</p>
           </div>
           <div>
             <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-2">ROLE</p>
-            <p className="text-[12px] leading-snug">{meta.role}</p>
+            <p className="font-body text-body leading-snug">{meta.role}</p>
           </div>
           <div>
             <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-2">SKILLS</p>
-            <p className="text-[12px] leading-snug">{meta.skills.join(", ")}</p>
+            <p className="font-body text-body leading-snug">{meta.skills.join(", ")}</p>
           </div>
         </div>
 
@@ -67,10 +67,10 @@ export default function SundaeSillockPage() {
           <div className="space-y-6">
             {highlights.map((item, i) => (
               <div key={i} className="flex gap-6">
-                <span className="text-[10px] tracking-widest text-neutral-300 shrink-0 pt-0.5">
+                <span className="text-base tracking-widest text-neutral-300 shrink-0 pt-0.5">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <p className="text-[14px] leading-relaxed text-neutral-700">{item}</p>
+                <p className="font-body text-body leading-relaxed text-neutral-700">{item}</p>
               </div>
             ))}
           </div>
@@ -88,7 +88,7 @@ export default function SundaeSillockPage() {
         <div className="mb-16">
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">CONTEXT</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">Scaling a franchise in South Korea</h2>
-          <p className="text-[13px] text-neutral-500 leading-relaxed max-w-2xl mb-8">
+          <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-8">
             [Placeholder — describe the brand, its growth stage, the market, and what challenges came with scaling quickly.]
           </p>
           <div className="w-full rounded-2xl bg-[#f5dfc6]" style={{ height: "360px" }} />
@@ -98,7 +98,7 @@ export default function SundaeSillockPage() {
         <div className="mb-16">
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">APPROACH</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">Campaigns and quality systems</h2>
-          <p className="text-[13px] text-neutral-500 leading-relaxed max-w-2xl mb-8">
+          <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-8">
             [Placeholder — walk through the localized campaign strategy, what made it work, and how quality control was implemented across locations.]
           </p>
           <div className="w-full rounded-2xl bg-[#eecfae]" style={{ height: "360px" }} />
@@ -108,7 +108,7 @@ export default function SundaeSillockPage() {
         <div className="mb-20">
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">RESULTS</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">33.8% revenue growth</h2>
-          <p className="text-[13px] text-neutral-500 leading-relaxed max-w-2xl mb-8">
+          <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-8">
             [Placeholder — add the revenue data, operational improvements, and what you learned about scaling physical-digital brand experiences.]
           </p>
           <div className="w-full rounded-2xl bg-[#e7bf97]" style={{ height: "360px" }} />
@@ -119,7 +119,7 @@ export default function SundaeSillockPage() {
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-6">NEXT UP…</p>
           <a href="/government-portal" className="group flex items-center justify-between">
             <div>
-              <p className="text-[11px] text-neutral-400 mb-1">PROGRAM MANAGER · 2023</p>
+              <p className="font-body text-body text-neutral-400 mb-1">PROGRAM MANAGER · 2023</p>
               <h3 className="font-sans font-semibold text-[22px] group-hover:opacity-60 transition-opacity">
                 Government Employment Portal →
               </h3>

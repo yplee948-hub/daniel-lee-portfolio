@@ -95,7 +95,7 @@ export default function AccessibilityChessboardPage() {
         </h1>
 
         <div className="flex items-end justify-between gap-6 flex-wrap border-t border-neutral-200 pt-8">
-          <p className="text-[14px] text-neutral-500 leading-relaxed max-w-lg">
+          <p className="font-body text-body text-neutral-500 leading-relaxed max-w-lg">
             A Harry Potter-inspired autonomous chessboard that physically moves pieces by
             itself — designed for players with hand and motor disabilities.
           </p>
@@ -152,13 +152,13 @@ export default function AccessibilityChessboardPage() {
             <h2 className="font-sans font-semibold text-[clamp(2rem,4vw,3rem)] leading-tight tracking-tight mb-6">
               Technical PM<br />who <em>ships</em><br />the product.
             </h2>
-            <p className="text-[13px] text-neutral-500 leading-relaxed mb-4">
+            <p className="font-body text-body text-neutral-500 leading-relaxed mb-4">
               I wore two hats on this project. As PM I defined the product vision, managed
               the T-Mobile sponsor relationship, coordinated the team, and owned the budget.
               As an engineer I built the web interface from scratch and co-built the CoreXY
               motion system hands-on.
             </p>
-            <p className="text-[13px] text-neutral-500 leading-relaxed">
+            <p className="font-body text-body text-neutral-500 leading-relaxed">
               This is the rare combination employers talk about — someone who can write a
               product brief in the morning and solder a PCB at night.
             </p>
@@ -194,8 +194,8 @@ export default function AccessibilityChessboardPage() {
                   {item.num}
                 </span>
                 <div>
-                  <h4 className="font-sans font-semibold text-[12px] mb-1">{item.title}</h4>
-                  <p className="text-[11px] text-neutral-500 leading-relaxed">{item.body}</p>
+                  <h4 className="font-sans font-semibold text-base mb-1">{item.title}</h4>
+                  <p className="font-body text-body text-neutral-500 leading-relaxed">{item.body}</p>
                 </div>
               </div>
             ))}
@@ -217,14 +217,14 @@ export default function AccessibilityChessboardPage() {
           </p>
         </div>
 
-        <p className="text-[13px] text-neutral-500 leading-relaxed max-w-3xl mb-4">
+        <p className="font-body text-body text-neutral-500 leading-relaxed max-w-3xl mb-4">
           Chess is one of the most universal strategy games in the world. But for people
           living with hand disabilities or motor impairments, physically moving pieces across
           a board is a frustrating barrier. Existing solutions — digital chess apps,
           screen-based interfaces — strip away the tactile, physical experience of the game
           entirely.
         </p>
-        <p className="text-[13px] text-neutral-500 leading-relaxed max-w-3xl mb-12">
+        <p className="font-body text-body text-neutral-500 leading-relaxed max-w-3xl mb-12">
           Wizarding Chess removes that barrier. Players speak their move, and the board moves
           the piece for them.
         </p>
@@ -245,7 +245,7 @@ export default function AccessibilityChessboardPage() {
               <p className="font-sans font-light text-[3rem] leading-none text-black mb-2">
                 {s.num}
               </p>
-              <p className="text-[11px] text-neutral-500 leading-relaxed max-w-[200px]">
+              <p className="font-body text-body text-neutral-500 leading-relaxed max-w-[200px]">
                 {s.label}
               </p>
             </div>
@@ -256,7 +256,7 @@ export default function AccessibilityChessboardPage() {
       {/* ── WHAT WE BUILT ── */}
       <section className="px-6 md:px-16 py-24">
         <SectionLabel>What We Built</SectionLabel>
-        <p className="text-[14px] text-neutral-500 leading-relaxed max-w-3xl mb-8">
+        <p className="font-body text-body text-neutral-500 leading-relaxed max-w-3xl mb-8">
           A fully autonomous, voice-controlled physical chessboard that moves pieces on its
           own using an electromagnet on a CoreXY gantry. Players interact via voice command
           or a web interface. The board physically executes the move in real space.
@@ -294,14 +294,14 @@ export default function AccessibilityChessboardPage() {
                 {l.num}
               </p>
               <p className="text-xl mb-3">{l.icon}</p>
-              <h4 className="font-sans font-semibold text-[12px] mb-2">{l.title}</h4>
-              <p className="text-[11px] text-neutral-500 leading-relaxed">{l.desc}</p>
+              <h4 className="font-sans font-semibold text-base mb-2">{l.title}</h4>
+              <p className="font-body text-body text-neutral-500 leading-relaxed">{l.desc}</p>
             </div>
           ))}
         </div>
 
         <div className="border border-neutral-200 bg-neutral-50 rounded-sm px-6 py-4 flex items-center justify-between gap-4 flex-wrap mt-5">
-          <p className="text-[12px] text-neutral-500">
+          <p className="font-body text-body text-neutral-500">
             <strong className="text-black">Live Demo Available</strong> — Connect to the web
             interface and control the physical board from any browser on the same network.
           </p>
@@ -331,7 +331,7 @@ export default function AccessibilityChessboardPage() {
             </h3>
           </div>
           <div>
-            <p className="text-[13px] text-neutral-500 leading-relaxed mb-6">
+            <p className="font-body text-body text-neutral-500 leading-relaxed mb-6">
               We explored multiple approaches — including robotic arms — before settling on a
               CoreXY belt-drive system inspired by 3D printer mechanics. We designed all
               custom brackets in Fusion 360, 3D printed them, sourced linear rods, belts,
@@ -411,7 +411,7 @@ export default function AccessibilityChessboardPage() {
             </h3>
           </div>
           <div>
-            <p className="text-[13px] text-neutral-500 leading-relaxed mb-6">
+            <p className="font-body text-body text-neutral-500 leading-relaxed mb-6">
               We selected an H-bridge-driven electromagnet and engineered a key insight: by
               switching the direction of current through the H-bridge, we could attract white
               pieces on one polarity and black pieces on the other — allowing the board to
@@ -442,7 +442,7 @@ export default function AccessibilityChessboardPage() {
             </h3>
           </div>
           <div>
-            <p className="text-[13px] text-neutral-500 leading-relaxed mb-6">
+            <p className="font-body text-body text-neutral-500 leading-relaxed mb-6">
               We integrated an ICS-43432 I2S MEMS microphone with the ESP32-S3 to capture
               voice commands, sending audio to OpenAI Whisper for transcription. The system
               parses the transcript for a chess move and sends it wirelessly to the Pico via
@@ -467,7 +467,7 @@ export default function AccessibilityChessboardPage() {
             </h3>
           </div>
           <div>
-            <p className="text-[13px] text-neutral-500 leading-relaxed mb-6">
+            <p className="font-body text-body text-neutral-500 leading-relaxed mb-6">
               We designed a custom 2-layer PCB in KiCad integrating 16× A1302xUA Hall effect
               sensors and 16× WS2812B addressable RGB LEDs — one of each per chess square.
               The board was fabricated in Shenzhen, received, and hand-soldered using SMD
@@ -528,7 +528,7 @@ export default function AccessibilityChessboardPage() {
             </h3>
           </div>
           <div>
-            <p className="text-[13px] text-neutral-500 leading-relaxed mb-6">
+            <p className="font-body text-body text-neutral-500 leading-relaxed mb-6">
               We 3D-printed a full Harry Potter-themed chess set using SLA resin printing on
               an ELEGOO printer, UV-cured them on a Mercury Plus curing station,
               post-processed and assembled by hand with super glue, then spray-painted one
@@ -573,7 +573,7 @@ export default function AccessibilityChessboardPage() {
             </h3>
           </div>
           <div>
-            <p className="text-[13px] text-neutral-500 leading-relaxed mb-6">
+            <p className="font-body text-body text-neutral-500 leading-relaxed mb-6">
               Built entirely by me from scratch. A cinematic landing page with a 3D animated
               knight video, and a full game interface with an interactive chessboard,
               real-time WebSocket sync to the physical board, legal move highlighting (blue
@@ -583,7 +583,7 @@ export default function AccessibilityChessboardPage() {
               at the board reflects on every connected screen instantly.
             </p>
             <div className="border border-neutral-200 bg-white rounded-sm px-6 py-4 flex items-center justify-between gap-4 flex-wrap">
-              <p className="text-[12px] text-neutral-500">
+              <p className="font-body text-body text-neutral-500">
                 <strong className="text-black">Try it live</strong> — the web interface is
                 deployed and working.
               </p>
@@ -610,7 +610,7 @@ export default function AccessibilityChessboardPage() {
             </h3>
           </div>
           <div>
-            <p className="text-[13px] text-neutral-500 leading-relaxed mb-6">
+            <p className="font-body text-body text-neutral-500 leading-relaxed mb-6">
               We presented our full system to the T-Mobile accessibility team, demonstrating
               end-to-end piece movement, voice control, and the web interface live. We
               received feedback specifically around the LED accessibility layer and continue
@@ -657,7 +657,7 @@ export default function AccessibilityChessboardPage() {
             </div>
           </div>
           <div className="pl-[4.5rem] space-y-4">
-            <p className="text-[13px] text-neutral-500 leading-relaxed max-w-3xl">
+            <p className="font-body text-body text-neutral-500 leading-relaxed max-w-3xl">
               This was our biggest and most fundamental challenge. Chess pieces are physical
               objects — they can drift, stick to each other due to residual magnetism, get
               dragged slightly off-center, or fail to land exactly on target. Once the board
@@ -665,7 +665,7 @@ export default function AccessibilityChessboardPage() {
               compounds the error. Within a few moves the whole board could be in complete
               disarray.
             </p>
-            <p className="text-[13px] text-neutral-500 leading-relaxed max-w-3xl">
+            <p className="font-body text-body text-neutral-500 leading-relaxed max-w-3xl">
               We researched several approaches — computer vision (too complex,
               lighting-dependent), pressure sensors (not sensitive enough for light resin
               pieces), and capacitive sensing (too much interference from wood). We landed on
@@ -693,14 +693,14 @@ export default function AccessibilityChessboardPage() {
             </div>
           </div>
           <div className="pl-[4.5rem] space-y-4">
-            <p className="text-[13px] text-neutral-500 leading-relaxed max-w-3xl">
+            <p className="font-body text-body text-neutral-500 leading-relaxed max-w-3xl">
               Moving a piece takes around 5 seconds on average — acceptable for a normal move.
               But when a capture happens, the original plan was for the robot to drag the
               captured piece to a border slot before executing the main move, meaning a player
               could wait 10–15 seconds for a single capture. In testing this felt painfully
               slow and broke the flow of the game entirely.
             </p>
-            <p className="text-[13px] text-neutral-500 leading-relaxed max-w-3xl">
+            <p className="font-body text-body text-neutral-500 leading-relaxed max-w-3xl">
               We rethought the capture interaction using the electromagnet&apos;s polarity
               switching: on a capture, the board flips the magnet polarity to repel the
               captured piece rather than drag it, nudging it so the player can pick it up
@@ -727,7 +727,7 @@ export default function AccessibilityChessboardPage() {
             </div>
           </div>
           <div className="pl-[4.5rem] space-y-4">
-            <p className="text-[13px] text-neutral-500 leading-relaxed max-w-3xl">
+            <p className="font-body text-body text-neutral-500 leading-relaxed max-w-3xl">
               This was the core of the entire project and the most layered challenge we faced.
               Our T-Mobile mentor pushed us early to think beyond &ldquo;the board moves
               pieces&rdquo; — the question was what a truly accessible chess experience looks
@@ -736,7 +736,7 @@ export default function AccessibilityChessboardPage() {
               the board, they needed feedback confirming the move happened correctly, and they
               needed to understand the board state at a glance.
             </p>
-            <p className="text-[13px] text-neutral-500 leading-relaxed max-w-3xl">
+            <p className="font-body text-body text-neutral-500 leading-relaxed max-w-3xl">
               We addressed each with a different layer: voice recognition via OpenAI Whisper
               for input (no physical contact required), WS2812B LEDs per square for in-board
               confirmation feedback, and the real-time web interface for complete board
@@ -799,8 +799,8 @@ export default function AccessibilityChessboardPage() {
                   {h.num}
                 </p>
               )}
-              <h4 className="font-sans font-semibold text-[12px] mb-2">{h.title}</h4>
-              <p className="text-[11px] text-neutral-500 leading-relaxed">{h.desc}</p>
+              <h4 className="font-sans font-semibold text-base mb-2">{h.title}</h4>
+              <p className="font-body text-body text-neutral-500 leading-relaxed">{h.desc}</p>
             </div>
           ))}
         </div>
@@ -872,10 +872,10 @@ export default function AccessibilityChessboardPage() {
               TMO
             </div>
             <div>
-              <p className="font-sans font-semibold text-[13px]">
+              <p className="font-sans font-semibold text-base">
                 T-Mobile Accessibility Team
               </p>
-              <p className="text-[11px] text-neutral-500 mt-0.5">
+              <p className="font-body text-body text-neutral-500 mt-0.5">
                 Industry Sponsor &amp; Accessibility Mentor
               </p>
               <span className="inline-block mt-2 font-mono text-[9px] tracking-widest uppercase border border-pink-300 text-pink-500 px-2 py-0.5">
@@ -918,8 +918,8 @@ export default function AccessibilityChessboardPage() {
               >
                 {m.initials}
               </div>
-              <p className="font-sans font-semibold text-[13px] mb-1">{m.name}</p>
-              <p className="text-[11px] text-neutral-500 leading-relaxed">{m.role}</p>
+              <p className="font-sans font-semibold text-base mb-1">{m.name}</p>
+              <p className="font-body text-body text-neutral-500 leading-relaxed">{m.role}</p>
             </div>
           ))}
         </div>
@@ -948,8 +948,8 @@ export default function AccessibilityChessboardPage() {
           ].map((l, i) => (
             <div key={i} className="pt-6 border-t border-neutral-200">
               <p className="text-xl mb-4">{l.icon}</p>
-              <h4 className="font-sans font-semibold text-[13px] mb-3">{l.title}</h4>
-              <p className="text-[12px] text-neutral-500 leading-relaxed">{l.body}</p>
+              <h4 className="font-sans font-semibold text-base mb-3">{l.title}</h4>
+              <p className="font-body text-body text-neutral-500 leading-relaxed">{l.body}</p>
             </div>
           ))}
         </div>
@@ -970,7 +970,7 @@ export default function AccessibilityChessboardPage() {
               className="flex gap-4 items-center border border-neutral-200 px-5 py-4 rounded-sm"
             >
               <span className="w-2 h-2 rounded-full bg-black flex-shrink-0 animate-pulse" />
-              <p className="text-[12px] text-neutral-500">{item}</p>
+              <p className="font-body text-body text-neutral-500">{item}</p>
             </div>
           ))}
         </div>

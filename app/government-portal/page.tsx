@@ -22,7 +22,7 @@ export default function GovernmentPortalPage() {
     <>
       <Nav />
 
-      <main className="pt-28 pb-16 px-6 md:px-10 max-w-4xl mx-auto">
+      <main className="pt-28 pb-16 px-6 md:px-10 max-w-6xl mx-auto">
 
         {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-6">
@@ -37,7 +37,7 @@ export default function GovernmentPortalPage() {
         <h1 className="font-sans font-bold text-[32px] md:text-[48px] leading-tight tracking-tight mb-4">
           {meta.title}
         </h1>
-        <p className="text-[13px] text-neutral-500 leading-relaxed max-w-xl mb-12">
+        <p className="font-body text-body text-neutral-500 leading-relaxed max-w-xl mb-12">
           {meta.description}
         </p>
 
@@ -45,19 +45,19 @@ export default function GovernmentPortalPage() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-b border-neutral-200 py-8 mb-16">
           <div>
             <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-2">TIMELINE</p>
-            <p className="text-[12px] leading-snug">{meta.timeline}</p>
+            <p className="font-body text-body leading-snug">{meta.timeline}</p>
           </div>
           <div>
             <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-2">TEAM</p>
-            <p className="text-[12px] leading-snug">{meta.team}</p>
+            <p className="font-body text-body leading-snug">{meta.team}</p>
           </div>
           <div>
             <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-2">ROLE</p>
-            <p className="text-[12px] leading-snug">{meta.role}</p>
+            <p className="font-body text-body leading-snug">{meta.role}</p>
           </div>
           <div>
             <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-2">SKILLS</p>
-            <p className="text-[12px] leading-snug">{meta.skills.join(", ")}</p>
+            <p className="font-body text-body leading-snug">{meta.skills.join(", ")}</p>
           </div>
         </div>
 
@@ -67,10 +67,10 @@ export default function GovernmentPortalPage() {
           <div className="space-y-6">
             {highlights.map((item, i) => (
               <div key={i} className="flex gap-6">
-                <span className="text-[10px] tracking-widest text-neutral-300 shrink-0 pt-0.5">
+                <span className="text-base tracking-widest text-neutral-300 shrink-0 pt-0.5">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <p className="text-[14px] leading-relaxed text-neutral-700">{item}</p>
+                <p className="font-body text-body leading-relaxed text-neutral-700">{item}</p>
               </div>
             ))}
           </div>
@@ -88,7 +88,7 @@ export default function GovernmentPortalPage() {
         <div className="mb-16">
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">CONTEXT</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">Launching a government-scale product</h2>
-          <p className="text-[13px] text-neutral-500 leading-relaxed max-w-2xl mb-8">
+          <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-8">
             [Placeholder — describe the portal, the government initiative behind it, and the stakes of getting onboarding right at scale.]
           </p>
           <div className="w-full rounded-2xl bg-[#c2dcc2]" style={{ height: "360px" }} />
@@ -98,7 +98,7 @@ export default function GovernmentPortalPage() {
         <div className="mb-16">
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">PROCESS</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">Redesigning the onboarding flow</h2>
-          <p className="text-[13px] text-neutral-500 leading-relaxed max-w-2xl mb-8">
+          <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-8">
             [Placeholder — walk through how you identified drop-off points, what changes were made to the onboarding process, and how you coordinated with government stakeholders.]
           </p>
           <div className="w-full rounded-2xl bg-[#b0d0b0]" style={{ height: "360px" }} />
@@ -108,7 +108,7 @@ export default function GovernmentPortalPage() {
         <div className="mb-20">
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">IMPACT</p>
           <h2 className="font-sans font-semibold text-[22px] mb-4">35% more applications completed</h2>
-          <p className="text-[13px] text-neutral-500 leading-relaxed max-w-2xl mb-8">
+          <p className="font-body text-body text-neutral-500 leading-relaxed max-w-4xl mb-8">
             [Placeholder — share the before/after data, what the completion rate improvement meant for real citizens, and key takeaways from working in the public sector.]
           </p>
           <div className="w-full rounded-2xl bg-[#9ec49e]" style={{ height: "360px" }} />
@@ -119,7 +119,7 @@ export default function GovernmentPortalPage() {
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-6">NEXT UP…</p>
           <a href="/zero-vfx" className="group flex items-center justify-between">
             <div>
-              <p className="text-[11px] text-neutral-400 mb-1">MARKETING · 2020</p>
+              <p className="font-body text-body text-neutral-400 mb-1">MARKETING · 2020</p>
               <h3 className="font-sans font-semibold text-[22px] group-hover:opacity-60 transition-opacity">
                 Zero VFX →
               </h3>
