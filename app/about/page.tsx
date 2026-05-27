@@ -34,7 +34,7 @@ export default function AboutPage() {
       <main className="pt-28 pb-8 bg-white">
         <div className="w-full max-w-6xl mx-auto px-6 md:px-10">
           {/* Intro: copy left, collage right */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-10 xl:gap-16 items-start mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start mb-20">
             <div className="max-w-xl lg:max-w-none">
               <p
                 className="font-sans leading-tight mb-10"
@@ -68,7 +68,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="lg:pt-4">
+            <div className="w-full">
               <AboutCollage />
             </div>
           </div>
