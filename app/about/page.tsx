@@ -6,17 +6,20 @@ const leadership = [
   {
     role: "PM Intern",
     org: "UW MSTI, Coffee Chat Program",
-    bg: "#e8edf5",
+    image: "/images/aboutme/IMG_9593.jpg",
+    alt: "Leading a workshop discussion",
   },
   {
     role: "Apprenticeship Lead",
     org: "T-Mobile, Accessibility Chessboard",
-    bg: "#f0e8f5",
+    image: "/images/chessboard/Image__20_.jpeg",
+    alt: "Team collaborating on the accessibility chessboard",
   },
   {
     role: "Graduate Student",
     org: "MS Technology Innovation (HCI)",
-    bg: "#e8f5ee",
+    image: "/images/aboutme/IMG_6325.jpg",
+    alt: "Soldering electronics in the lab",
   },
 ];
 
@@ -83,12 +86,16 @@ export default function AboutPage() {
               At UW MSTI, I work at the intersection of technology and people.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-              {leadership.map((item, i) => (
-                <div key={i}>
-                  <div
-                    className="w-full mb-3"
-                    style={{ backgroundColor: item.bg, height: "200px" }}
-                  />
+              {leadership.map((item) => (
+                <div key={item.role}>
+                  <div className="mb-3 aspect-[3/2] w-full overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.alt}
+                      className="h-full w-full object-cover"
+                      draggable={false}
+                    />
+                  </div>
                   <p className="font-body text-body text-black">{item.role}</p>
                   <p className="font-body text-body text-neutral-500">{item.org}</p>
                 </div>
