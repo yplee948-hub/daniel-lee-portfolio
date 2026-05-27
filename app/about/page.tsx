@@ -1,22 +1,21 @@
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
-import AboutCollage from "../components/AboutCollage";
 
 const leadership = [
   {
     role: "PM Intern",
-    org: "UW MSTI, Coffee Chat Program",
+    org: "UW MSTI — Coffee Chat Program",
     bg: "#e8edf5",
   },
   {
     role: "Apprenticeship Lead",
-    org: "T-Mobile, Accessibility Chessboard",
+    org: "T-Mobile — Accessibility Chessboard",
     bg: "#f0e8f5",
   },
   {
     role: "Graduate Student",
     org: "MS Technology Innovation (HCI)",
-    bg: "#e8f5ee",
+    bg: "#e8f5ed",
   },
 ];
 
@@ -31,83 +30,72 @@ export default function AboutPage() {
     <>
       <Nav active="about" />
 
-      <main className="pt-28 pb-8 bg-white">
-        <div className="w-full max-w-6xl mx-auto px-6 md:px-10">
-          {/* Intro: copy left, collage right */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-10 xl:gap-16 items-start mb-20">
-            <div className="max-w-xl lg:max-w-none">
-              <p
-                className="font-sans leading-tight mb-10"
-                style={{ fontSize: "32px", fontWeight: 500, color: "#000000" }}
-              >
-                I&apos;m Daniel – I build programs that connect people and solve real problems.
-              </p>
+      <main className="pt-[112px] pb-8 bg-white">
+        <div className="w-full max-w-[1440px] mx-auto px-6 md:px-20">
+          <p
+            className="font-sans font-medium text-[32px] text-black leading-tight max-w-[800px] mb-10"
+          >
+            I&apos;m Daniel – I build programs that connect people and solve real problems.
+          </p>
 
-              <div className="space-y-5 font-body text-body text-[#242424] leading-[1.7]">
-                <p>
-                  Growing up between Seoul and Bellevue shaped my instinct for understanding people.
-                  I&apos;ve always been drawn to the spaces where systems fall short: the government
-                  portal that confuses users, the franchise that can&apos;t scale, the team that loses
-                  track of its own progress.
-                </p>
-                <p>
-                  I spent years in operations and program management, running franchise expansions in
-                  South Korea and managing citizen-facing government programs. Each role taught me how
-                  to move fast in ambiguous environments and turn fragmented data into clear action.
-                </p>
-                <p>
-                  That path eventually led me to product management and HCI. I&apos;m currently pursuing
-                  my M.S. in Technology Innovation (HCI) at the University of Washington, where I build
-                  dashboards, prototype accessibility tools, and work with AI to make things that
-                  actually help people.
-                </p>
-                <p>
-                  I believe the best product decisions come from being in the room with real users. And
-                  I believe every PM should know how to build, at least a little.
-                </p>
-              </div>
-            </div>
-
-            <div className="lg:pt-4">
-              <AboutCollage />
-            </div>
+          <div className="space-y-5 max-w-full font-sans text-base text-[#242424] leading-[27px] mb-20">
+            <p>
+              Growing up between Seoul and Bellevue shaped my instinct for understanding people.
+              I&apos;ve always been drawn to the spaces where systems fall short — the government
+              portal that confuses users, the franchise that can&apos;t scale, the team that loses
+              track of its own progress.
+            </p>
+            <p>
+              I spent years in operations and program management, running franchise expansions in
+              South Korea and managing citizen-facing government programs. Each role taught me how
+              to move fast in ambiguous environments and turn fragmented data into clear action.
+            </p>
+            <p>
+              That path eventually led me to product management and HCI. I&apos;m currently pursuing
+              my M.S. in Technology Innovation (HCI) at the University of Washington, where I build
+              dashboards, prototype accessibility tools, and work with AI to make things that
+              actually help people.
+            </p>
+            <p>
+              I believe the best product decisions come from being in the room with real users. And
+              I believe every PM should know how to build, at least a little.
+            </p>
           </div>
 
-          {/* Leadership */}
-          <div className="mt-20 pt-10 border-t border-neutral-200">
-            <p className="text-base tracking-widest uppercase text-neutral-400 mb-4">LEADERSHIP</p>
-            <p
-              className="font-sans mb-10"
-              style={{ fontSize: "24px", fontWeight: 400, color: "#545454" }}
-            >
+          <section className="mb-20">
+            <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-neutral-400 mb-4">
+              LEADERSHIP
+            </p>
+            <p className="font-sans text-2xl text-[#545454] max-w-[700px] mb-10 leading-snug">
               At UW MSTI, I work at the intersection of technology and people.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {leadership.map((item, i) => (
                 <div key={i}>
                   <div
-                    className="w-full mb-3"
+                    className="w-full mb-2 rounded-sm"
                     style={{ backgroundColor: item.bg, height: "200px" }}
                   />
-                  <p className="font-body text-body text-black">{item.role}</p>
-                  <p className="font-body text-body text-neutral-500">{item.org}</p>
+                  <p className="text-sm text-black">{item.role}</p>
+                  <p className="text-sm text-neutral-500">{item.org}</p>
                 </div>
               ))}
             </div>
-          </div>
+          </section>
 
-          {/* Core Values */}
-          <div className="mt-20 pt-10 border-t border-neutral-200">
-            <p className="text-base tracking-widest uppercase text-neutral-400 mb-10">MY CORE VALUES</p>
+          <section>
+            <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-neutral-400 mb-8">
+              MY CORE VALUES
+            </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
               {values.map((value, i) => (
-                <div key={i}>
-                  <p className="text-lg mb-3 text-neutral-800">✱</p>
-                  <p className="font-body text-body leading-relaxed text-[#242424]">{value}</p>
+                <div key={i} className="max-w-[360px]">
+                  <p className="text-lg mb-3 text-[#333]">✱</p>
+                  <p className="text-sm text-[#242424] leading-relaxed">{value}</p>
                 </div>
               ))}
             </div>
-          </div>
+          </section>
 
           <Footer inset />
         </div>
