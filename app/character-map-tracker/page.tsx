@@ -23,7 +23,7 @@ export default function CharacterMapTrackerPage() {
     <>
       <Nav />
 
-      <main className="pt-28 pb-16 px-6 md:px-10 max-w-6xl mx-auto">
+      <main className="pt-28 px-6 md:px-10 max-w-6xl mx-auto">
 
         {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-6">
@@ -733,9 +733,8 @@ export default function CharacterMapTrackerPage() {
             </div>
           </div>
         </div>
+        <Footer inset />
       </main>
-
-      <Footer />
     </>
   );
 }

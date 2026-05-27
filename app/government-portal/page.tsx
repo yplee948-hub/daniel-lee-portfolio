@@ -22,7 +22,7 @@ export default function GovernmentPortalPage() {
     <>
       <Nav />
 
-      <main className="pt-28 pb-16 px-6 md:px-10 max-w-6xl mx-auto">
+      <main className="pt-28 px-6 md:px-10 max-w-6xl mx-auto">
 
         {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-6">
@@ -113,9 +113,8 @@ export default function GovernmentPortalPage() {
           </p>
           <div className="w-full rounded-2xl bg-[#9ec49e]" style={{ height: "360px" }} />
         </div>
+        <Footer inset />
       </main>
-
-      <Footer />
     </>
   );
 }
