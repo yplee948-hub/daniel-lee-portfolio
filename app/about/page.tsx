@@ -1,5 +1,6 @@
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
+import AboutCollage from "../components/AboutCollage";
 
 const leadership = [
   {
@@ -31,41 +32,49 @@ export default function AboutPage() {
       <Nav active="about" />
 
       <main className="pt-28 pb-8 bg-white">
-        <div className="w-full max-w-4xl mx-auto px-8 md:px-16">
+        <div className="w-full max-w-6xl mx-auto px-6 md:px-10">
+          {/* Intro: copy left, collage right */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-10 xl:gap-16 items-start mb-20">
+            <div className="max-w-xl lg:max-w-none">
+              <p
+                className="font-sans leading-tight mb-10"
+                style={{ fontSize: "32px", fontWeight: 500, color: "#000000" }}
+              >
+                I&apos;m Daniel – I build programs that connect people and solve real problems.
+              </p>
 
-          {/* Intro heading */}
-          <p
-            className="font-sans leading-tight mb-10"
-            style={{ fontSize: "32px", fontWeight: 500, color: "#000000" }}
-          >
-            I&apos;m Daniel – I build programs that connect people and solve real problems.
-          </p>
+              <div className="space-y-5 font-body text-body text-[#242424] leading-[1.7]">
+                <p>
+                  Growing up between Seoul and Bellevue shaped my instinct for understanding people.
+                  I&apos;ve always been drawn to the spaces where systems fall short: the government
+                  portal that confuses users, the franchise that can&apos;t scale, the team that loses
+                  track of its own progress.
+                </p>
+                <p>
+                  I spent years in operations and program management, running franchise expansions in
+                  South Korea and managing citizen-facing government programs. Each role taught me how
+                  to move fast in ambiguous environments and turn fragmented data into clear action.
+                </p>
+                <p>
+                  That path eventually led me to product management and HCI. I&apos;m currently pursuing
+                  my M.S. in Technology Innovation (HCI) at the University of Washington, where I build
+                  dashboards, prototype accessibility tools, and work with AI to make things that
+                  actually help people.
+                </p>
+                <p>
+                  I believe the best product decisions come from being in the room with real users. And
+                  I believe every PM should know how to build, at least a little.
+                </p>
+              </div>
+            </div>
 
-          {/* Body paragraphs */}
-          <div className="space-y-5 max-w-2xl font-body text-body text-[#242424] leading-[1.7]">
-            <p>
-              Growing up between Seoul and Bellevue shaped my instinct for understanding people. I&apos;ve always been
-              drawn to the spaces where systems fall short: the government portal that confuses users, the franchise
-              that can&apos;t scale, the team that loses track of its own progress.
-            </p>
-            <p>
-              I spent years in operations and program management, running franchise expansions in South Korea and
-              managing citizen-facing government programs. Each role taught me how to move fast in ambiguous
-              environments and turn fragmented data into clear action.
-            </p>
-            <p>
-              That path eventually led me to product management and HCI. I&apos;m currently pursuing my M.S. in
-              Technology Innovation (HCI) at the University of Washington, where I build dashboards, prototype
-              accessibility tools, and work with AI to make things that actually help people.
-            </p>
-            <p>
-              I believe the best product decisions come from being in the room with real users. And I believe every
-              PM should know how to build, at least a little.
-            </p>
+            <div className="lg:pt-4">
+              <AboutCollage />
+            </div>
           </div>
 
           {/* Leadership */}
-          <div className="mt-20 pt-10 border-t border-neutral-200 max-w-4xl">
+          <div className="mt-20 pt-10 border-t border-neutral-200">
             <p className="text-base tracking-widest uppercase text-neutral-400 mb-4">LEADERSHIP</p>
             <p
               className="font-sans mb-10"
@@ -88,15 +97,13 @@ export default function AboutPage() {
           </div>
 
           {/* Core Values */}
-          <div className="mt-20 pt-10 border-t border-neutral-200 max-w-4xl">
+          <div className="mt-20 pt-10 border-t border-neutral-200">
             <p className="text-base tracking-widest uppercase text-neutral-400 mb-10">MY CORE VALUES</p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
               {values.map((value, i) => (
                 <div key={i}>
                   <p className="text-lg mb-3 text-neutral-800">✱</p>
-                  <p className="font-body text-body leading-relaxed text-[#242424]">
-                    {value}
-                  </p>
+                  <p className="font-body text-body leading-relaxed text-[#242424]">{value}</p>
                 </div>
               ))}
             </div>
