@@ -1,0 +1,168 @@
+<svg viewBox="0 0 1100 620" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <title>Coffee Chat Program Workflow Map</title>
+  <desc>End-to-end workflow showing coordinator flow and ambassador journey with friction points highlighted</desc>
+
+  <!-- Background -->
+  <rect width="1100" height="620" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="550" y="38" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a2e" letter-spacing="0.3">Coffee Chat Program — Workflow Map</text>
+
+  <!-- SECTION LABEL: Coordinator Flow -->
+  <text x="30" y="80" font-size="9" font-weight="700" letter-spacing="1.5" fill="#9ca3af">COORDINATOR FLOW</text>
+
+  <!-- 1: Request -->
+  <rect x="30" y="90" width="96" height="48" rx="8" fill="white" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="78" y="111" text-anchor="middle" font-size="10" font-weight="600" fill="#374151">Coffee Chat</text>
+  <text x="78" y="125" text-anchor="middle" font-size="10" font-weight="600" fill="#374151">Request</text>
+  <line x1="126" y1="114" x2="148" y2="114" stroke="#d1d5db" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 2: Joho Form -->
+  <rect x="148" y="90" width="96" height="48" rx="8" fill="white" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="196" y="111" text-anchor="middle" font-size="10" font-weight="600" fill="#374151">Joho Form</text>
+  <text x="196" y="125" text-anchor="middle" font-size="9" fill="#9ca3af">auto-submitted</text>
+  <line x1="244" y1="114" x2="266" y2="114" stroke="#d1d5db" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 3: SharePoint -->
+  <rect x="266" y="90" width="96" height="48" rx="8" fill="white" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="314" y="108" text-anchor="middle" font-size="10" font-weight="600" fill="#374151">SharePoint</text>
+  <text x="314" y="121" text-anchor="middle" font-size="9" fill="#9ca3af">auto-updated</text>
+  <text x="314" y="133" text-anchor="middle" font-size="9" fill="#9ca3af">spreadsheet</text>
+  <line x1="362" y1="114" x2="384" y2="114" stroke="#d1d5db" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 4: Assign (friction) -->
+  <rect x="384" y="90" width="96" height="48" rx="8" fill="#fff7ed" stroke="#f97316" stroke-width="1.5"/>
+  <text x="432" y="108" text-anchor="middle" font-size="10" font-weight="600" fill="#c2410c">Coordinator</text>
+  <text x="432" y="121" text-anchor="middle" font-size="10" font-weight="600" fill="#c2410c">Assigns</text>
+  <text x="432" y="133" text-anchor="middle" font-size="9" fill="#f97316">manual</text>
+  <line x1="480" y1="114" x2="502" y2="114" stroke="#d1d5db" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 5: Notify (friction) -->
+  <rect x="502" y="90" width="96" height="48" rx="8" fill="#fff7ed" stroke="#f97316" stroke-width="1.5"/>
+  <text x="550" y="108" text-anchor="middle" font-size="10" font-weight="600" fill="#c2410c">Email Both</text>
+  <text x="550" y="121" text-anchor="middle" font-size="10" font-weight="600" fill="#c2410c">Parties</text>
+  <text x="550" y="133" text-anchor="middle" font-size="9" fill="#f97316">manual</text>
+  <line x1="598" y1="114" x2="620" y2="114" stroke="#d1d5db" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 6: Coffee Chat -->
+  <rect x="620" y="90" width="96" height="48" rx="8" fill="white" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="668" y="111" text-anchor="middle" font-size="10" font-weight="600" fill="#374151">Coffee Chat</text>
+  <text x="668" y="125" text-anchor="middle" font-size="9" fill="#9ca3af">Zoom / in-person</text>
+  <line x1="716" y1="114" x2="738" y2="114" stroke="#d1d5db" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 7: Feedback form (friction) -->
+  <rect x="738" y="90" width="96" height="48" rx="8" fill="#fff7ed" stroke="#f97316" stroke-width="1.5"/>
+  <text x="786" y="108" text-anchor="middle" font-size="10" font-weight="600" fill="#c2410c">Send Feedback</text>
+  <text x="786" y="121" text-anchor="middle" font-size="10" font-weight="600" fill="#c2410c">Form</text>
+  <text x="786" y="133" text-anchor="middle" font-size="9" fill="#f97316">manual · 1 week</text>
+  <line x1="834" y1="114" x2="856" y2="114" stroke="#d1d5db" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 8: Update spreadsheet (friction) -->
+  <rect x="856" y="90" width="110" height="48" rx="8" fill="#fff7ed" stroke="#f97316" stroke-width="1.5"/>
+  <text x="911" y="108" text-anchor="middle" font-size="10" font-weight="600" fill="#c2410c">Update</text>
+  <text x="911" y="121" text-anchor="middle" font-size="10" font-weight="600" fill="#c2410c">Spreadsheet</text>
+  <text x="911" y="133" text-anchor="middle" font-size="9" fill="#f97316">manual</text>
+
+  <!-- DIVIDER -->
+  <line x1="30" y1="185" x2="1070" y2="185" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- SECTION LABEL: Ambassador Journey -->
+  <text x="30" y="215" font-size="9" font-weight="700" letter-spacing="1.5" fill="#9ca3af">AMBASSADOR JOURNEY</text>
+
+  <!-- AMB 1: Receives email -->
+  <rect x="30" y="225" width="110" height="48" rx="8" fill="white" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="85" y="246" text-anchor="middle" font-size="10" font-weight="600" fill="#374151">Receives</text>
+  <text x="85" y="259" text-anchor="middle" font-size="10" font-weight="600" fill="#374151">Assignment</text>
+  <line x1="140" y1="249" x2="162" y2="249" stroke="#d1d5db" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- AMB 2: Draft email (friction) -->
+  <rect x="162" y="225" width="110" height="48" rx="8" fill="#fff7ed" stroke="#f97316" stroke-width="1.5"/>
+  <text x="217" y="243" text-anchor="middle" font-size="10" font-weight="600" fill="#c2410c">Draft Intro</text>
+  <text x="217" y="256" text-anchor="middle" font-size="10" font-weight="600" fill="#c2410c">Email</text>
+  <text x="217" y="268" text-anchor="middle" font-size="9" fill="#f97316">copy-paste format</text>
+  <line x1="272" y1="249" x2="294" y2="249" stroke="#d1d5db" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- AMB 3: Send email -->
+  <rect x="294" y="225" width="96" height="48" rx="8" fill="white" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="342" y="246" text-anchor="middle" font-size="10" font-weight="600" fill="#374151">Send Email</text>
+  <text x="342" y="260" text-anchor="middle" font-size="9" fill="#9ca3af">via Outlook</text>
+  <line x1="390" y1="249" x2="412" y2="249" stroke="#d1d5db" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- AMB 4: Update spreadsheet (friction) -->
+  <rect x="412" y="225" width="110" height="48" rx="8" fill="#fff7ed" stroke="#f97316" stroke-width="1.5"/>
+  <text x="467" y="243" text-anchor="middle" font-size="10" font-weight="600" fill="#c2410c">Update</text>
+  <text x="467" y="256" text-anchor="middle" font-size="10" font-weight="600" fill="#c2410c">Spreadsheet</text>
+  <text x="467" y="268" text-anchor="middle" font-size="9" fill="#f97316">manual</text>
+  <line x1="522" y1="249" x2="544" y2="249" stroke="#d1d5db" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- AMB 5: Connect -->
+  <rect x="544" y="225" width="96" height="48" rx="8" fill="white" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="592" y="246" text-anchor="middle" font-size="10" font-weight="600" fill="#374151">Coffee Chat</text>
+  <text x="592" y="260" text-anchor="middle" font-size="9" fill="#9ca3af">connect</text>
+  <line x1="640" y1="249" x2="662" y2="249" stroke="#d1d5db" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- AMB 6: Fill feedback (friction) -->
+  <rect x="662" y="225" width="110" height="48" rx="8" fill="#fff7ed" stroke="#f97316" stroke-width="1.5"/>
+  <text x="717" y="243" text-anchor="middle" font-size="10" font-weight="600" fill="#c2410c">Fill Feedback</text>
+  <text x="717" y="256" text-anchor="middle" font-size="10" font-weight="600" fill="#c2410c">Form</text>
+  <text x="717" y="268" text-anchor="middle" font-size="9" fill="#f97316">Microsoft Forms</text>
+  <line x1="772" y1="249" x2="794" y2="249" stroke="#d1d5db" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- AMB 7: Form updated -->
+  <rect x="794" y="225" width="110" height="48" rx="8" fill="white" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="849" y="243" text-anchor="middle" font-size="10" font-weight="600" fill="#374151">Spreadsheet</text>
+  <text x="849" y="256" text-anchor="middle" font-size="10" font-weight="600" fill="#374151">Updated</text>
+  <text x="849" y="268" text-anchor="middle" font-size="9" fill="#9ca3af">by coordinator</text>
+
+  <!-- DIVIDER -->
+  <line x1="30" y1="320" x2="1070" y2="320" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- INSIGHT CARDS LABEL -->
+  <text x="30" y="348" font-size="9" font-weight="700" letter-spacing="1.5" fill="#9ca3af">KEY INSIGHTS FROM INTERVIEWS</text>
+
+  <!-- Card 1 -->
+  <rect x="30" y="360" width="320" height="90" rx="10" fill="white" stroke="#e5e7eb" stroke-width="1.5"/>
+  <rect x="30" y="360" width="4" height="90" rx="2" fill="#f97316"/>
+  <text x="48" y="380" font-size="11" font-weight="700" fill="#1f2937">Manual email drafting wastes time</text>
+  <text x="48" y="396" font-size="10" fill="#6b7280">Ambassadors had no template system. Each intro</text>
+  <text x="48" y="410" font-size="10" fill="#6b7280">email required opening a separate format doc,</text>
+  <text x="48" y="424" font-size="10" fill="#6b7280">copy-pasting, and manually filling in student details.</text>
+  <text x="48" y="438" font-size="10" fill="#6b7280">No record of whether it was sent.</text>
+
+  <!-- Card 2 -->
+  <rect x="370" y="360" width="320" height="90" rx="10" fill="white" stroke="#e5e7eb" stroke-width="1.5"/>
+  <rect x="370" y="360" width="4" height="90" rx="2" fill="#f97316"/>
+  <text x="388" y="380" font-size="11" font-weight="700" fill="#1f2937">No visibility after assignment</text>
+  <text x="388" y="396" font-size="10" fill="#6b7280">Once assigned, coordinators had no signal until</text>
+  <text x="388" y="410" font-size="10" fill="#6b7280">feedback arrived. During peak season, stalled</text>
+  <text x="388" y="424" font-size="10" fill="#6b7280">requests could sit undetected for weeks with</text>
+  <text x="388" y="438" font-size="10" fill="#6b7280">no escalation path.</text>
+
+  <!-- Card 3 -->
+  <rect x="710" y="360" width="320" height="90" rx="10" fill="white" stroke="#e5e7eb" stroke-width="1.5"/>
+  <rect x="710" y="360" width="4" height="90" rx="2" fill="#f97316"/>
+  <text x="728" y="380" font-size="11" font-weight="700" fill="#1f2937">Feedback data was disconnected</text>
+  <text x="728" y="396" font-size="10" fill="#6b7280">Post-chat feedback lived in a separate Microsoft</text>
+  <text x="728" y="410" font-size="10" fill="#6b7280">Form file, never linked to the original request.</text>
+  <text x="728" y="424" font-size="10" fill="#6b7280">Cross-referencing insights across ambassadors</text>
+  <text x="728" y="438" font-size="10" fill="#6b7280">required hours of manual work.</text>
+
+  <!-- LEGEND -->
+  <rect x="30" y="480" width="340" height="44" rx="8" fill="white" stroke="#e5e7eb" stroke-width="1.5"/>
+  <rect x="50" y="497" width="14" height="14" rx="3" fill="#fff7ed" stroke="#f97316" stroke-width="1.5"/>
+  <text x="72" y="508" font-size="10" fill="#374151">High-friction manual step</text>
+  <rect x="190" y="497" width="14" height="14" rx="3" fill="white" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="212" y="508" font-size="10" fill="#374151">Automated or neutral step</text>
+
+  <!-- SCOPE BOX -->
+  <rect x="30" y="540" width="700" height="56" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="50" y="562" font-size="9" font-weight="700" letter-spacing="1.2" fill="#15803d">PROTOTYPE SCOPE</text>
+  <text x="50" y="578" font-size="10" fill="#166534">Ambassador email templates · Coordinator status pipeline · Integrated post-chat feedback form</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#d1d5db"/>
+    </marker>
+  </defs>
+</svg>
