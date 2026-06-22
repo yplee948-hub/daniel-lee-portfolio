@@ -153,35 +153,6 @@ export default function CoffeeChatPage() {
             The existing process had 9 steps from form submission to feedback collection. Three of them highlighted in the map were purely manual and offered no visibility to anyone else:
           </p>
 
-          {/* Workflow steps */}
-          <div className="rounded-xl border border-neutral-100 bg-[#f8fafc] px-8 py-8 mb-8">
-            <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-6">EXISTING WORKFLOW · 9 STEPS</p>
-            <div className="space-y-3">
-              {[
-                { step: "01", label: "Student submits a coffee chat request", sub: "Via Joho Form on the MSTI website", friction: false },
-                { step: "02", label: "Form auto-populates the SharePoint spreadsheet", sub: "The one reliable automated step in the process", friction: false },
-                { step: "03", label: "Coordinator receives email notification", sub: "Triggered automatically from SharePoint", friction: false },
-                { step: "04", label: "Coordinator manually assigns to an ambassador", sub: "Student vs. alumni, based on preference", friction: false },
-                { step: "05", label: "Coordinator manually emails both parties", sub: "Copy-pasted intro email with student details", friction: true },
-                { step: "06", label: "Ambassador drafts and sends a follow-up email", sub: "Manually, using a format doc stored separately", friction: true },
-                { step: "07", label: "Ambassador and student connect", sub: "Zoom, in-person, or email no standard format", friction: false },
-                { step: "08", label: "Coordinator manually sends feedback form after 1 week", sub: "Via Microsoft Forms tracked in a separate file", friction: true },
-                { step: "09", label: "Coordinator manually updates spreadsheet with outcome", sub: "Done by hand, often delayed or skipped", friction: true },
-              ].map((s) => (
-                <div key={s.step} className={`flex gap-4 items-start rounded-lg px-4 py-3 ${s.friction ? "bg-red-50 border border-red-100" : "bg-white border border-neutral-100"}`}>
-                  <span className={`text-[10px] font-mono shrink-0 pt-0.5 ${s.friction ? "text-red-400" : "text-neutral-300"}`}>{s.step}</span>
-                  <div>
-                    <p className={`text-[12px] font-semibold ${s.friction ? "text-red-700" : "text-neutral-700"}`}>{s.label}</p>
-                    <p className="text-[11px] text-neutral-400 mt-0.5">{s.sub}</p>
-                  </div>
-                  {s.friction && (
-                    <span className="ml-auto text-[9px] tracking-widest uppercase text-red-400 font-semibold shrink-0 pt-0.5">friction</span>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-
           {/* FigJam image */}
           <div className="w-full rounded-2xl overflow-hidden border border-neutral-200 mb-3">
             <img
