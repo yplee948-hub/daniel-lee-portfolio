@@ -125,6 +125,22 @@ export default function CoffeeChatPage() {
             ))}
           </div>
 
+          {/* Before images */}
+          <div className="grid grid-cols-2 gap-4 mb-10">
+            <div>
+              <div className="w-full rounded-2xl overflow-hidden border border-neutral-200" style={{ height: "320px" }}>
+                <img src="/images/coffeechatapplication.png" alt="Student coffee chat intake form" className="w-full h-full object-cover object-top"/>
+              </div>
+              <p className="font-body text-body text-neutral-400 mt-3 text-[11px]">Student intake form on the MSTI website. Each submission became a row in the shared tracker.</p>
+            </div>
+            <div>
+              <div className="w-full rounded-2xl overflow-hidden border border-neutral-200" style={{ height: "320px" }}>
+                <img src="/images/Execeltracker.png" alt="Original SharePoint spreadsheet tracker" className="w-full h-full object-cover object-top"/>
+              </div>
+              <p className="font-body text-body text-neutral-400 mt-3 text-[11px]">Original SharePoint spreadsheet with no ownership column, no status pipeline, and no SLA visibility.</p>
+            </div>
+          </div>
+
           <p className="font-body text-body text-neutral-500 leading-relaxed mb-4">
             Three friction points surfaced consistently across nearly every interview:
           </p>
