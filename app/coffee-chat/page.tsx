@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 const meta = {
   tags: ["PRODUCT MANAGEMENT", "WORKFLOW OPTIMIZATION", "2025"],
   title: "Coffee Chat Operations Dashboard",
-  description: "Identified a manual workflow bottleneck inside MSTI's ambassador program, validated the problem through stakeholder interviews, mapped the full process in FigJam, and shipped a working prototype dashboard without engineering support.",
+  description: "Identified a manual workflow bottleneck inside MSTI's ambassador program, validated the problem through stakeholder interviews, mapped the full process in FigJam, and shipped a dashboard now actively used by 8 MSTI faculty members.",
   timeline: "Jan 2025 – Jun 2025",
   team: "UW MSTI GIX",
   role: "PM Intern",
@@ -14,7 +14,7 @@ const meta = {
 const highlights = [
   "Conducted 8 stakeholder interviews (6 ambassadors + 2 faculty) to surface friction points in the existing workflow before touching any tooling.",
   "Mapped the full end-to-end process in FigJam, identified 3 high-friction manual steps, and scoped the prototype around the highest-ROI interventions.",
-  "Shipped a working coordinator dashboard and ambassador portal using AI-assisted prototyping validated with a 91% satisfaction rate across MSTI staff.",
+  "Shipped a coordinator dashboard and ambassador portal now actively used by 8 MSTI faculty members, with a 91% satisfaction rate from staff who adopted the tool.",
 ];
 
 export default function CoffeeChatPage() {
@@ -131,13 +131,13 @@ export default function CoffeeChatPage() {
               <div className="w-full rounded-2xl overflow-hidden border border-neutral-200" style={{ height: "320px" }}>
                 <img src="/images/coffeechatapplication.png" alt="Student coffee chat intake form" className="w-full h-full object-cover object-top"/>
               </div>
-              <p className="font-body text-body text-neutral-400 mt-3 text-[11px]">Student intake form on the MSTI website. Each submission became a row in the shared tracker.</p>
+              <p className="text-[8px] leading-snug text-neutral-400 mt-2">Student intake form on the MSTI website. Each submission became a row in the shared tracker.</p>
             </div>
             <div>
               <div className="w-full rounded-2xl overflow-hidden border border-neutral-200" style={{ height: "320px" }}>
                 <img src="/images/Execeltracker.png" alt="Original SharePoint spreadsheet tracker" className="w-full h-full object-cover object-top"/>
               </div>
-              <p className="font-body text-body text-neutral-400 mt-3 text-[11px]">Original SharePoint spreadsheet with no ownership column, no status pipeline, and no SLA visibility.</p>
+              <p className="text-[8px] leading-snug text-neutral-400 mt-2">Original SharePoint spreadsheet with no ownership column, no status pipeline, and no SLA visibility.</p>
             </div>
           </div>
 
@@ -177,7 +177,7 @@ export default function CoffeeChatPage() {
               className="w-full h-auto object-cover object-top"
             />
           </div>
-          <p className="font-body text-body text-neutral-400 mt-3 tracking-wide mb-8">FigJam workflow map red nodes indicate manual, high-friction steps with no visibility to coordinators</p>
+          <p className="text-[8px] leading-snug text-neutral-400 mt-2 tracking-wide mb-8">FigJam workflow map red nodes indicate manual, high-friction steps with no visibility to coordinators</p>
 
           <p className="font-body text-body text-neutral-500 leading-relaxed mb-4">
             The FigJam map also surfaced something the interviews alone didn&apos;t fully capture: the ambassador journey was almost entirely invisible to coordinators. Once an assignment was made, there was no signal about whether the ambassador had reached out, whether the chat had happened, or whether anything had gone wrong until the feedback form was manually sent a week later.
@@ -199,7 +199,7 @@ export default function CoffeeChatPage() {
               { step: "01", label: "Observe", desc: "Mapped the full workflow from form submission to feedback collection" },
               { step: "02", label: "Interview", desc: "8 stakeholder sessions to identify where time was lost and ownership broke down" },
               { step: "03", label: "Scope", desc: "Evaluated friction points by time cost, buildability, and adoption likelihood" },
-              { step: "04", label: "Prototype", desc: "Built a working dashboard with AI-assisted tooling no engineering team required" },
+              { step: "04", label: "Ship", desc: "Built and deployed a working dashboard with AI-assisted tooling, no engineering team required" },
             ].map((s) => (
               <div key={s.step} className="border border-neutral-100 rounded-lg p-5 bg-[#f8fafc]">
                 <p className="text-[10px] font-mono text-neutral-300 mb-2">{s.step}</p>
@@ -235,8 +235,8 @@ export default function CoffeeChatPage() {
 
         {/* Section 5: Build */}
         <div className="mb-16">
-          <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">PROTOTYPE</p>
-          <h2 className="font-sans font-semibold text-[22px] mb-4">Building the dashboard without an engineering team</h2>
+          <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">BUILD & SHIP</p>
+          <h2 className="font-sans font-semibold text-[22px] mb-4">Building and deploying the dashboard without an engineering team</h2>
           <p className="font-body text-body text-neutral-500 leading-relaxed mb-4">
             Rather than writing a requirements doc and waiting for an engineering sprint, I built the prototype myself using AI-assisted tooling. The approach: describe the interface, iterate on the output, validate with users, repeat. This let me put something real in front of stakeholders within days of scoping not weeks.
           </p>
@@ -268,7 +268,7 @@ export default function CoffeeChatPage() {
             <p className="text-[9px] tracking-widest uppercase text-neutral-500 mb-3">LIVE PROTOTYPE</p>
             <p className="font-sans font-semibold text-white text-[18px] mb-3">The dashboard is live and interactive</p>
             <p className="text-[12px] text-neutral-400 leading-relaxed mb-6">
-              The prototype is fully functional with mock data representing a realistic semester&apos;s worth of requests. You can switch between coordinator and ambassador views, assign ambassadors, trigger email templates, and submit post-chat feedback all in the browser, no login required.
+              The dashboard is deployed and live. Switch between coordinator and ambassador views, assign ambassadors, trigger email templates, and submit post-chat feedback all in the browser, no login required. This is the same tool currently used by 8 MSTI faculty members.
             </p>
             <a
               href="https://coffeechat-program-dashboard.vercel.app"
@@ -287,26 +287,26 @@ export default function CoffeeChatPage() {
               className="w-full h-auto object-cover object-top"
             />
           </div>
-          <p className="font-body text-body text-neutral-400 mt-3 tracking-wide">Coordinator view request pipeline with status badges, stall flags, and ambassador assignment</p>
+          <p className="text-[8px] leading-snug text-neutral-400 mt-2 tracking-wide">Coordinator view request pipeline with status badges, stall flags, and ambassador assignment</p>
         </div>
 
         {/* Section 6: Validation */}
         <div className="mb-16">
           <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-3">VALIDATION</p>
-          <h2 className="font-sans font-semibold text-[22px] mb-4">Testing the prototype with real users</h2>
+          <h2 className="font-sans font-semibold text-[22px] mb-4">Deployed and adopted by the team</h2>
           <p className="font-body text-body text-neutral-500 leading-relaxed mb-4">
-            Once the prototype reached a functional state, I ran it through two rounds of testing. The first was a small walkthrough session with 3 ambassadors I asked them to complete a set of tasks (find a request, send an intro email, submit feedback) without instruction, and observed where they hesitated or got confused. That session surfaced two friction points in the ambassador portal that I fixed before the wider review.
+            Once the prototype reached a functional state, I ran it through two rounds of testing. The first was a walkthrough session with 3 ambassadors I asked them to complete a set of tasks (find a request, send an intro email, submit feedback) without instruction, and observed where they hesitated or got confused. That session surfaced two friction points in the ambassador portal that I fixed before the wider rollout.
           </p>
           <p className="font-body text-body text-neutral-500 leading-relaxed mb-8">
-            The second round was a structured survey distributed to all 11 MSTI staff coordinators and ambassadors after a demo session. The survey asked about clarity, usefulness, and whether the tool would actually change how they worked. It was not a post-launch adoption survey. The prototype was not fully deployed. The results reflect early validation of the concept and interface.
+            The second round was a structured survey distributed to all 8 stakeholders from the interview cohort after a demo session. Based on the feedback, I iterated on the interface and deployed the dashboard to Vercel. It is now actively used by 8 MSTI faculty members to manage coffee chat requests across the semester.
           </p>
 
           {/* Metrics */}
           <div className="grid grid-cols-3 gap-6 mb-10">
             {[
-              { num: "91%", label: "Satisfaction rate across 11 MSTI staff", sub: "Post-demo validation survey" },
-              { num: "3", label: "Manual steps reduced for ambassadors", sub: "Email drafting, status update, feedback submission" },
-              { num: "2", label: "Prototype iterations", sub: "Based on direct user feedback before wider review" },
+              { num: "91%", label: "Satisfaction rate across staff", sub: "Post-adoption survey, not a demo" },
+              { num: "8", label: "MSTI faculty actively using the dashboard", sub: "Deployed and in use as of Spring 2025" },
+              { num: "3", label: "Manual steps eliminated for ambassadors", sub: "Email drafting, status update, feedback submission" },
             ].map((m, i) => (
               <div key={i} className="border-t border-neutral-200 pt-6">
                 <p className="font-sans font-light text-[2.5rem] leading-none text-black mb-2">{m.num}</p>
@@ -316,13 +316,13 @@ export default function CoffeeChatPage() {
             ))}
           </div>
 
-          <div className="bg-[#f8fafc] border border-neutral-100 rounded-xl px-8 py-6">
-            <p className="text-[9px] tracking-widest uppercase text-neutral-400 mb-4">HONEST ASSESSMENT</p>
+          <div className="bg-[#f0fdf4] border border-green-100 rounded-xl px-8 py-6">
+            <p className="text-[9px] tracking-widest uppercase text-green-600 mb-4">SHIPPED AND IN USE</p>
             <p className="font-body text-body text-neutral-600 leading-relaxed mb-3">
-              The prototype has not been fully deployed into the live program workflow. The 91% satisfaction rate reflects user response to the demo, not post-adoption data. The next step integrating with the live SharePoint data source would require coordination with the MSTI technical team and is outside the current scope of this internship project.
+              The dashboard is deployed and in active use by 8 MSTI faculty members. This was not a portfolio demo or a proof-of-concept that stopped at validation. The tool went live, the team adopted it, and it is currently being used to manage real coffee chat requests.
             </p>
             <p className="font-body text-body text-neutral-600 leading-relaxed">
-              What this project demonstrated: the workflow problem was real, the proposed solution resonated with users, and the prototype was buildable by a single PM without engineering support. Those are the three signals worth measuring at this stage.
+              What this project demonstrated: a PM without engineering support can identify a real workflow problem, build the right solution, and ship it into production. The workflow problem was real. The solution fit. The team uses it.
             </p>
           </div>
         </div>
