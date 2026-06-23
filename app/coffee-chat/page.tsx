@@ -172,7 +172,7 @@ export default function CoffeeChatPage() {
           {/* FigJam image */}
           <div className="w-full rounded-2xl overflow-hidden border border-neutral-200 mb-3">
             <img
-              src="/images/coffeechat_figjam.svg"
+              src="/images/coffeechat_figjam.png"
               alt="FigJam workflow map showing the coffee chat program process"
               className="w-full h-auto object-cover object-top"
             />
