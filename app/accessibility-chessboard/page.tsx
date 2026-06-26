@@ -178,7 +178,7 @@ export default function AccessibilityChessboardPage() {
       <section className="px-6 md:px-16 py-24 bg-neutral-50">
         <SectionLabel>The Problem</SectionLabel>
 
-        <div className="bg-[#ede0f8] border border-[#cba8f0]/40 rounded-sm px-8 py-10 mb-10">
+        <div className="bg-[#ede0f8] border border-[#cba8f0]/40 rounded-sm px-8 py-10 mb-10 max-w-5xl mx-auto">
           <p className="flex items-center gap-2 font-mono text-[9px] tracking-widest uppercase text-purple-500 mb-3">
             <Lightbulb className="w-3.5 h-3.5" strokeWidth={1.75} />
             HOW MIGHT WE
