@@ -312,7 +312,7 @@ export default function AccessibilityChessboardPage() {
               Bresenham&apos;s line algorithm for smooth coordinated motion across 41cm × 41cm
               of travel.
             </p>
-            {/* Bento grid — 3-col × 2-row, feature image left */}
+            {/* Bento grid: 3-col x 2-row, feature image left */}
             <div className="grid grid-cols-3 grid-rows-2 gap-2 mb-3" style={{ height: 380 }}>
               <PhotoWrap
                 src="/images/chessboard/Xy_beginning.jpeg"
@@ -355,7 +355,7 @@ export default function AccessibilityChessboardPage() {
                   />
                 </div>
                 <Caption>
-                  Fusion 360 — carriage piece (top) and corner mount (bottom)
+                  Fusion 360: carriage piece (top) and corner mount (bottom)
                 </Caption>
               </div>
               <div className="flex gap-2">
@@ -593,7 +593,7 @@ export default function AccessibilityChessboardPage() {
             <p className="font-body text-body text-neutral-500 leading-relaxed mb-6">
               We presented our full integrated system to the T-Mobile accessibility team,
               demonstrating end-to-end piece movement, voice control, and the web interface
-              live. The board worked — but the demo surfaced three real engineering problems
+              live. The board worked, but the demo surfaced three real engineering problems
               we needed to solve before final delivery.
             </p>
             <div className="space-y-3 mb-6">
@@ -608,7 +608,7 @@ export default function AccessibilityChessboardPage() {
                   num: "02",
                   issue: "Top layer sagged in the middle.",
                   detail:
-                    "With the PCB sandwiched between enclosure layers, the bottom of the top layer was too thin and flexed downward at the center — increasing the gap between electromagnet and board surface right where accuracy mattered most.",
+                    "With the PCB sandwiched between enclosure layers, the bottom of the top layer was too thin and flexed downward at the center, increasing the gap between electromagnet and board surface right where accuracy mattered most.",
                 },
                 {
                   num: "03",
@@ -649,7 +649,7 @@ export default function AccessibilityChessboardPage() {
               />
             </div>
             <Caption>
-              T-Mobile sponsor demo — board working, three engineering issues identified
+              T-Mobile sponsor demo, board working, three engineering issues identified
             </Caption>
           </div>
         </div>
@@ -668,18 +668,18 @@ export default function AccessibilityChessboardPage() {
             <p className="font-body text-body text-neutral-500 leading-relaxed mb-4">
               After the T-Mobile demo we added mechanical limit switches to the CoreXY
               gantry. The board moved pieces reliably during the presentation, but we had no
-              reliable way to know where the magnet carriage actually was — especially on
+              reliable way to know where the magnet carriage actually was, especially on
               startup or after a long session of moves.
             </p>
             <p className="font-body text-body text-neutral-500 leading-relaxed mb-4">
               The main reason is homing. When the chessboard first turns on, the system does
               not automatically know where the magnet carriage is. The limit switch lets the
-              carriage move to a known edge position — usually the home corner — so the
+              carriage move to a known edge position, usually the home corner, so the
               firmware can set that point as X = 0, Y = 0 before any move is sent.
             </p>
             <p className="font-body text-body text-neutral-500 leading-relaxed mb-6">
               It is also important for accuracy. XY systems like ours use stepper motors, and
-              stepper motors do not know their true position — they only count steps. If a
+              stepper motors do not know their true position. They only count steps. If a
               motor skips steps, slips, or gets blocked by friction, the software position can
               drift from reality. Limit switches give the firmware a physical reference to
               recalibrate against, driving slowly to each edge, backing off, and re-measuring
@@ -698,7 +698,7 @@ export default function AccessibilityChessboardPage() {
                   },
                   {
                     label: "Startup calibration sequence",
-                    body: "On boot the carriage homes to −X, then +X, then −Y, then +Y — backing off slightly after each hit so the switch releases before the next move.",
+                    body: "On boot the carriage homes to −X, then +X, then −Y, then +Y, backing off slightly after each hit so the switch releases before the next move.",
                   },
                   {
                     label: "Runtime safety stop",
@@ -771,7 +771,7 @@ export default function AccessibilityChessboardPage() {
                   },
                   {
                     label: "Eliminated a full top layer",
-                    body: "Instead of laying a separate top sheet and applying chess square decals on top of it, we cut the chess board squares directly out of the PCB layer itself. This removed an entire layer of material and brought our total stack to 9.25 mm — comfortably within the 11 mm limit.",
+                    body: "Instead of laying a separate top sheet and applying chess square decals on top of it, we cut the chess board squares directly out of the PCB layer itself. This removed an entire layer of material and brought our total stack to 9.25 mm, comfortably within the 11 mm limit.",
                   },
                   {
                     label: "Hall effect sensor integration",
@@ -836,7 +836,7 @@ export default function AccessibilityChessboardPage() {
           <div>
             <p className="font-body text-body text-neutral-500 leading-relaxed mb-6">
               With the engineering constraints solved, we designed and built the final
-              enclosure from scratch. We went with a wooden theme — the goal was for the
+              enclosure from scratch. We went with a wooden theme. The goal was for the
               board to feel like an antique chess set, not a prototype. We used a CNC
               machine to precision-cut the top layers, a table saw for the structural
               wood stock, hand-applied wood stain and wax finish, and a laser cutter for
@@ -1180,14 +1180,14 @@ export default function AccessibilityChessboardPage() {
         <SectionLabel>What&apos;s Next</SectionLabel>
         <p className="font-body text-body text-neutral-500 leading-relaxed max-w-2xl mb-8">
           The course project is complete and our T-Mobile mentor invited the team to continue
-          development over the summer in partnership with the T-Mobile accessibility team —
+          development over the summer in partnership with the T-Mobile accessibility team,
           moving the board from a working prototype toward a product real users can test.
         </p>
         <div className="flex flex-col gap-3 max-w-xl">
           {[
             "Formal user testing sessions with players who have hand and motor disabilities",
             "Expand accessibility features based on T-Mobile accessibility team input",
-            "Remote play mode — two players in different locations via web interface",
+            "Remote play mode: two players in different locations via web interface",
             "Full 8×8 Hall sensor grid covering every square for complete position verification",
           ].map((item, i) => (
             <div
