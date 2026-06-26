@@ -1,5 +1,7 @@
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
+import { PhotoWrap } from "../components/PhotoWrap";
+import { VideoWrap } from "../components/VideoWrap";
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
@@ -8,53 +10,6 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
         {children}
       </span>
       <span className="flex-1 h-px bg-neutral-200" />
-    </div>
-  );
-}
-
-function PhotoWrap({
-  src,
-  alt,
-  aspect = "16/9",
-}: {
-  src: string;
-  alt: string;
-  aspect?: string;
-}) {
-  return (
-    <div
-      className="rounded-sm overflow-hidden bg-neutral-200"
-      style={{ aspectRatio: aspect }}
-    >
-      <img src={src} alt={alt} className="w-full h-full object-cover" />
-    </div>
-  );
-}
-
-function VideoWrap({
-  src,
-  label,
-  portrait = false,
-}: {
-  src: string;
-  label: string;
-  portrait?: boolean;
-}) {
-  return (
-    <div
-      className="relative rounded-sm overflow-hidden bg-neutral-200 mb-3"
-      style={portrait ? { aspectRatio: "9/14" } : { maxHeight: "420px" }}
-    >
-      <video
-        controls
-        className="w-full h-full block"
-        style={{ objectFit: portrait ? "contain" : "cover", maxHeight: portrait ? undefined : "420px" }}
-      >
-        <source src={src} />
-      </video>
-      <span className="absolute top-3 left-3 font-mono text-[9px] bg-black/70 text-white px-2 py-1 tracking-widest uppercase rounded-sm">
-        {label}
-      </span>
     </div>
   );
 }
@@ -70,7 +25,7 @@ function Caption({ children }: { children: React.ReactNode }) {
 export default function AccessibilityChessboardPage() {
   return (
     <>
-      <Nav badge="In Progress" />
+      <Nav badge="Completed" />
 
       {/* ── HERO ── */}
       <section
@@ -340,47 +295,53 @@ export default function AccessibilityChessboardPage() {
               Bresenham&apos;s line algorithm for smooth coordinated motion across 41cm × 41cm
               of travel.
             </p>
-            <div className="grid grid-cols-2 gap-3 mb-2" style={{ maxWidth: "480px" }}>
+            {/* Bento grid — 3-col × 2-row, feature image left */}
+            <div className="grid grid-cols-3 grid-rows-2 gap-2 mb-3" style={{ height: 380 }}>
               <PhotoWrap
                 src="/images/chessboard/Xy_beginning.jpeg"
                 alt="Early gantry assembly"
-                aspect="3/4"
+                fill
+                className="col-span-2 row-span-2 h-full"
               />
-              <div className="flex flex-col gap-3">
-                <PhotoWrap
-                  src="/images/chessboard/beginning_.jpeg"
-                  alt="Components laid out"
-                  aspect="1"
-                />
-                <PhotoWrap
-                  src="/images/chessboard/1779615087216_image.png"
-                  alt="Full gantry assembled"
-                  aspect="1"
-                />
-              </div>
+              <PhotoWrap
+                src="/images/chessboard/beginning_.jpeg"
+                alt="Components laid out"
+                fill
+                className="h-full"
+              />
+              <PhotoWrap
+                src="/images/chessboard/1779615087216_image.png"
+                alt="Full gantry assembled"
+                fill
+                className="h-full"
+              />
             </div>
             <Caption>
               Early assembly → components laid out → first full gantry with breadboard wiring
             </Caption>
-            <div className="grid grid-cols-2 gap-6 items-start">
-              {/* Left: Fusion 360 images */}
+
+            {/* CAD renders + movement videos */}
+            <div className="grid grid-cols-2 gap-3 mt-6">
               <div>
-                <div className="flex flex-col gap-3 mb-2">
+                <div className="grid grid-rows-2 gap-2 mb-2" style={{ height: 320 }}>
                   <PhotoWrap
                     src="/images/chessboard/1779614899975_image.png"
                     alt="Fusion 360 carriage CAD"
+                    fill
+                    className="h-full"
                   />
                   <PhotoWrap
                     src="/images/chessboard/1779614921073_image.png"
                     alt="Fusion 360 corner bracket CAD"
+                    fill
+                    className="h-full"
                   />
                 </div>
                 <Caption>
-                  Custom bracket designs in Fusion 360 carriage piece (top) and corner mount (bottom)
+                  Fusion 360 — carriage piece (top) and corner mount (bottom)
                 </Caption>
               </div>
-              {/* Right: portrait videos */}
-              <div className="flex gap-3">
+              <div className="flex gap-2">
                 <div className="flex-1">
                   <VideoWrap
                     src="/images/chessboard/first_vid_test_.mp4"
@@ -427,6 +388,7 @@ export default function AccessibilityChessboardPage() {
             <VideoWrap
               src="/images/chessboard/Electromagnet_Polarity_Test.mp4"
               label="Polarity Switching Test"
+              maxHeight={520}
             />
           </div>
         </div>
@@ -452,6 +414,7 @@ export default function AccessibilityChessboardPage() {
             <VideoWrap
               src="/images/chessboard/voice_sensor.MOV"
               label="First Successful Voice Command"
+              maxHeight={560}
             />
           </div>
         </div>
@@ -600,7 +563,7 @@ export default function AccessibilityChessboardPage() {
         </div>
 
         {/* Phase 07 */}
-        <div className="grid md:grid-cols-[2fr_3fr] gap-12 py-16">
+        <div className="grid md:grid-cols-[2fr_3fr] gap-12 py-16 border-b border-neutral-200">
           <div className="md:sticky top-24 self-start">
             <p className="font-mono text-[9px] text-neutral-400 tracking-widest mb-2">
               PHASE 07
@@ -611,14 +574,51 @@ export default function AccessibilityChessboardPage() {
           </div>
           <div>
             <p className="font-body text-body text-neutral-500 leading-relaxed mb-6">
-              We presented our full system to the T-Mobile accessibility team, demonstrating
-              end-to-end piece movement, voice control, and the web interface live. We
-              received feedback specifically around the LED accessibility layer and continue
-              to iterate based on their input.
+              We presented our full integrated system to the T-Mobile accessibility team,
+              demonstrating end-to-end piece movement, voice control, and the web interface
+              live. The board worked — but the demo surfaced three real engineering problems
+              we needed to solve before final delivery.
             </p>
+            <div className="space-y-3 mb-6">
+              {[
+                {
+                  num: "01",
+                  issue: "Chess pieces too heavy.",
+                  detail:
+                    "The SLA resin pieces were solid and dense. Under the electromagnet's pull they dragged correctly, but the extra mass caused some pieces to get stuck mid-move on the gantry rail.",
+                },
+                {
+                  num: "02",
+                  issue: "Top layer sagged in the middle.",
+                  detail:
+                    "With the PCB sandwiched between enclosure layers, the bottom of the top layer was too thin and flexed downward at the center — increasing the gap between electromagnet and board surface right where accuracy mattered most.",
+                },
+                {
+                  num: "03",
+                  issue: "No way to verify chess piece location.",
+                  detail:
+                    "The Hall effect sensors were designed into the PCB but hadn't yet been integrated into the live board. Without confirmation that pieces were actually sitting on the right squares, the system was running blind.",
+                },
+              ].map((item) => (
+                <div
+                  key={item.num}
+                  className="flex gap-4 items-start border border-neutral-200 rounded-sm px-5 py-4"
+                >
+                  <span className="font-sans font-light text-[1.4rem] text-neutral-300 leading-none flex-shrink-0 w-8 pt-0.5">
+                    {item.num}
+                  </span>
+                  <div>
+                    <p className="font-sans font-semibold text-[13px] mb-1">{item.issue}</p>
+                    <p className="font-body text-body text-neutral-500 leading-relaxed">
+                      {item.detail}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
             <PhotoWrap
               src="/images/chessboard/Image__24_.jpeg"
-              alt="Team smiling at demo day"
+              alt="Team at T-Mobile demo day"
             />
             <Caption>&nbsp;</Caption>
             <div className="grid grid-cols-2 gap-3 mb-2">
@@ -632,8 +632,240 @@ export default function AccessibilityChessboardPage() {
               />
             </div>
             <Caption>
-              T-Mobile sponsor demo, presenting to industry accessibility team
+              T-Mobile sponsor demo — board working, three engineering issues identified
             </Caption>
+          </div>
+        </div>
+
+        {/* Phase 08 */}
+        <div className="grid md:grid-cols-[2fr_3fr] gap-12 py-16 border-b border-neutral-200">
+          <div className="md:sticky top-24 self-start">
+            <p className="font-mono text-[9px] text-neutral-400 tracking-widest mb-2">
+              PHASE 08
+            </p>
+            <h3 className="font-sans font-semibold text-[1.4rem] leading-snug">
+              Limit Switches<br /><em>&amp; Homing</em>
+            </h3>
+          </div>
+          <div>
+            <p className="font-body text-body text-neutral-500 leading-relaxed mb-4">
+              After the T-Mobile demo we added mechanical limit switches to the CoreXY
+              gantry. The board moved pieces reliably during the presentation, but we had no
+              reliable way to know where the magnet carriage actually was — especially on
+              startup or after a long session of moves.
+            </p>
+            <p className="font-body text-body text-neutral-500 leading-relaxed mb-4">
+              The main reason is homing. When the chessboard first turns on, the system does
+              not automatically know where the magnet carriage is. The limit switch lets the
+              carriage move to a known edge position — usually the home corner — so the
+              firmware can set that point as X = 0, Y = 0 before any move is sent.
+            </p>
+            <p className="font-body text-body text-neutral-500 leading-relaxed mb-6">
+              It is also important for accuracy. XY systems like ours use stepper motors, and
+              stepper motors do not know their true position — they only count steps. If a
+              motor skips steps, slips, or gets blocked by friction, the software position can
+              drift from reality. Limit switches give the firmware a physical reference to
+              recalibrate against, driving slowly to each edge, backing off, and re-measuring
+              travel so the board can recover without manual intervention.
+            </p>
+
+            <div className="bg-neutral-950 rounded-xl px-7 py-6 mb-6 text-white">
+              <p className="font-mono text-[9px] tracking-widest uppercase text-neutral-400 mb-4">
+                HOW HOMING WORKS
+              </p>
+              <div className="space-y-4">
+                {[
+                  {
+                    label: "Six switches across both axes",
+                    body: "One switch per X end, plus two per Y end to cover the dual-rail gantry. Each switch is wired active-low with a pull-up resistor.",
+                  },
+                  {
+                    label: "Startup calibration sequence",
+                    body: "On boot the carriage homes to −X, then +X, then −Y, then +Y — backing off slightly after each hit so the switch releases before the next move.",
+                  },
+                  {
+                    label: "Runtime safety stop",
+                    body: "During normal moves the firmware checks switches in the direction of travel and stops immediately if a limit is hit unexpectedly, then triggers a full recalibration.",
+                  },
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-4">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-neutral-500 flex-shrink-0" />
+                    <div>
+                      <p className="font-sans font-semibold text-[13px] text-white mb-0.5">
+                        {item.label}
+                      </p>
+                      <p className="font-body text-[13px] text-neutral-400 leading-relaxed">
+                        {item.body}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-3 mb-2">
+              <PhotoWrap
+                src="/images/chessboard/limit_switch_x.jpg"
+                alt="X-axis limit switch mounted at the home edge"
+              />
+              <PhotoWrap
+                src="/images/chessboard/limit_switch_y.jpg"
+                alt="Y-axis limit switches mounted on the gantry rails"
+              />
+            </div>
+            <Caption>
+              X-axis limit switch at home edge → Y-axis limit switches on the dual-rail gantry
+            </Caption>
+          </div>
+        </div>
+
+        {/* Phase 09 */}
+        <div className="grid md:grid-cols-[2fr_3fr] gap-12 py-16 border-b border-neutral-200">
+          <div className="md:sticky top-24 self-start">
+            <p className="font-mono text-[9px] text-neutral-400 tracking-widest mb-2">
+              PHASE 09
+            </p>
+            <h3 className="font-sans font-semibold text-[1.4rem] leading-snug">
+              Enclosure<br /><em>Engineering</em>
+            </h3>
+          </div>
+          <div>
+            <p className="font-body text-body text-neutral-500 leading-relaxed mb-4">
+              After the T-Mobile demo we addressed all three enclosure issues and added limit
+              switch homing before building the final enclosure. The electromagnet imposes a
+              hard constraint: the total top-layer thickness must stay at or under 11 mm for
+              the magnetic field to reliably move pieces through the surface. Every design
+              decision flowed from that number.
+            </p>
+
+            <div className="bg-neutral-950 rounded-xl px-7 py-6 mb-6 text-white">
+              <p className="font-mono text-[9px] tracking-widest uppercase text-neutral-400 mb-4">
+                HOW WE FIXED EACH ISSUE
+              </p>
+              <div className="space-y-4">
+                {[
+                  {
+                    label: "Lighter pieces",
+                    body: "Hollowed out the interior of each chess piece to dramatically cut weight while keeping the base magnet in place. The electromagnet now slides pieces cleanly without sticking or stalling.",
+                  },
+                  {
+                    label: "Sagging solved with a torsion layer",
+                    body: "Rather than using a thick 1/4\" bottom layer (which would eat into our 11 mm budget), I investigated and found we could use a thinner 1/8\" bottom layer plus a 1.5 mm torsion sheet on top. The torsion layer distributes load across the PCB sandwich and prevents center sag even when only screwed down at the four corners.",
+                  },
+                  {
+                    label: "Eliminated a full top layer",
+                    body: "Instead of laying a separate top sheet and applying chess square decals on top of it, we cut the chess board squares directly out of the PCB layer itself. This removed an entire layer of material and brought our total stack to 9.25 mm — comfortably within the 11 mm limit.",
+                  },
+                  {
+                    label: "Hall effect sensor integration",
+                    body: "We wired up the A1302xUA Hall sensors already on the PCB, tested each of the 16 sensors individually, confirmed detection, and merged the firmware so piece position is now verified after every move in real time.",
+                  },
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-4">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-neutral-500 flex-shrink-0" />
+                    <div>
+                      <p className="font-sans font-semibold text-[13px] text-white mb-0.5">
+                        {item.label}
+                      </p>
+                      <p className="font-body text-[13px] text-neutral-400 leading-relaxed">
+                        {item.body}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-5 pt-4 border-t border-neutral-700 flex items-center gap-3">
+                <span className="font-mono text-[9px] tracking-widest uppercase text-neutral-500">
+                  Total top-layer thickness achieved
+                </span>
+                <span className="font-sans font-bold text-white text-xl">9.25 mm</span>
+                <span className="font-mono text-[9px] tracking-widest uppercase text-green-400">
+                  ✓ within 11 mm limit
+                </span>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-3 mb-2">
+              <PhotoWrap
+                src="/images/chessboard/hardware_test.jpg"
+                alt="Engineer testing final hardware"
+              />
+              <PhotoWrap
+                src="/images/chessboard/pcb_mount.jpg"
+                alt="Four PCB boards mounted on bottom top layer"
+              />
+            </div>
+            <Caption>
+              Final hardware validation before enclosure → four PCB boards mounted on the bottom top layer
+            </Caption>
+            <PhotoWrap
+              src="/images/chessboard/team_assembly.jpg"
+              alt="Team integrating hardware and enclosure"
+            />
+            <Caption>Full team integrating hardware subsystems and enclosure layers</Caption>
+          </div>
+        </div>
+
+        {/* Phase 10 */}
+        <div className="grid md:grid-cols-[2fr_3fr] gap-12 py-16">
+          <div className="md:sticky top-24 self-start">
+            <p className="font-mono text-[9px] text-neutral-400 tracking-widest mb-2">
+              PHASE 10
+            </p>
+            <h3 className="font-sans font-semibold text-[1.4rem] leading-snug">
+              Final<br /><em>Enclosure</em>
+            </h3>
+          </div>
+          <div>
+            <p className="font-body text-body text-neutral-500 leading-relaxed mb-6">
+              With the engineering constraints solved, we designed and built the final
+              enclosure from scratch. We went with a wooden theme — the goal was for the
+              board to feel like an antique chess set, not a prototype. We used a CNC
+              machine to precision-cut the top layers, a table saw for the structural
+              wood stock, hand-applied wood stain and wax finish, and a laser cutter for
+              the decorative emblems. Everything was designed in Fusion 360 first.
+            </p>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 border border-neutral-200 rounded-sm overflow-hidden divide-x divide-neutral-200 mb-6">
+              {[
+                { tool: "CNC", desc: "Precision cuts for top layers" },
+                { tool: "Table saw", desc: "Structural wood stock" },
+                { tool: "Wood stain + wax", desc: "Hand-applied finish" },
+                { tool: "Laser cutter", desc: "Decorative emblems" },
+              ].map((t, i) => (
+                <div key={i} className="p-4 bg-neutral-50">
+                  <p className="font-sans font-semibold text-[13px] mb-1">{t.tool}</p>
+                  <p className="font-mono text-[9px] tracking-wide text-neutral-400">{t.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="grid grid-cols-3 gap-3 mb-2">
+              <PhotoWrap
+                src="/images/chessboard/fusion_enclosure.png"
+                alt="Fusion 360 enclosure design"
+              />
+              <PhotoWrap
+                src="/images/chessboard/cnc_work.jpg"
+                alt="CNC machine cutting top layer"
+              />
+              <PhotoWrap
+                src="/images/chessboard/cnc_cutting.jpg"
+                alt="CNC machine cutting the enclosure panels"
+              />
+            </div>
+            <Caption>Fusion 360 enclosure design → CNC cutting the top layer</Caption>
+            <div className="grid grid-cols-2 gap-3 mb-2">
+              <PhotoWrap
+                src="/images/chessboard/finished_enclosure.jpg"
+                alt="Finished wooden enclosure"
+              />
+              <PhotoWrap
+                src="/images/chessboard/mentor_photo.jpg"
+                alt="Team with T-Mobile mentor at final demo"
+              />
+            </div>
+            <Caption>Finished enclosure with wood stain and wax → final demo with T-Mobile mentor</Caption>
           </div>
         </div>
       </section>
@@ -678,44 +910,10 @@ export default function AccessibilityChessboardPage() {
           </div>
         </div>
 
-        <div className="py-10 border-b border-neutral-200">
-          <div className="flex gap-6 items-start mb-5">
-            <span className="font-sans font-light text-[2.5rem] text-neutral-300 leading-none flex-shrink-0 w-12">
-              02
-            </span>
-            <div className="pt-2">
-              <h3 className="font-sans font-medium text-[15px] leading-snug">
-                Wait Time &amp; Captured Piece UX 
-              </h3>
-              <h3 className="font-sans font-light italic text-[15px] text-neutral-500">
-                &ldquo;Five seconds is a long time.&rdquo;
-              </h3>
-            </div>
-          </div>
-          <div className="pl-[4.5rem] space-y-4">
-            <p className="font-body text-body text-neutral-500 leading-relaxed max-w-3xl">
-              Moving a piece takes around 5 seconds on average, acceptable for a normal move.
-              But when a capture happens, the original plan was for the robot to drag the
-              captured piece to a border slot before executing the main move, meaning a player
-              could wait 10–15 seconds for a single capture. In testing this felt painfully
-              slow and broke the flow of the game entirely.
-            </p>
-            <p className="font-body text-body text-neutral-500 leading-relaxed max-w-3xl">
-              We rethought the capture interaction using the electromagnet&apos;s polarity
-              switching: on a capture, the board flips the magnet polarity to repel the
-              captured piece rather than drag it, nudging it so the player can pick it up
-              themselves. This turns a frustrating wait into an intentional interaction: the
-              player gets to remove their opponent&apos;s piece by hand, which feels more
-              satisfying. It cut capture time significantly and made the experience feel
-              collaborative rather than passive.
-            </p>
-          </div>
-        </div>
-
         <div className="py-10">
           <div className="flex gap-6 items-start mb-5">
             <span className="font-sans font-light text-[2.5rem] text-neutral-300 leading-none flex-shrink-0 w-12">
-              03
+              02
             </span>
             <div className="pt-2">
               <h3 className="font-sans font-medium text-[15px] leading-snug">
@@ -958,12 +1156,17 @@ export default function AccessibilityChessboardPage() {
       {/* ── WHAT'S NEXT ── */}
       <section className="px-6 md:px-16 py-20 border-t border-neutral-200">
         <SectionLabel>What&apos;s Next</SectionLabel>
+        <p className="font-body text-body text-neutral-500 leading-relaxed max-w-2xl mb-8">
+          The course project is complete and our T-Mobile mentor invited the team to continue
+          development over the summer in partnership with the T-Mobile accessibility team —
+          moving the board from a working prototype toward a product real users can test.
+        </p>
         <div className="flex flex-col gap-3 max-w-xl">
           {[
-            "Final birch plywood enclosure production-quality board housing currently in fabrication",
-            "Full 8×8 Hall sensor + LED grid integration across the complete board",
-            "Complete end-to-end play loop with real-time piece position verification",
-            "Web interface remote play mode for players in different locations",
+            "Formal user testing sessions with players who have hand and motor disabilities",
+            "Expand accessibility features based on T-Mobile accessibility team input",
+            "Remote play mode — two players in different locations via web interface",
+            "Full 8×8 Hall sensor grid covering every square for complete position verification",
           ].map((item, i) => (
             <div
               key={i}
