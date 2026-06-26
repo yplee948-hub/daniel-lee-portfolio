@@ -189,14 +189,14 @@ export default function AccessibilityChessboardPage() {
           </p>
         </div>
 
-        <p className="font-body text-body text-neutral-500 leading-relaxed max-w-3xl mx-auto text-center mb-4">
+        <p className="font-body text-body text-neutral-500 leading-relaxed max-w-3xl mb-4">
           Chess is one of the most universal strategy games in the world. But for people
           living with hand disabilities or motor impairments, physically moving pieces across
           a board is a frustrating barrier. Existing solutions like digital chess apps and
           screen-based interfaces strip away the tactile, physical experience of the game
           entirely.
         </p>
-        <p className="font-body text-body text-neutral-500 leading-relaxed max-w-3xl mx-auto text-center mb-12">
+        <p className="font-body text-body text-neutral-500 leading-relaxed max-w-3xl mb-12">
           Wizarding Chess removes that barrier. Players speak their move, and the board moves
           the piece for them.
         </p>
