@@ -183,7 +183,7 @@ export default function AccessibilityChessboardPage() {
             <Lightbulb className="w-3.5 h-3.5" strokeWidth={1.75} />
             HOW MIGHT WE
           </p>
-          <p className="font-sans font-medium text-[clamp(1.3rem,2.5vw,2rem)] leading-snug">
+          <p className="font-sans font-medium text-[clamp(1.05rem,1.8vw,1.45rem)] leading-snug">
             Make physical chess truly playable for people with hand and motor disabilities
             without sacrificing the tactile experience of the game?
           </p>
