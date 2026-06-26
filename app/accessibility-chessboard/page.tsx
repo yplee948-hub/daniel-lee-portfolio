@@ -2,6 +2,22 @@ import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import { PhotoWrap } from "../components/PhotoWrap";
 import { VideoWrap } from "../components/VideoWrap";
+import {
+  Lightbulb,
+  Mic,
+  BrainCircuit,
+  Cpu,
+  LayoutGrid,
+  FlaskConical,
+  Waypoints,
+  Wifi,
+  Lock,
+  CircuitBoard,
+  Bot,
+  Wrench,
+  Accessibility,
+  Handshake,
+} from "lucide-react";
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
@@ -163,8 +179,9 @@ export default function AccessibilityChessboardPage() {
         <SectionLabel>The Problem</SectionLabel>
 
         <div className="bg-[#ede0f8] border border-[#cba8f0]/40 rounded-sm px-8 py-10 mb-10">
-          <p className="font-mono text-[9px] tracking-widest uppercase text-purple-500 mb-3">
-            💭 HOW MIGHT WE
+          <p className="flex items-center gap-2 font-mono text-[9px] tracking-widest uppercase text-purple-500 mb-3">
+            <Lightbulb className="w-3.5 h-3.5" strokeWidth={1.75} />
+            HOW MIGHT WE
           </p>
           <p className="font-sans font-medium text-[clamp(1.3rem,2.5vw,2rem)] leading-snug">
             Make physical chess truly playable for people with hand and motor disabilities
@@ -221,25 +238,25 @@ export default function AccessibilityChessboardPage() {
           {[
             {
               num: "01",
-              icon: "🎙️",
+              icon: Mic,
               title: "Voice & Web",
               desc: 'Player speaks "e2 to e4" or clicks in the browser. Stockfish AI available for either side.',
             },
             {
               num: "02",
-              icon: "📡",
+              icon: BrainCircuit,
               title: "ESP32-S3 Brain",
               desc: "Transcribes voice via OpenAI Whisper, bridges to motor controller wirelessly via ESP-NOW.",
             },
             {
               num: "03",
-              icon: "⚙️",
+              icon: Cpu,
               title: "Pico Controller",
               desc: "Validates moves, runs Dijkstra pathfinding around pieces, drives CoreXY stepper motors.",
             },
             {
               num: "04",
-              icon: "♟️",
+              icon: LayoutGrid,
               title: "Physical Board",
               desc: "Electromagnet slides pieces to target square. Hall sensors verify position. LEDs confirm placement.",
             },
@@ -248,7 +265,7 @@ export default function AccessibilityChessboardPage() {
               <p className="font-mono text-[9px] text-neutral-400 tracking-widest mb-3">
                 {l.num}
               </p>
-              <p className="text-xl mb-3">{l.icon}</p>
+              <l.icon className="w-6 h-6 text-black mb-3" strokeWidth={1.5} />
               <h4 className="font-sans font-semibold text-base mb-2">{l.title}</h4>
               <p className="font-body text-body text-neutral-500 leading-relaxed">{l.desc}</p>
             </div>
@@ -959,44 +976,44 @@ export default function AccessibilityChessboardPage() {
         <div className="grid grid-cols-2 md:grid-cols-3 border border-neutral-200 divide-x divide-y divide-neutral-200 rounded-sm overflow-hidden">
           {[
             {
-              icon: "🧪",
+              icon: FlaskConical,
               num: "52",
               title: "Unit Tests",
               desc: "Written for embedded C++ firmware using the Unity framework chess engine and move planner fully tested independently of hardware.",
             },
             {
-              icon: "🗺️",
+              icon: Waypoints,
               num: null,
               title: "Dijkstra Pathfinding",
               desc: "Runs on the Pico to route the magnet carriage around blocking pieces, with recursive blocker parking up to 3 levels deep.",
             },
             {
-              icon: "📡",
+              icon: Wifi,
               num: null,
               title: "ESP-NOW Wireless",
               desc: "Peer-to-peer between two microcontrollers with automatic channel scanning and hopping. No router required.",
             },
             {
-              icon: "🔒",
+              icon: Lock,
               num: null,
               title: "No Optimistic UI",
               desc: "The web interface only updates when the physical move is confirmed complete. The digital board always reflects physical reality.",
             },
             {
-              icon: "🔌",
+              icon: CircuitBoard,
               num: null,
               title: "Custom PCB",
               desc: "Designed in KiCad, fabricated in Shenzhen, hand-soldered by the team. 16 Hall sensors + 16 RGB LEDs on a 2-layer board.",
             },
             {
-              icon: "🤖",
+              icon: Bot,
               num: null,
               title: "Stockfish 18 AI",
               desc: "Runs as a WebAssembly Web Worker entirely in the browser. No server required. Either player can be toggled to AI mid-game.",
             },
           ].map((h, i) => (
             <div key={i} className="bg-white p-6 hover:bg-neutral-50 transition-colors">
-              <p className="text-xl mb-3">{h.icon}</p>
+              <h.icon className="w-6 h-6 text-black mb-3" strokeWidth={1.5} />
               {h.num && (
                 <p className="font-sans font-light text-[2.2rem] leading-none text-black mb-1">
                   {h.num}
@@ -1134,23 +1151,23 @@ export default function AccessibilityChessboardPage() {
         <div className="grid md:grid-cols-3 gap-8">
           {[
             {
-              icon: "🔩",
+              icon: Wrench,
               title: "Hardware and software are inseparable.",
               body: "Every software decision had physical consequences, and every hardware constraint shaped the code. Writing a chess engine that runs on a microcontroller while also routing a physical magnet around real pieces taught me to think in both worlds simultaneously.",
             },
             {
-              icon: "♿",
+              icon: Accessibility,
               title: "Accessibility is a design constraint, not a feature.",
               body: "Working with T-Mobile's accessibility team reframed how I think about inclusive design. The best accessibility decisions weren't add-ons. They were fundamental architecture choices that made the whole system better for everyone.",
             },
             {
-              icon: "🤝",
+              icon: Handshake,
               title: "PMs who build earn more trust.",
               body: "Being hands-on in the codebase and on the workbench gave me credibility with my teammates that purely managerial coordination never would have. I could make better product decisions because I understood the technical tradeoffs from the inside.",
             },
           ].map((l, i) => (
             <div key={i} className="pt-6 border-t border-neutral-200">
-              <p className="text-xl mb-4">{l.icon}</p>
+              <l.icon className="w-7 h-7 text-black mb-4" strokeWidth={1.5} />
               <h4 className="font-sans font-semibold text-base mb-3">{l.title}</h4>
               <p className="font-body text-body text-neutral-500 leading-relaxed">{l.body}</p>
             </div>
