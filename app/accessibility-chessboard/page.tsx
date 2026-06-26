@@ -844,14 +844,17 @@ export default function AccessibilityChessboardPage() {
               <PhotoWrap
                 src="/images/chessboard/fusion_enclosure.png"
                 alt="Fusion 360 enclosure design"
+                aspect="4/3"
               />
               <PhotoWrap
                 src="/images/chessboard/cnc_work.jpg"
                 alt="CNC machine cutting top layer"
+                aspect="4/3"
               />
               <PhotoWrap
                 src="/images/chessboard/cnc_cutting.jpg"
                 alt="CNC machine cutting the enclosure panels"
+                aspect="4/3"
               />
             </div>
             <Caption>Fusion 360 enclosure design → CNC cutting the top layer</Caption>
@@ -859,10 +862,12 @@ export default function AccessibilityChessboardPage() {
               <PhotoWrap
                 src="/images/chessboard/finished_enclosure.jpg"
                 alt="Finished wooden enclosure"
+                aspect="4/3"
               />
               <PhotoWrap
                 src="/images/chessboard/mentor_photo.jpg"
                 alt="Team with T-Mobile mentor at final demo"
+                aspect="4/3"
               />
             </div>
             <Caption>Finished enclosure with wood stain and wax → final demo with T-Mobile mentor</Caption>
