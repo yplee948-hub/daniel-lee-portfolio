@@ -44,7 +44,7 @@ export default function AboutPage() {
                 className="font-sans leading-tight mb-10"
                 style={{ fontSize: "32px", fontWeight: 500, color: "#000000" }}
               >
-                I&apos;m Daniel – I build programs that connect people and solve real problems.
+                I&apos;m Daniel. I build programs that connect people and solve real problems.
               </p>
 
               <div className="space-y-5 font-body text-body text-[#242424] leading-[1.7]">

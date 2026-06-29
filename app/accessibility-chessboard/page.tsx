@@ -53,7 +53,7 @@ export default function AccessibilityChessboardPage() {
       >
         <p className="flex items-center gap-3 font-mono text-[9px] tracking-widest uppercase text-neutral-500 mb-8">
           <span className="w-8 h-px bg-neutral-400 inline-block" />
-          T-Mobile Sponsored &nbsp;·&nbsp; TECHIN 515, University of Washington &nbsp;·&nbsp; 2025–2026
+          T-Mobile Sponsored &nbsp;·&nbsp; TECHIN 515, University of Washington &nbsp;·&nbsp; 2025 to 2026
         </p>
 
         <h1

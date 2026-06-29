@@ -5,7 +5,7 @@ const meta = {
   tags: ["PROGRAM MANAGER", "GOVERNMENT", "2023"],
   title: "Government Employment Portal",
   description: "Managed citizen onboarding for a new employment portal, driving a 35% increase in application completion.",
-  timeline: "2022 – 2023",
+  timeline: "2022 to 2023",
   team: "Ministry of Labor, Korea",
   role: "Program Manager",
   skills: ["Program Management", "User Onboarding", "Process Design", "Stakeholder Coordination"],

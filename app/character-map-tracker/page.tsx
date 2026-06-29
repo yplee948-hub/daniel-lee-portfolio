@@ -6,7 +6,7 @@ const meta = {
   title: "Drama Relationship Map",
   description:
     "Acted as PM in a course-based developer marketplace to ship a spoiler-safe, AI-assisted character relationship board for cast-heavy dramas, from blank spec to live product.",
-  timeline: "Jan 2025 – Apr 2025",
+  timeline: "Jan 2025 to Apr 2025",
   team: "UW MSTI",
   role: "Product Manager (Client)",
   skills: ["Next.js", "React Flow", "TypeScript", "OpenAI API", "TMDB API", "Supabase"],
@@ -152,7 +152,7 @@ export default function CharacterMapTrackerPage() {
               },
               {
                 persona: "The Hiatus Binger",
-                shows: "Any show with 1–2 year gaps between seasons",
+                shows: "Any show with 1 to 2 year gaps between seasons",
                 pain: "They wait for a full season to drop, or return after a long break. They've forgotten the specific grudges, affairs, and betrayals from the previous season and need a 5-minute visual refresher before they can re-engage.",
                 trigger: "Season re-entry",
               },
@@ -321,7 +321,7 @@ export default function CharacterMapTrackerPage() {
               two drama-adjacent Discord communities and one Reddit thread.
             </p>
             <p className="font-body text-body text-neutral-500 leading-relaxed mb-5">
-              The benchmark for strong demand signal: a 15–20% email sign-up conversion rate from
+              The benchmark for strong demand signal: a 15 to 20% email sign-up conversion rate from
               unique visitors. Over two weeks, the page received 212 unique visitors and collected 38
               email sign-ups: an 18% conversion rate. That number, alongside the interview data and the
               Reddit pattern, gave me enough confidence to write a full SPEC rather than a scoped
@@ -332,7 +332,7 @@ export default function CharacterMapTrackerPage() {
                 {[
                   { num: "212", label: "Unique visitors over 2 weeks" },
                   { num: "38", label: "Email sign-ups from the beta CTA" },
-                  { num: "18%", label: "Conversion rate: above the 15–20% strong-demand threshold" },
+                  { num: "18%", label: "Conversion rate: above the 15 to 20% strong-demand threshold" },
                 ].map((m, i) => (
                   <div key={i}>
                     <p className="font-sans font-light text-[2rem] leading-none text-black mb-1">{m.num}</p>
@@ -633,7 +633,7 @@ export default function CharacterMapTrackerPage() {
               </p>
               <p className="font-body text-body text-neutral-500 leading-relaxed">
                 RedNote&apos;s format did the rest. With 300M+ monthly active users skewing female aged
-                18–35, the exact demographic that drives K-drama and C-drama fandom, and a visual-first
+                18 to 35, the exact demographic that drives K-drama and C-drama fandom, and a visual-first
                 feed where saves carry more algorithmic weight than likes, a single high-quality post
                 showing the board in action had real distribution potential. Singles Inferno (단신지옥 /
                 单身地狱) was already trending on the platform when we launched, which meant the demo

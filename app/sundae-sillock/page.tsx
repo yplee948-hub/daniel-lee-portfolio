@@ -5,7 +5,7 @@ const meta = {
   tags: ["PROJECT MANAGER", "FRANCHISE OPS", "2024"],
   title: "Sundae Sillock Growth",
   description: "Drove growth across 50+ franchise locations through quality control and localized campaigns.",
-  timeline: "2023 – 2024",
+  timeline: "2023 to 2024",
   team: "Sundae Sillock Korea",
   role: "Project Manager",
   skills: ["Franchise Operations", "Campaign Management", "Quality Control", "Excel", "Localization"],

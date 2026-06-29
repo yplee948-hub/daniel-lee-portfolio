@@ -5,7 +5,7 @@ const meta = {
   tags: ["PRODUCT MANAGEMENT", "WORKFLOW OPTIMIZATION", "2025"],
   title: "Coffee Chat Operations Dashboard",
   description: "Identified a manual workflow bottleneck inside MSTI's ambassador program, validated the problem through stakeholder interviews, mapped the full process in FigJam, and shipped a dashboard now actively used by 8 MSTI faculty members.",
-  timeline: "Jan 2025 – Jun 2025",
+  timeline: "Jan 2025 to Jun 2025",
   team: "UW MSTI GIX",
   role: "PM Intern",
   skills: ["Stakeholder Interviews", "FigJam", "Workflow Mapping", "Prototyping", "HTML/CSS/JS", "Claude AI"],
@@ -223,7 +223,7 @@ export default function CoffeeChatPage() {
                 <ul className="space-y-2">
                   {col.items.map((item, j) => (
                     <li key={j} className={`text-[11px] leading-relaxed flex gap-2 ${i === 0 ? "text-neutral-300" : "text-neutral-600"}`}>
-                      <span className="shrink-0 mt-0.5">{i === 1 ? "–" : "→"}</span>
+                      <span className="shrink-0 mt-0.5">{i === 1 ? "•" : "→"}</span>
                       {item}
                     </li>
                   ))}
