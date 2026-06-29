@@ -1,6 +1,7 @@
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import AboutCollage from "../components/AboutCollage";
+import { Users, LineChart, Zap } from "lucide-react";
 
 const leadership = [
   {
@@ -24,9 +25,9 @@ const leadership = [
 ];
 
 const values = [
-  "Build with users, not just for them.",
-  "Data tells the story; empathy writes it.",
-  "Move fast, but never forget the human on the other end.",
+  { icon: Users, text: "Build with users, not just for them." },
+  { icon: LineChart, text: "Data tells the story; empathy writes it." },
+  { icon: Zap, text: "Move fast, but never forget the human on the other end." },
 ];
 
 export default function AboutPage() {
@@ -109,8 +110,8 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
               {values.map((value, i) => (
                 <div key={i}>
-                  <p className="text-lg mb-3 text-neutral-800">✱</p>
-                  <p className="font-body text-body leading-relaxed text-[#242424]">{value}</p>
+                  <value.icon className="w-6 h-6 mb-3 text-neutral-800" strokeWidth={1.5} />
+                  <p className="font-body text-body leading-relaxed text-[#242424]">{value.text}</p>
                 </div>
               ))}
             </div>
