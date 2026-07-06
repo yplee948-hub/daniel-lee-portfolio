@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import { PhotoWrap } from "../components/PhotoWrap";
 import { VideoWrap } from "../components/VideoWrap";
 import { LiveDemoButton } from "../components/LiveDemoModal";
+import { ProjectKanban } from "../components/ProjectKanban";
 import {
   Lightbulb,
   Mic,
@@ -162,6 +163,18 @@ export default function AccessibilityChessboardPage() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* ── PROJECT TIMELINE ── */}
+      <section className="px-6 md:px-16 py-24 bg-neutral-50">
+        <SectionLabel>Project Timeline</SectionLabel>
+        <p className="font-body text-body text-neutral-500 leading-relaxed max-w-3xl mb-8">
+          As technical PM I owned delivery from March through summer: sprint planning,
+          cross-functional coordination, sponsor checkpoints, and post-demo hardening. This
+          board reflects how work moved from kickoff to shipped milestones across hardware,
+          firmware, and software.
+        </p>
+        <ProjectKanban />
       </section>
 
       {/* ── THE PROBLEM ── */}
