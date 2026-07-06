@@ -120,7 +120,7 @@ export function PhotoWrap({
         ref={containerRef}
         className={`group relative overflow-hidden rounded-xl bg-neutral-200 select-none touch-none ${
           dragging ? "cursor-grabbing" : "cursor-grab"
-        } ${className}`}
+        } ${fit === "contain" ? "flex items-center justify-center" : ""} ${className}`}
         style={fill ? undefined : { aspectRatio: aspect }}
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}

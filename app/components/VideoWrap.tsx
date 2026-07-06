@@ -23,7 +23,9 @@ export function VideoWrap({
 
   return (
     <div
-      className={`relative rounded-sm overflow-hidden bg-neutral-200 mb-3 ${className}`}
+      className={`relative rounded-sm overflow-hidden bg-neutral-200 mb-3 ${
+        fit === "contain" ? "flex items-center justify-center" : ""
+      } ${className}`}
       style={frameStyle}
     >
       <video
