@@ -90,7 +90,7 @@ export default function AccessibilityChessboardPage() {
         {[
           { num: "3", label: "Microcontrollers" },
           { num: "52", label: "Unit Tests" },
-          { num: "16", label: "Custom PCB Sensors" },
+          { num: "64", label: "Custom PCB Sensors" },
           { num: "$350", label: "Total Budget" },
           { num: "41cm", label: "Gantry Travel" },
           { num: "5s", label: "Avg Move Time" },
@@ -442,8 +442,9 @@ export default function AccessibilityChessboardPage() {
           </div>
           <div>
             <p className="font-body text-body text-neutral-500 leading-relaxed mb-6">
-              We designed a custom 2-layer PCB in KiCad integrating 16× A1302xUA Hall effect
-              sensors and 16× WS2812B addressable RGB LEDs, one of each per chess square.
+              We designed custom 2-layer PCBs in KiCad integrating 64 A1302xUA Hall effect
+              sensors and 64 WS2812B addressable RGB LEDs across four boards, one of each per
+              chess square.
               The board was fabricated in Shenzhen, received, and hand-soldered using SMD
               reflow techniques. The Hall sensors detect and verify piece presence; the LEDs
               provide accessibility feedback highlighting valid moves and confirming correct
@@ -769,7 +770,7 @@ export default function AccessibilityChessboardPage() {
                   },
                   {
                     label: "Hall effect sensor integration",
-                    body: "We wired up the A1302xUA Hall sensors already on the PCB, tested each of the 16 sensors individually, confirmed detection, and merged the firmware so piece position is now verified after every move in real time.",
+                    body: "We wired up the A1302xUA Hall sensors already on the PCBs, tested all 64 sensors individually, confirmed detection, and merged the firmware so piece position is now verified after every move in real time.",
                   },
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4">
@@ -1036,7 +1037,7 @@ export default function AccessibilityChessboardPage() {
               icon: CircuitBoard,
               num: null,
               title: "Custom PCB",
-              desc: "Designed in KiCad, fabricated in Shenzhen, hand-soldered by the team. 16 Hall sensors + 16 RGB LEDs on a 2-layer board.",
+              desc: "Designed in KiCad, fabricated in Shenzhen, hand-soldered by the team. 64 Hall sensors + 64 RGB LEDs across four 2-layer boards.",
             },
             {
               icon: Bot,
@@ -1221,7 +1222,7 @@ export default function AccessibilityChessboardPage() {
             "Formal user testing sessions with players who have hand and motor disabilities",
             "Expand accessibility features based on T-Mobile accessibility team input",
             "Remote play mode: two players in different locations via web interface",
-            "Full 8×8 Hall sensor grid covering every square for complete position verification",
+            "Improve firmware reliability for real-time validation across all 64 sensor squares",
           ].map((item, i) => (
             <div
               key={i}
