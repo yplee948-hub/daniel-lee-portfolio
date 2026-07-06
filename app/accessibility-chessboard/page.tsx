@@ -928,16 +928,20 @@ export default function AccessibilityChessboardPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-3 h-[min(480px,52vh)]">
               <PhotoWrap
                 src="/images/chessboard/piece_location_verification_1.jpg"
                 alt="Hall effect sensor PCB for piece location verification"
-                aspect="4/3"
+                fill
+                fit="contain"
+                className="h-full"
               />
               <PhotoWrap
                 src="/images/chessboard/piece_location_verification_2.jpg"
                 alt="Chessboard with Hall sensors verifying piece placement"
-                aspect="4/3"
+                fill
+                fit="contain"
+                className="h-full"
               />
             </div>
           </div>

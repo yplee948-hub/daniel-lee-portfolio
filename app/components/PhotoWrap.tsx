@@ -13,12 +13,14 @@ export function PhotoWrap({
   alt,
   aspect = "16/9",
   fill = false,
+  fit = "cover",
   className = "",
 }: {
   src: string;
   alt: string;
   aspect?: string;
   fill?: boolean;
+  fit?: "cover" | "contain";
   className?: string;
 }) {
   const [open, setOpen] = useState(false);
@@ -129,7 +131,7 @@ export function PhotoWrap({
           src={src}
           alt={alt}
           draggable={false}
-          className="pointer-events-none h-full w-full object-cover"
+          className={`pointer-events-none h-full w-full ${fit === "contain" ? "object-contain" : "object-cover"}`}
           style={{
             transform: `translate(${offset.x}px, ${offset.y}px) scale(${ZOOM})`,
             transition: dragging ? "none" : "transform 200ms ease-out",
