@@ -891,7 +891,7 @@ export default function AccessibilityChessboardPage() {
         <SectionLabel>Challenges &amp; How We Addressed Them</SectionLabel>
 
         <div className="py-10 border-b border-neutral-200">
-          <div className="grid md:grid-cols-2 gap-10 items-start">
+          <div className="grid md:grid-cols-[2fr_3fr] gap-10 items-start">
             <div>
               <div className="flex gap-6 items-start mb-5">
                 <span className="font-sans font-light text-[2.5rem] text-neutral-300 leading-none flex-shrink-0 w-12">
@@ -948,7 +948,7 @@ export default function AccessibilityChessboardPage() {
         </div>
 
         <div className="py-10">
-          <div className="grid md:grid-cols-2 gap-10 items-start">
+          <div className="grid md:grid-cols-[2fr_3fr] gap-10 items-start">
             <div>
               <div className="flex gap-6 items-start mb-5">
                 <span className="font-sans font-light text-[2.5rem] text-neutral-300 leading-none flex-shrink-0 w-12">
