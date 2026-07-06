@@ -948,38 +948,52 @@ export default function AccessibilityChessboardPage() {
         </div>
 
         <div className="py-10">
-          <div className="flex gap-6 items-start mb-5">
-            <span className="font-sans font-light text-[2.5rem] text-neutral-300 leading-none flex-shrink-0 w-12">
-              02
-            </span>
-            <div className="pt-2">
-              <h3 className="font-sans font-medium text-[15px] leading-snug">
-                Accessibility 
-              </h3>
-              <h3 className="font-sans font-light italic text-[15px] text-neutral-500">
-                &ldquo;What does truly accessible chess actually look like?&rdquo;
-              </h3>
+          <div className="grid md:grid-cols-2 gap-10 items-start">
+            <div>
+              <div className="flex gap-6 items-start mb-5">
+                <span className="font-sans font-light text-[2.5rem] text-neutral-300 leading-none flex-shrink-0 w-12">
+                  02
+                </span>
+                <div className="pt-2">
+                  <h3 className="font-sans font-medium text-[15px] leading-snug">
+                    Accessibility
+                  </h3>
+                  <h3 className="font-sans font-light italic text-[15px] text-neutral-500">
+                    &ldquo;What does truly accessible chess actually look like?&rdquo;
+                  </h3>
+                </div>
+              </div>
+              <div className="pl-[4.5rem] space-y-4">
+                <p className="font-body text-body text-neutral-500 leading-relaxed">
+                  This was the core of the entire project and the most layered challenge we faced.
+                  Our T-Mobile mentor pushed us early to think beyond &ldquo;the board moves
+                  pieces.&rdquo; The question was what a truly accessible chess experience looks
+                  like for someone with limited hand mobility, limited vision, or both. We
+                  identified three problems: players needed a way to input moves without touching
+                  the board, they needed feedback confirming the move happened correctly, and they
+                  needed to understand the board state at a glance.
+                </p>
+                <p className="font-body text-body text-neutral-500 leading-relaxed">
+                  We addressed each with a different layer: voice recognition via OpenAI Whisper
+                  for input (no physical contact required), WS2812B LEDs per square for in-board
+                  confirmation feedback, and the real-time web interface for complete board
+                  awareness from any device. Together these three layers mean a player with limited
+                  hand mobility can play a full game of physical chess speaking their moves,
+                  watching the board respond, and following the game on screen without assistance
+                  from another person.
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="pl-[4.5rem] space-y-4">
-            <p className="font-body text-body text-neutral-500 leading-relaxed max-w-3xl">
-              This was the core of the entire project and the most layered challenge we faced.
-              Our T-Mobile mentor pushed us early to think beyond &ldquo;the board moves
-              pieces.&rdquo; The question was what a truly accessible chess experience looks
-              like for someone with limited hand mobility, limited vision, or both. We
-              identified three problems: players needed a way to input moves without touching
-              the board, they needed feedback confirming the move happened correctly, and they
-              needed to understand the board state at a glance.
-            </p>
-            <p className="font-body text-body text-neutral-500 leading-relaxed max-w-3xl">
-              We addressed each with a different layer: voice recognition via OpenAI Whisper
-              for input (no physical contact required), WS2812B LEDs per square for in-board
-              confirmation feedback, and the real-time web interface for complete board
-              awareness from any device. Together these three layers mean a player with limited
-              hand mobility can play a full game of physical chess speaking their moves,
-              watching the board respond, and following the game on screen without assistance
-              from another person.
-            </p>
+
+            <div className="h-[min(480px,52vh)]">
+              <VideoWrap
+                src="/images/chessboard/accessibility_challenge.mp4"
+                label="Accessibility Demo"
+                fill
+                fit="contain"
+                className="h-full mb-0"
+              />
+            </div>
           </div>
         </div>
       </section>
