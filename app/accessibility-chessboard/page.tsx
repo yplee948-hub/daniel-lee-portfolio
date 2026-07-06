@@ -324,7 +324,7 @@ export default function AccessibilityChessboardPage() {
               />
             </div>
             <Caption>
-              Early assembly → components laid out → first full gantry with breadboard wiring
+              Early assembly, components laid out, then first full gantry with breadboard wiring
             </Caption>
 
             {/* CAD renders + movement videos */}
@@ -467,7 +467,7 @@ export default function AccessibilityChessboardPage() {
                 alt="Fully soldered PCB"
               />
             </div>
-            <Caption>KiCad 3D render → fully soldered PCB from Shenzhen</Caption>
+            <Caption>KiCad 3D render to fully soldered PCB from Shenzhen</Caption>
             <div className="grid grid-cols-2 gap-3 mb-2">
               <PhotoWrap
                 src="/images/chessboard/Image__28_.jpeg"
@@ -479,7 +479,7 @@ export default function AccessibilityChessboardPage() {
               />
             </div>
             <Caption>
-              Hand-soldering SMD components → PCB fitted perfectly into laser-cut wood frame
+              Hand-soldering SMD components, then PCB fitted perfectly into laser-cut wood frame
             </Caption>
             <VideoWrap
               src="/images/chessboard/halleffectsensortest.mp4"
@@ -517,7 +517,7 @@ export default function AccessibilityChessboardPage() {
               />
             </div>
             <Caption>
-              Sliced in UltiMaker Cura → UV curing on the ELEGOO Mercury Plus station
+              Sliced in UltiMaker Cura, then UV curing on the ELEGOO Mercury Plus station
             </Caption>
             <div className="grid grid-cols-2 gap-3 mb-2">
               <PhotoWrap
@@ -529,7 +529,7 @@ export default function AccessibilityChessboardPage() {
                 alt="Finished white and black pieces"
               />
             </div>
-            <Caption>Late-night post-processing → finished white vs black pieces</Caption>
+            <Caption>Late-night post-processing, then finished white vs black pieces</Caption>
           </div>
         </div>
 
@@ -689,7 +689,7 @@ export default function AccessibilityChessboardPage() {
                   },
                   {
                     label: "Startup calibration sequence",
-                    body: "On boot the carriage homes to −X, then +X, then −Y, then +Y, backing off slightly after each hit so the switch releases before the next move.",
+                    body: "On boot the carriage homes to -X, then +X, then -Y, then +Y, backing off slightly after each hit so the switch releases before the next move.",
                   },
                   {
                     label: "Runtime safety stop",
@@ -722,7 +722,7 @@ export default function AccessibilityChessboardPage() {
               />
             </div>
             <Caption>
-              X-axis limit switch at home edge → Y-axis limit switches on the dual-rail gantry
+              X-axis limit switch at home edge and Y-axis limit switches on the dual-rail gantry
             </Caption>
           </div>
         </div>
@@ -804,7 +804,7 @@ export default function AccessibilityChessboardPage() {
               />
             </div>
             <Caption>
-              Final hardware validation before enclosure → four PCB boards mounted on the bottom top layer
+              Final hardware validation before enclosure, then four PCB boards mounted on the bottom top layer
             </Caption>
             <PhotoWrap
               src="/images/chessboard/team_assembly.jpg"
@@ -865,7 +865,7 @@ export default function AccessibilityChessboardPage() {
                 aspect="4/3"
               />
             </div>
-            <Caption>Fusion 360 enclosure design → CNC cutting the top layer</Caption>
+            <Caption>Fusion 360 enclosure design, then CNC cutting the top layer</Caption>
             <div className="grid grid-cols-2 gap-3 mb-2">
               <PhotoWrap
                 src="/images/chessboard/finished_enclosure.jpg"
@@ -878,7 +878,7 @@ export default function AccessibilityChessboardPage() {
                 aspect="1/1"
               />
             </div>
-            <Caption>Finished enclosure with wood stain and wax → final demo with T-Mobile mentor</Caption>
+            <Caption>Finished enclosure with wood stain and wax, then final demo with T-Mobile mentor</Caption>
           </div>
         </div>
       </section>

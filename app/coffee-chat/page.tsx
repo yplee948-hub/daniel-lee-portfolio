@@ -247,7 +247,7 @@ export default function CoffeeChatPage() {
           {/* Feature breakdown */}
           <div className="grid grid-cols-2 gap-4 mb-8">
             {[
-              { view: "Coordinator Dashboard", features: ["Status pipeline: Pending → Intro Sent → Confirmed → Completed → Feedback", "Stall detection: flags requests with no update in 5+ days", "Ambassador assignment with preference matching (student vs. alumni)", "Export to CSV for end-of-semester reporting", "Real-time stats: total requests, pending count, stalled count, feedback rate"] },
+              { view: "Coordinator Dashboard", features: ["Status pipeline: Pending, Intro Sent, Confirmed, Completed, Feedback", "Stall detection: flags requests with no update in 5+ days", "Ambassador assignment with preference matching (student vs. alumni)", "Export to CSV for end-of-semester reporting", "Real-time stats: total requests, pending count, stalled count, feedback rate"] },
               { view: "Ambassador Portal", features: ["Personal queue showing only assigned requests", "Pre-filled intro and follow-up email templates with GIX signature", "One-click email preview and copy", "Post-chat feedback form (6 questions, built into the completion flow)", "Activity log showing full history per request"] },
             ].map((col, i) => (
               <div key={i} className="border border-neutral-200 rounded-lg p-6">
