@@ -117,15 +117,11 @@ export default function AccessibilityChessboardPage() {
             <h2 className="font-sans font-semibold text-[clamp(2rem,4vw,3rem)] leading-tight tracking-tight mb-6">
               Technical PM<br />who <em>ships</em><br />the product.
             </h2>
-            <p className="font-body text-body text-neutral-500 leading-relaxed mb-4">
+            <p className="font-body text-body text-neutral-500 leading-relaxed">
               I wore two hats on this project. As PM I defined the product vision, managed
               the T-Mobile sponsor relationship, coordinated the team, and owned the budget.
               As an engineer I built the web interface from scratch and co-built the CoreXY
               motion system hands-on.
-            </p>
-            <p className="font-body text-body text-neutral-500 leading-relaxed">
-              This is the rare combination employers talk about: someone who can write a
-              product brief in the morning and solder a PCB at night.
             </p>
           </div>
           <div className="flex flex-col gap-4">
