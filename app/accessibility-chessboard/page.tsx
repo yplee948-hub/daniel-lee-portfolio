@@ -891,38 +891,55 @@ export default function AccessibilityChessboardPage() {
         <SectionLabel>Challenges &amp; How We Addressed Them</SectionLabel>
 
         <div className="py-10 border-b border-neutral-200">
-          <div className="flex gap-6 items-start mb-5">
-            <span className="font-sans font-light text-[2.5rem] text-neutral-300 leading-none flex-shrink-0 w-12">
-              01
-            </span>
-            <div className="pt-2">
-              <h3 className="font-sans font-medium text-[15px] leading-snug">
-                Piece Location Verification 
-              </h3>
-              <h3 className="font-sans font-light italic text-[15px] text-neutral-500">
-                &ldquo;How do we know the board is in the right state?&rdquo;
-              </h3>
+          <div className="grid md:grid-cols-2 gap-10 items-start">
+            <div>
+              <div className="flex gap-6 items-start mb-5">
+                <span className="font-sans font-light text-[2.5rem] text-neutral-300 leading-none flex-shrink-0 w-12">
+                  01
+                </span>
+                <div className="pt-2">
+                  <h3 className="font-sans font-medium text-[15px] leading-snug">
+                    Piece Location Verification
+                  </h3>
+                  <h3 className="font-sans font-light italic text-[15px] text-neutral-500">
+                    &ldquo;How do we know the board is in the right state?&rdquo;
+                  </h3>
+                </div>
+              </div>
+              <div className="pl-[4.5rem] space-y-4">
+                <p className="font-body text-body text-neutral-500 leading-relaxed">
+                  This was our biggest and most fundamental challenge. Chess pieces are physical
+                  objects. They can drift, stick to each other due to residual magnetism, get
+                  dragged slightly off-center, or fail to land exactly on target. Once the board
+                  state drifts even slightly from what the software expects, every subsequent move
+                  compounds the error. Within a few moves the whole board could be in complete
+                  disarray.
+                </p>
+                <p className="font-body text-body text-neutral-500 leading-relaxed">
+                  We researched several approaches: computer vision (too complex,
+                  lighting-dependent), pressure sensors (not sensitive enough for light resin
+                  pieces), and capacitive sensing (too much interference from wood). We landed on
+                  Hall effect sensors: one A1302xUA sensor per square, embedded in a custom PCB
+                  beneath the board. Since every piece has a magnet in its base, each sensor
+                  detects whether a piece is sitting on its square and reports back to the
+                  firmware, closing the loop between what the system thinks is on the board and
+                  what is actually there.
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="pl-[4.5rem] space-y-4">
-            <p className="font-body text-body text-neutral-500 leading-relaxed max-w-3xl">
-              This was our biggest and most fundamental challenge. Chess pieces are physical
-              objects. They can drift, stick to each other due to residual magnetism, get
-              dragged slightly off-center, or fail to land exactly on target. Once the board
-              state drifts even slightly from what the software expects, every subsequent move
-              compounds the error. Within a few moves the whole board could be in complete
-              disarray.
-            </p>
-            <p className="font-body text-body text-neutral-500 leading-relaxed max-w-3xl">
-              We researched several approaches: computer vision (too complex,
-              lighting-dependent), pressure sensors (not sensitive enough for light resin
-              pieces), and capacitive sensing (too much interference from wood). We landed on
-              Hall effect sensors: one A1302xUA sensor per square, embedded in a custom PCB
-              beneath the board. Since every piece has a magnet in its base, each sensor
-              detects whether a piece is sitting on its square and reports back to the
-              firmware, closing the loop between what the system thinks is on the board and
-              what is actually there.
-            </p>
+
+            <div className="grid grid-cols-2 gap-3">
+              <PhotoWrap
+                src="/images/chessboard/piece_location_verification_1.jpg"
+                alt="Hall effect sensor PCB for piece location verification"
+                aspect="4/3"
+              />
+              <PhotoWrap
+                src="/images/chessboard/piece_location_verification_2.jpg"
+                alt="Chessboard with Hall sensors verifying piece placement"
+                aspect="4/3"
+              />
+            </div>
           </div>
         </div>
 
