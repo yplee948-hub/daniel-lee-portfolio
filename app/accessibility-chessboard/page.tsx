@@ -72,9 +72,7 @@ export default function AccessibilityChessboardPage() {
           </p>
           <div className="flex gap-3 flex-shrink-0">
             <a
-              href="https://515-wizard-chess.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#live-demo"
               className="font-mono text-[10px] tracking-widest uppercase bg-black text-white px-5 py-3 hover:bg-neutral-700 transition-colors"
             >
               Live Demo →
@@ -272,11 +270,13 @@ export default function AccessibilityChessboardPage() {
           ))}
         </div>
 
-        <VideoWrap
-          src="/images/chessboard/live_demo.mp4"
-          label="Live Demo"
-          maxHeight={560}
-        />
+        <div id="live-demo" className="scroll-mt-28">
+          <VideoWrap
+            src="/images/chessboard/live_demo.mp4"
+            label="Live Demo"
+            maxHeight={560}
+          />
+        </div>
 
         <div className="border border-neutral-200 bg-neutral-50 rounded-sm px-6 py-4 flex items-center justify-between gap-4 flex-wrap mt-5">
           <p className="font-body text-body text-neutral-500">

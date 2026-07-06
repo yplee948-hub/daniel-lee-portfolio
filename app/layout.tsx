@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${roboto.variable} ${spaceMono.variable}`}>
+    <html lang="en" className={`${inter.variable} ${roboto.variable} ${spaceMono.variable} scroll-smooth`}>
       <body className={`${roboto.className} antialiased text-[18px] leading-relaxed`}>{children}</body>
     </html>
   );
