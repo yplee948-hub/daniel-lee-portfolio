@@ -2,6 +2,7 @@ import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import { PhotoWrap } from "../components/PhotoWrap";
 import { VideoWrap } from "../components/VideoWrap";
+import { LiveDemoButton } from "../components/LiveDemoModal";
 import {
   Lightbulb,
   Mic,
@@ -71,12 +72,7 @@ export default function AccessibilityChessboardPage() {
             itself, designed for players with hand and motor disabilities.
           </p>
           <div className="flex gap-3 flex-shrink-0">
-            <a
-              href="#live-demo"
-              className="font-mono text-[10px] tracking-widest uppercase bg-black text-white px-5 py-3 hover:bg-neutral-700 transition-colors"
-            >
-              Live Demo →
-            </a>
+            <LiveDemoButton className="font-mono text-[10px] tracking-widest uppercase bg-black text-white px-5 py-3 hover:bg-neutral-700 transition-colors" />
             <a
               href="https://github.com/yplee948-hub/wizardchess"
               target="_blank"
@@ -268,14 +264,6 @@ export default function AccessibilityChessboardPage() {
               <p className="font-body text-body text-neutral-500 leading-relaxed">{l.desc}</p>
             </div>
           ))}
-        </div>
-
-        <div id="live-demo" className="scroll-mt-28 flex justify-center">
-          <VideoWrap
-            src="/images/chessboard/live_demo.mp4"
-            label="Live Demo"
-            nativeSize
-          />
         </div>
 
         <div className="border border-neutral-200 bg-neutral-50 rounded-sm px-6 py-4 flex items-center justify-between gap-4 flex-wrap mt-5">
