@@ -270,11 +270,11 @@ export default function AccessibilityChessboardPage() {
           ))}
         </div>
 
-        <div id="live-demo" className="scroll-mt-28">
+        <div id="live-demo" className="scroll-mt-28 flex justify-center">
           <VideoWrap
             src="/images/chessboard/live_demo.mp4"
             label="Live Demo"
-            maxHeight={560}
+            nativeSize
           />
         </div>
 
